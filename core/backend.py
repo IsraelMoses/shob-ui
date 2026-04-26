@@ -1,27 +1,66 @@
 """
 backend.py
 ==========
-Manages device registry and shared filesystem paths.
+Manages device registry, configuration, and shared filesystem paths.
 """
 
 import json
+import os
 import sqlite3
 from pathlib import Path
 
-# ── paths ──────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).resolve().parent.parent
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+def _env_path(name: str, default: Path) -> Path:
+    value = os.environ.get(name)
+    if not value:
+        return default
+    return Path(value).expanduser()
+
+
+def _env_int(name: str, default: int) -> int:
+    value = os.environ.get(name)
+    if not value:
+        return default
+    try:
+        return int(value)
+    except ValueError:
+        return default
+
+
+def _env_bool(name: str, default: bool = False) -> bool:
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _default_tls_file(filename: str) -> Path:
+    program_data = Path(os.environ.get("ProgramData", r"C:\ProgramData"))
+    external_file = program_data / "ShobUI" / "certs" / filename
+    if external_file.exists():
+        return external_file
+    return BASE_DIR / filename
+
+
 DEVICES_JSON = BASE_DIR / "devices.json"
-DEVICES_DB   = BASE_DIR / "devices.db"
-GALLERY_DIR  = BASE_DIR / "gallery"
-CERT_FILE    = BASE_DIR / "cert.pem"
-KEY_FILE     = BASE_DIR / "key.pem"
-LOGO_FILE    = BASE_DIR / "logo.png"
+DEVICES_DB = BASE_DIR / "devices.db"
+GALLERY_DIR = BASE_DIR / "gallery"
+LOGO_FILE = BASE_DIR / "logo.png"
 GALLERY_DIR.mkdir(exist_ok=True)
 
-SERVER_PORT  = 8443
+SERVER_HOST = os.environ.get("SHOB_SERVER_HOST", "0.0.0.0")
+SERVER_PORT = _env_int("SHOB_SERVER_PORT", 8443)
+DEBUG_SERVER_ENABLED = _env_bool("SHOB_DEBUG_SERVER", False)
+DEBUG_SERVER_PORT = _env_int("SHOB_DEBUG_PORT", 8080)
+
+CERT_FILE = _env_path("SHOB_TLS_CERT_FILE", _default_tls_file("cert.pem"))
+KEY_FILE = _env_path("SHOB_TLS_KEY_FILE", _default_tls_file("key.pem"))
 
 DEFAULT_DEVICES = [
-    {"uuid": "cam-0001", "ip": "127.0.0.1",   "name": "Front Door"},
+    {"uuid": "cam-0001", "ip": "127.0.0.1", "name": "Front Door"},
     {"uuid": "cam-0002", "ip": "192.168.1.50", "name": "Back Yard"},
 ]
 

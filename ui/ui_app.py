@@ -262,6 +262,10 @@ class SecCamApp(tk.Tk):
     def set_server_status(self, text: str, color: str):
         self._srv_lbl.config(text=text, fg=color)
 
+    def show_blocked_upload(self, msg):
+        sender = msg.get("sender_ip", "unknown")
+        self.set_server_status(f"Blocked upload from {sender}", C["status_err"])
+
     def _next_device_uuid(self) -> str:
         existing = {d["uuid"] for d in load_devices()}
         idx = 1
@@ -370,3 +374,4 @@ class SecCamApp(tk.Tk):
         gw = self._gallery_windows.get(msg["device"]["uuid"])
         if gw and gw.winfo_exists():
             gw._load()
+

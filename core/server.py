@@ -3,12 +3,11 @@ server.py
 =========
 Manages the embedded HTTPS/HTTP server.
 Cameras POST a JPEG or MP4 to POST /upload
-Also exposes a plain debug server on port 8080 that logs raw requests.
+Can expose an optional plain debug server on port 8080 when enabled.
 
 Incoming messages are placed in a shared queue for the UI to consume.
 """
 
-import json
 import queue
 import ssl
 import threading
@@ -20,12 +19,12 @@ from urllib.parse import parse_qs, urlparse
 
 from flask import Flask, request, jsonify
 
-from .backend import device_by_ip, BASE_DIR, CERT_FILE, KEY_FILE, SERVER_PORT
+from .backend import device_by_ip, BASE_DIR, CERT_FILE, KEY_FILE, SERVER_HOST, SERVER_PORT
 
-# ── shared queue consumed by the UI ───────────────────────────────────────────
+# Shared queue consumed by the UI
 msg_queue: queue.Queue = queue.Queue()
 
-# ── Flask upload server ────────────────────────────────────────────────────────
+# Flask upload server
 flask_app = Flask(__name__)
 
 
@@ -149,14 +148,14 @@ def _run_flask(on_ready, on_error):
         ctx = None
         if CERT_FILE.exists() and KEY_FILE.exists():
             ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-            ctx.load_cert_chain(CERT_FILE, KEY_FILE)
+            ctx.load_cert_chain(str(CERT_FILE), str(KEY_FILE))
             proto = "https"
         else:
             proto = "http"
 
         from werkzeug.serving import make_server
-        srv = make_server("0.0.0.0", SERVER_PORT, flask_app, ssl_context=ctx)
-        on_ready(proto, SERVER_PORT)
+        srv = make_server(SERVER_HOST, SERVER_PORT, flask_app, ssl_context=ctx)
+        on_ready(proto, SERVER_HOST, SERVER_PORT)
         srv.serve_forever()
     except Exception as exc:
         on_error(exc)
@@ -172,7 +171,7 @@ def start_flask_server(on_ready, on_error):
     t.start()
 
 
-# ── Plain debug HTTP server (port 8080) ───────────────────────────────────────
+# Plain debug HTTP server
 class _DebugHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         content_length = int(self.headers.get("Content-Length", 0))
@@ -225,3 +224,4 @@ def start_debug_server(port: int = 8080):
         srv.serve_forever()
 
     threading.Thread(target=_run, daemon=True).start()
+

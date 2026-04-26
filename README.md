@@ -118,3 +118,21 @@ secam_player/
     └── cam-0002/
         └── ...
 ```
+
+---
+
+## Security and TPM
+
+TLS PEM files (`cert.pem`, `key.pem`) are ignored by Git. For Windows TPM-backed certificate setup and safer key handling, see:
+
+```
+docs/security-tpm.md
+```
+
+Useful scripts:
+
+```powershell
+.\scripts\check_tpm.ps1
+.\scripts\create_tpm_certificate.ps1
+.\scripts\run_with_external_pem.ps1
+```
