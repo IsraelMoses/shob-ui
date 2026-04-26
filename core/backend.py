@@ -55,6 +55,12 @@ SERVER_HOST = os.environ.get("SHOB_SERVER_HOST", "0.0.0.0")
 SERVER_PORT = _env_int("SHOB_SERVER_PORT", 8443)
 DEBUG_SERVER_ENABLED = _env_bool("SHOB_DEBUG_SERVER", False)
 DEBUG_SERVER_PORT = _env_int("SHOB_DEBUG_PORT", 8080)
+TLS_ENABLED = _env_bool("SHOB_TLS_ENABLED", True)
+TRUSTED_PROXY_IPS = {
+    ip.strip()
+    for ip in os.environ.get("SHOB_TRUSTED_PROXY_IPS", "127.0.0.1,::1").split(",")
+    if ip.strip()
+}
 
 CERT_FILE = _env_path("SHOB_TLS_CERT_FILE", _default_tls_file("cert.pem"))
 KEY_FILE = _env_path("SHOB_TLS_KEY_FILE", _default_tls_file("key.pem"))

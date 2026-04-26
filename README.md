@@ -135,4 +135,6 @@ Useful scripts:
 .\scripts\check_tpm.ps1
 .\scripts\create_tpm_certificate.ps1
 .\scripts\run_with_external_pem.ps1
+.\scripts\run_internal_http.ps1
+.\scripts\start_tpm_https_proxy.ps1
 ```

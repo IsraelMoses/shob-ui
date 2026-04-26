@@ -17,8 +17,10 @@ The app supports these environment variables:
 - `SHOB_SERVER_PORT`: bind port, default `8443`.
 - `SHOB_DEBUG_SERVER`: set to `1` only when raw debug logging is needed.
 - `SHOB_DEBUG_PORT`: debug server port, default `8080`.
+- `SHOB_TLS_ENABLED`: set to `0` when TLS is handled by the TPM HTTPS proxy.
+- `SHOB_TRUSTED_PROXY_IPS`: proxy IPs allowed to supply `X-Forwarded-For`, default `127.0.0.1,::1`.
 
-By default, the app still looks for `cert.pem` and `key.pem` next to `main.py` for development compatibility. Those files are ignored by Git.
+By default, the app first checks `C:\ProgramData\ShobUI\certs\cert.pem` and `C:\ProgramData\ShobUI\certs\key.pem`, then falls back to project-local PEM files for development compatibility. Project-local PEM files are ignored by Git.
 
 ## Check TPM status
 
@@ -68,3 +70,41 @@ copy .\key.pem C:\ProgramData\ShobUI\certs\key.pem
 ```
 
 The private key remains a file in this mode, so this is cleaner than storing it in the project folder but not equivalent to TPM protection.
+
+## Run with TPM-backed HTTPS proxy
+
+Your created TPM certificate thumbprint:
+
+```text
+5177BE7AA02955D765ADFD8D45A55421DCE52361
+```
+
+Open a normal PowerShell window for the Python app:
+
+```powershell
+cd "<project-folder>"
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\run_internal_http.ps1
+```
+
+This starts the Python app internally on:
+
+```text
+http://127.0.0.1:8081
+```
+
+Open a second PowerShell window as Administrator for the TPM HTTPS proxy:
+
+```powershell
+cd "<project-folder>"
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\start_tpm_https_proxy.ps1 -Thumbprint 5177BE7AA02955D765ADFD8D45A55421DCE52361
+```
+
+Cameras should then post to the external HTTPS endpoint:
+
+```text
+https://<player-host>:8443/upload
+```
+
+The proxy receives HTTPS using the TPM-backed certificate, forwards the request to the local Python app, and passes the original camera IP through `X-Forwarded-For`.

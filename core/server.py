@@ -19,7 +19,16 @@ from urllib.parse import parse_qs, urlparse
 
 from flask import Flask, request, jsonify
 
-from .backend import device_by_ip, BASE_DIR, CERT_FILE, KEY_FILE, SERVER_HOST, SERVER_PORT
+from .backend import (
+    device_by_ip,
+    BASE_DIR,
+    CERT_FILE,
+    KEY_FILE,
+    SERVER_HOST,
+    SERVER_PORT,
+    TLS_ENABLED,
+    TRUSTED_PROXY_IPS,
+)
 
 # Shared queue consumed by the UI
 msg_queue: queue.Queue = queue.Queue()
@@ -44,6 +53,16 @@ def _safe_device_lookup(ip: str):
 
 def _format_headers(headers) -> dict:
     return {k: v for k, v in headers.items()}
+
+
+def _client_ip() -> str:
+    remote_addr = request.remote_addr or "unknown"
+    if remote_addr in TRUSTED_PROXY_IPS:
+        forwarded_for = request.headers.get("X-Forwarded-For", "")
+        first_hop = forwarded_for.split(",", 1)[0].strip()
+        if first_hop:
+            return first_hop
+    return remote_addr
 
 
 def _log_blocked_post(source: str, sender_ip: str, path: str, headers, body: bytes):
@@ -84,7 +103,7 @@ def upload():
     print(f"Path: {request.path}")
     print(f"Content-Type: {request.content_type}")
     print(request.headers)
-    sender_ip = request.remote_addr or "unknown"
+    sender_ip = _client_ip()
     device = _safe_device_lookup(sender_ip)
 
     # Read raw body once if needed for blocked logging or raw-body uploads
@@ -146,7 +165,7 @@ def _run_flask(on_ready, on_error):
     """Run the werkzeug server in its own thread."""
     try:
         ctx = None
-        if CERT_FILE.exists() and KEY_FILE.exists():
+        if TLS_ENABLED and CERT_FILE.exists() and KEY_FILE.exists():
             ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
             ctx.load_cert_chain(str(CERT_FILE), str(KEY_FILE))
             proto = "https"
