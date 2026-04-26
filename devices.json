@@ -1,0 +1,22 @@
+[
+  {
+    "uuid": "cam-0001",
+    "ip": "192.168.1.10",
+    "name": "Front Door"
+  },
+  {
+    "uuid": "cam-reshet",
+    "ip": "2.54.104.99",
+    "name": "cam-reshet"
+  },
+  {
+    "uuid": "cam-0003",
+    "ip": "192.168.1.12",
+    "name": "Garage"
+  },
+  {
+    "uuid": "cam-0004",
+    "ip": "77.137.176.248",
+    "name": "my reshset hebratit"
+  }
+]
