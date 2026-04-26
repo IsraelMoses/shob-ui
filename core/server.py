@@ -173,7 +173,7 @@ def _run_flask(on_ready, on_error):
             proto = "http"
 
         from werkzeug.serving import make_server
-        srv = make_server(SERVER_HOST, SERVER_PORT, flask_app, ssl_context=ctx)
+        srv = make_server(SERVER_HOST, SERVER_PORT, flask_app, ssl_context=ctx, threaded=True)
         on_ready(proto, SERVER_HOST, SERVER_PORT)
         srv.serve_forever()
     except Exception as exc:

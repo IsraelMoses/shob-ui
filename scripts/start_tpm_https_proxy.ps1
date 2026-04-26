@@ -1,4 +1,4 @@
-﻿#Requires -Version 5.1
+#Requires -Version 5.1
 #Requires -RunAsAdministrator
 
 param(
@@ -36,6 +36,7 @@ if ($urlAcl -notmatch [regex]::Escape($prefix)) {
 }
 
 $client = [System.Net.Http.HttpClient]::new()
+$client.Timeout = [TimeSpan]::FromSeconds(30)
 $listener = [System.Net.HttpListener]::new()
 $listener.Prefixes.Add($prefix)
 $listener.Start()
@@ -61,9 +62,22 @@ try {
 
             if ($request.HasEntityBody) {
                 $body = [System.IO.MemoryStream]::new()
-                $request.InputStream.CopyTo($body)
-                $body.Position = 0
-                $forward.Content = [System.Net.Http.StreamContent]::new($body)
+                $buffer = [byte[]]::new(81920)
+                $remaining = $request.ContentLength64
+
+                if ($remaining -gt 0) {
+                    while ($remaining -gt 0) {
+                        $toRead = [Math]::Min($buffer.Length, [int]$remaining)
+                        $read = $request.InputStream.Read($buffer, 0, $toRead)
+                        if ($read -le 0) { break }
+                        $body.Write($buffer, 0, $read)
+                        $remaining -= $read
+                    }
+                } else {
+                    $request.InputStream.CopyTo($body)
+                }
+
+                $forward.Content = [System.Net.Http.ByteArrayContent]::new($body.ToArray())
             }
 
             foreach ($name in $request.Headers.AllKeys) {
