@@ -223,7 +223,21 @@ class SecCamApp(tk.Tk):
             anchor="w",
         ).pack(fill=tk.X)
 
-        ttk.Button(card, text="Remove", command=lambda d=dev: self._remove_device(d)).pack(
+        delete_btn = tk.Button(
+            card,
+            text="Delete",
+            command=lambda d=dev: self._remove_device(d),
+            bg=C["status_err"],
+            fg=C["tx_white"],
+            activebackground="#991b1b",
+            activeforeground=C["tx_white"],
+            relief=tk.FLAT,
+            bd=0,
+            padx=8,
+            pady=4,
+            cursor="hand2",
+        )
+        delete_btn.pack(
             side=tk.RIGHT,
             padx=8,
             pady=8,
@@ -408,6 +422,7 @@ class SecCamApp(tk.Tk):
         if gw and gw.winfo_exists():
             gw.destroy()
         self._refresh_device_list()
+        self.set_server_status(f"Device deleted: {device['name']}", C["status_ok"])
 
     def _rebuild_grid(self):
         count = len(self._active_slots)
