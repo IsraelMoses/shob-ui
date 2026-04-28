@@ -33,6 +33,20 @@ python main.py
 ```
 The server starts on **port 8443** (HTTPS if certs present, HTTP otherwise).
 
+### Windows shortcut launcher
+
+On Windows you can install a desktop shortcut so you do not need to run
+`python main.py` manually each time:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\install_windows_launcher.ps1
+```
+
+After that, open **Shob UI** from the desktop shortcut.
+
+You can also double-click `run_shob_ui.bat` from the project folder.
+
 ### 3. Configure your devices
 Use the right sidebar in the UI:
 
