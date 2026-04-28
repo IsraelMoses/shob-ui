@@ -28,6 +28,8 @@ from .backend import (
     SERVER_PORT,
     TLS_ENABLED,
     TRUSTED_PROXY_IPS,
+    ADMIN_EVENT_ALLOWED_IPS,
+    ADMIN_EVENT_TOKEN,
 )
 
 # Shared queue consumed by the UI
@@ -93,6 +95,45 @@ def _log_blocked_post(source: str, sender_ip: str, path: str, headers, body: byt
         "received_at": datetime.now(),
         "source": source,
     })
+
+
+@flask_app.route("/internal/admin/device", methods=["POST"])
+def admin_device_event():
+    sender_ip = _client_ip()
+    if ADMIN_EVENT_ALLOWED_IPS and sender_ip not in ADMIN_EVENT_ALLOWED_IPS:
+        return jsonify({
+            "error": "blocked",
+            "reason": "sender IP is not allowed",
+            "sender_ip": sender_ip,
+        }), 403
+
+    if ADMIN_EVENT_TOKEN:
+        provided = request.headers.get("X-Shob-Admin-Token", "")
+        if provided != ADMIN_EVENT_TOKEN:
+            return jsonify({"error": "unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or {}
+    name = str(payload.get("name", "")).strip()
+    ip = str(payload.get("ip", "")).strip()
+    uuid = str(payload.get("uuid", "")).strip()
+
+    if not name or not ip or not uuid:
+        return jsonify({
+            "error": "invalid payload",
+            "required": ["name", "ip", "uuid"],
+        }), 400
+
+    received_at = datetime.now()
+    msg_queue.put({
+        "admin_event": True,
+        "name": name,
+        "ip": ip,
+        "uuid": uuid,
+        "sender_ip": sender_ip,
+        "received_at": received_at,
+    })
+
+    return jsonify({"status": "ok"}), 200
 
 
 @flask_app.route("/upload", methods=["POST"])

@@ -20,6 +20,7 @@ class GalleryWindow(tk.Toplevel):
 
     def __init__(self, parent, device: dict, on_gallery_changed=None):
         super().__init__(parent)
+        self.withdraw()
         self.device = device
         self.on_gallery_changed = on_gallery_changed
         self._thumbs = []
@@ -28,6 +29,19 @@ class GalleryWindow(tk.Toplevel):
         self.configure(bg=C["bg_gallery"])
         self._build()
         self._load()
+        self._center_on_parent(parent, 830, 600)
+        self.deiconify()
+        self.lift()
+
+    def _center_on_parent(self, parent, width=None, height=None):
+        parent.update_idletasks()
+        self.update_idletasks()
+
+        width = width or self.winfo_reqwidth()
+        height = height or self.winfo_reqheight()
+        x = parent.winfo_rootx() + max((parent.winfo_width() - width) // 2, 0)
+        y = parent.winfo_rooty() + max((parent.winfo_height() - height) // 2, 0)
+        self.geometry(f"{width}x{height}+{x}+{y}")
 
     def _build(self):
         hdr = tk.Frame(self, bg=C["bg_toolbar"], pady=10)
@@ -172,6 +186,7 @@ class GalleryWindow(tk.Toplevel):
 
     def _open_media(self, path, is_video):
         win = tk.Toplevel(self)
+        win.withdraw()
         win.title(path.name)
         win.configure(bg="#111111")
         if is_video:
@@ -184,6 +199,9 @@ class GalleryWindow(tk.Toplevel):
                 wraplength=420,
                 justify="center",
             ).pack(expand=True, padx=32, pady=32)
+            self._center_child_window(win)
+            win.deiconify()
+            win.lift()
             return
 
         try:
@@ -200,6 +218,19 @@ class GalleryWindow(tk.Toplevel):
                 bg="#111111",
                 fg="#ef4444",
             ).pack(expand=True)
+        self._center_child_window(win)
+        win.deiconify()
+        win.lift()
+
+    def _center_child_window(self, win):
+        win.update_idletasks()
+        self.update_idletasks()
+
+        width = win.winfo_reqwidth()
+        height = win.winfo_reqheight()
+        x = self.winfo_rootx() + max((self.winfo_width() - width) // 2, 0)
+        y = self.winfo_rooty() + max((self.winfo_height() - height) // 2, 0)
+        win.geometry(f"+{x}+{y}")
 
     def _clear_gallery(self):
         confirmed = messagebox.askyesno(

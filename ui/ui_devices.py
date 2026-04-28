@@ -11,6 +11,7 @@ from .ui_theme import C
 class DeviceDialog(tk.Toplevel):
     def __init__(self, parent, suggested_uuid: str):
         super().__init__(parent)
+        self.withdraw()
         self.result = None
         self._name_var = tk.StringVar()
         self._ip_var = tk.StringVar()
@@ -20,11 +21,23 @@ class DeviceDialog(tk.Toplevel):
         self.configure(bg=C["bg_toolbar"])
         self.resizable(False, False)
         self.transient(parent)
-        self.grab_set()
         self._build()
+        self._center_on_parent(parent)
+        self.deiconify()
+        self.grab_set()
         self.protocol("WM_DELETE_WINDOW", self._cancel)
         self.bind("<Return>", lambda e: self._submit())
         self.bind("<Escape>", lambda e: self._cancel())
+
+    def _center_on_parent(self, parent):
+        parent.update_idletasks()
+        self.update_idletasks()
+
+        width = self.winfo_reqwidth()
+        height = self.winfo_reqheight()
+        x = parent.winfo_rootx() + max((parent.winfo_width() - width) // 2, 0)
+        y = parent.winfo_rooty() + max((parent.winfo_height() - height) // 2, 0)
+        self.geometry(f"+{x}+{y}")
 
     def _build(self):
         body = tk.Frame(self, bg=C["bg_toolbar"], padx=18, pady=16)

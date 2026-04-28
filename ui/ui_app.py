@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 from core.backend import (
+    add_device_if_missing,
     add_device,
     load_devices,
     remove_device,
@@ -265,6 +266,99 @@ class SecCamApp(tk.Tk):
     def show_blocked_upload(self, msg):
         sender = msg.get("sender_ip", "unknown")
         self.set_server_status(f"Blocked upload from {sender}", C["status_err"])
+
+    def show_admin_device_event(self, msg):
+        name = msg.get("name", "")
+        ip = msg.get("ip", "")
+        uuid = msg.get("uuid", "")
+        sender = msg.get("sender_ip", "unknown")
+        received_at = msg.get("received_at")
+        if hasattr(received_at, "strftime"):
+            received = received_at.strftime("%Y-%m-%d %H:%M:%S")
+        else:
+            received = str(received_at or "")
+
+        try:
+            save_status = add_device_if_missing(uuid=uuid, ip=ip, name=name)
+            self._refresh_device_list()
+            if save_status == "created":
+                self.set_server_status(f"Admin device saved: {name} ({ip})", C["status_ok"])
+                saved_message = "Saved to device list"
+            elif save_status == "exists_uuid":
+                self.set_server_status("Admin device already exists", C["status_warn"])
+                saved_message = "Already exists by UUID; old device was not changed"
+            else:
+                self.set_server_status("Admin device IP already exists", C["status_warn"])
+                saved_message = "Already exists by IP; old device was not changed"
+        except Exception as exc:
+            self.set_server_status("Admin device save failed", C["status_err"])
+            saved_message = f"Could not save device: {exc}"
+
+        win = tk.Toplevel(self)
+        win.withdraw()
+        win.title("Admin Device Update")
+        win.configure(bg=C["bg_toolbar"])
+        win.transient(self)
+
+        body = tk.Frame(win, bg=C["bg_toolbar"], padx=18, pady=16)
+        body.pack(fill=tk.BOTH, expand=True)
+
+        tk.Label(
+            body,
+            text="Management update received",
+            font=("Helvetica", 13, "bold"),
+            bg=C["bg_toolbar"],
+            fg=C["tx_green"],
+        ).grid(row=0, column=0, columnspan=2, sticky="w", pady=(0, 12))
+
+        rows = [
+            ("Name", name),
+            ("IP", ip),
+            ("UUID", uuid),
+            ("From", sender),
+            ("Time", received),
+            ("Status", saved_message),
+        ]
+        for row, (label, value) in enumerate(rows, start=1):
+            tk.Label(
+                body,
+                text=f"{label}:",
+                font=("Helvetica", 9, "bold"),
+                bg=C["bg_toolbar"],
+                fg=C["tx_primary"],
+            ).grid(row=row, column=0, sticky="w", padx=(0, 10), pady=3)
+            tk.Label(
+                body,
+                text=value,
+                font=("Helvetica", 9),
+                bg=C["bg_toolbar"],
+                fg=C["tx_secondary"],
+            ).grid(row=row, column=1, sticky="w", pady=3)
+
+        ttk.Button(body, text="Close", command=win.destroy).grid(
+            row=len(rows) + 1,
+            column=1,
+            sticky="e",
+            pady=(14, 0),
+        )
+        self._center_child_window(win)
+        win.deiconify()
+        win.lift()
+
+    def _center_child_window(self, win):
+        win.update_idletasks()
+        self.update_idletasks()
+
+        width = win.winfo_reqwidth()
+        height = win.winfo_reqheight()
+        root_x = self.winfo_rootx()
+        root_y = self.winfo_rooty()
+        root_w = self.winfo_width()
+        root_h = self.winfo_height()
+
+        x = root_x + max((root_w - width) // 2, 0)
+        y = root_y + max((root_h - height) // 2, 0)
+        win.geometry(f"+{x}+{y}")
 
     def _next_device_uuid(self) -> str:
         existing = {d["uuid"] for d in load_devices()}

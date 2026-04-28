@@ -61,6 +61,12 @@ TRUSTED_PROXY_IPS = {
     for ip in os.environ.get("SHOB_TRUSTED_PROXY_IPS", "127.0.0.1,::1").split(",")
     if ip.strip()
 }
+ADMIN_EVENT_ALLOWED_IPS = {
+    ip.strip()
+    for ip in os.environ.get("SHOB_ADMIN_EVENT_ALLOWED_IPS", "127.0.0.1,::1").split(",")
+    if ip.strip()
+}
+ADMIN_EVENT_TOKEN = os.environ.get("SHOB_ADMIN_EVENT_TOKEN", "")
 
 CERT_FILE = _env_path("SHOB_TLS_CERT_FILE", _default_tls_file("cert.pem"))
 KEY_FILE = _env_path("SHOB_TLS_KEY_FILE", _default_tls_file("key.pem"))
@@ -148,6 +154,35 @@ def add_device(uuid: str, ip: str, name: str):
             (uuid.strip(), ip.strip(), name.strip()),
         )
         conn.commit()
+
+
+def add_device_if_missing(uuid: str, ip: str, name: str) -> str:
+    uuid = uuid.strip()
+    ip = ip.strip()
+    name = name.strip()
+    init_device_store()
+    with _db_conn() as conn:
+        existing_uuid = conn.execute(
+            "SELECT uuid FROM devices WHERE uuid = ?",
+            (uuid,),
+        ).fetchone()
+        existing_ip = conn.execute(
+            "SELECT uuid FROM devices WHERE ip = ?",
+            (ip,),
+        ).fetchone()
+
+        if existing_uuid:
+            return "exists_uuid"
+
+        if existing_ip:
+            return "exists_ip"
+
+        conn.execute(
+            "INSERT INTO devices (uuid, ip, name) VALUES (?, ?, ?)",
+            (uuid, ip, name),
+        )
+        conn.commit()
+        return "created"
 
 
 def remove_device(uuid: str):

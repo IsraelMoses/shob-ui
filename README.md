@@ -58,6 +58,28 @@ camera.
 
 ---
 
+## Internal management endpoint
+
+```
+POST http://127.0.0.1:8081/internal/admin/device
+```
+
+Receives device updates from the management UI. Expected JSON:
+
+```json
+{"name": "Camera 1", "ip": "127.0.0.1", "uuid": "device-id"}
+```
+
+On receipt, the Shob UI shows a structured popup. By default this endpoint
+accepts only localhost senders. For two-computer setups, set:
+
+```
+SHOB_ADMIN_EVENT_ALLOWED_IPS=<management-computer-ip>
+SHOB_ADMIN_EVENT_TOKEN=<shared-token>
+```
+
+---
+
 ## Testing locally
 
 ```bash

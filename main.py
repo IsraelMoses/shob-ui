@@ -18,7 +18,9 @@ def _poll_queue(app: SecCamApp):
     try:
         while True:
             msg = msg_queue.get_nowait()
-            if msg.get("blocked"):
+            if msg.get("admin_event"):
+                app.show_admin_device_event(msg)
+            elif msg.get("blocked"):
                 app.show_blocked_upload(msg)
             else:
                 app.add_slot(msg)
