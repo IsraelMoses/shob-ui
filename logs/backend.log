@@ -1,0 +1,2400 @@
+2026-05-07 15:45:29 | INFO | Backend logging initialized
+2026-05-07 15:52:57 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:52:57 | INFO | Time: 2026-05-07T15:52:57
+2026-05-07 15:52:57 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:52:57 | INFO | Path: /upload
+2026-05-07 15:52:57 | INFO | Content-Type: image/jpeg
+2026-05-07 15:52:57 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-07-36_00001.jpg"
+Expect: 100-continue
+Content-Length: 130435
+
+
+2026-05-07 15:52:58 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158378749.jpg
+2026-05-07 15:52:59 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:52:59 | INFO | Time: 2026-05-07T15:52:59
+2026-05-07 15:52:59 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:52:59 | INFO | Path: /upload
+2026-05-07 15:52:59 | INFO | Content-Type: image/jpeg
+2026-05-07 15:52:59 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-07-42_00002.jpg"
+Expect: 100-continue
+Content-Length: 130346
+
+
+2026-05-07 15:52:59 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158379856.jpg
+2026-05-07 15:53:00 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:00 | INFO | Time: 2026-05-07T15:53:00
+2026-05-07 15:53:00 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:00 | INFO | Path: /upload
+2026-05-07 15:53:00 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:00 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-07-46_00003.jpg"
+Expect: 100-continue
+Content-Length: 130373
+
+
+2026-05-07 15:53:01 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158381015.jpg
+2026-05-07 15:53:01 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:01 | INFO | Time: 2026-05-07T15:53:01
+2026-05-07 15:53:01 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:01 | INFO | Path: /upload
+2026-05-07 15:53:01 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:01 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-07-52_00004.jpg"
+Expect: 100-continue
+Content-Length: 130548
+
+
+2026-05-07 15:53:02 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158382267.jpg
+2026-05-07 15:53:02 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:02 | INFO | Time: 2026-05-07T15:53:02
+2026-05-07 15:53:02 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:02 | INFO | Path: /upload
+2026-05-07 15:53:02 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:02 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-08-36_00005.jpg"
+Expect: 100-continue
+Content-Length: 130611
+
+
+2026-05-07 15:53:03 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158383313.jpg
+2026-05-07 15:53:03 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:03 | INFO | Time: 2026-05-07T15:53:03
+2026-05-07 15:53:03 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:03 | INFO | Path: /upload
+2026-05-07 15:53:03 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:03 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-10-12_00006.jpg"
+Expect: 100-continue
+Content-Length: 130556
+
+
+2026-05-07 15:53:04 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158384597.jpg
+2026-05-07 15:53:04 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:04 | INFO | Time: 2026-05-07T15:53:04
+2026-05-07 15:53:04 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:04 | INFO | Path: /upload
+2026-05-07 15:53:04 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:04 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-11-22_00007.jpg"
+Expect: 100-continue
+Content-Length: 129724
+
+
+2026-05-07 15:53:05 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158385732.jpg
+2026-05-07 15:53:06 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:06 | INFO | Time: 2026-05-07T15:53:06
+2026-05-07 15:53:06 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:06 | INFO | Path: /upload
+2026-05-07 15:53:06 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:06 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-12-46_00008.jpg"
+Expect: 100-continue
+Content-Length: 135083
+
+
+2026-05-07 15:53:06 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158386977.jpg
+2026-05-07 15:53:07 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:07 | INFO | Time: 2026-05-07T15:53:07
+2026-05-07 15:53:07 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:07 | INFO | Path: /upload
+2026-05-07 15:53:07 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:07 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-13-59_00009.jpg"
+Expect: 100-continue
+Content-Length: 130856
+
+
+2026-05-07 15:53:07 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158387984.jpg
+2026-05-07 15:53:08 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:08 | INFO | Time: 2026-05-07T15:53:08
+2026-05-07 15:53:08 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:08 | INFO | Path: /upload
+2026-05-07 15:53:08 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:08 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-14-89_00010.jpg"
+Expect: 100-continue
+Content-Length: 130548
+
+
+2026-05-07 15:53:09 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158389130.jpg
+2026-05-07 15:53:09 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:09 | INFO | Time: 2026-05-07T15:53:09
+2026-05-07 15:53:09 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:09 | INFO | Path: /upload
+2026-05-07 15:53:09 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:09 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-16-02_00011.jpg"
+Expect: 100-continue
+Content-Length: 130309
+
+
+2026-05-07 15:53:10 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158390186.jpg
+2026-05-07 15:53:10 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:10 | INFO | Time: 2026-05-07T15:53:10
+2026-05-07 15:53:10 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:10 | INFO | Path: /upload
+2026-05-07 15:53:10 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:10 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-17-36_00012.jpg"
+Expect: 100-continue
+Content-Length: 129885
+
+
+2026-05-07 15:53:11 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158391340.jpg
+2026-05-07 15:53:11 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:11 | INFO | Time: 2026-05-07T15:53:11
+2026-05-07 15:53:11 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:11 | INFO | Path: /upload
+2026-05-07 15:53:11 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:11 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-18-36_00013.jpg"
+Expect: 100-continue
+Content-Length: 129893
+
+
+2026-05-07 15:53:12 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158392465.jpg
+2026-05-07 15:53:12 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:12 | INFO | Time: 2026-05-07T15:53:12
+2026-05-07 15:53:12 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:12 | INFO | Path: /upload
+2026-05-07 15:53:12 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:12 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-19-26_00014.jpg"
+Expect: 100-continue
+Content-Length: 129659
+
+
+2026-05-07 15:53:13 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158393649.jpg
+2026-05-07 15:53:14 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:14 | INFO | Time: 2026-05-07T15:53:14
+2026-05-07 15:53:14 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:14 | INFO | Path: /upload
+2026-05-07 15:53:14 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:14 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-20-46_00015.jpg"
+Expect: 100-continue
+Content-Length: 129778
+
+
+2026-05-07 15:53:14 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158394799.jpg
+2026-05-07 15:53:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:46 | INFO | Time: 2026-05-07T15:53:46
+2026-05-07 15:53:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:46 | INFO | Path: /upload
+2026-05-07 15:53:46 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:46 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-57-35_00016.jpg"
+Expect: 100-continue
+Content-Length: 130435
+
+
+2026-05-07 15:53:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158428378.jpg
+2026-05-07 15:53:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:53:48 | INFO | Time: 2026-05-07T15:53:48
+2026-05-07 15:53:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:53:48 | INFO | Path: /upload
+2026-05-07 15:53:48 | INFO | Content-Type: image/jpeg
+2026-05-07 15:53:48 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-54-57-39_00017.jpg"
+Expect: 100-continue
+Content-Length: 130487
+
+
+2026-05-07 15:53:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158429561.jpg
+2026-05-07 15:57:13 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:57:13 | INFO | Time: 2026-05-07T15:57:13
+2026-05-07 15:57:13 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:57:13 | INFO | Path: /upload
+2026-05-07 15:57:13 | INFO | Content-Type: image/jpeg
+2026-05-07 15:57:13 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-58-23-30_00018.jpg"
+Expect: 100-continue
+Content-Length: 135186
+
+
+2026-05-07 15:57:15 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158635058.jpg
+2026-05-07 15:57:15 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:57:15 | INFO | Time: 2026-05-07T15:57:15
+2026-05-07 15:57:15 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:57:15 | INFO | Path: /upload
+2026-05-07 15:57:15 | INFO | Content-Type: image/jpeg
+2026-05-07 15:57:15 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-58-23-33_00019.jpg"
+Expect: 100-continue
+Content-Length: 135184
+
+
+2026-05-07 15:57:16 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158636294.jpg
+2026-05-07 15:57:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:57:47 | INFO | Time: 2026-05-07T15:57:47
+2026-05-07 15:57:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:57:47 | INFO | Path: /upload
+2026-05-07 15:57:47 | INFO | Content-Type: image/jpeg
+2026-05-07 15:57:47 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-58-58-96_00004.jpg"
+Expect: 100-continue
+Content-Length: 163365
+
+
+2026-05-07 15:57:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158668653.jpg
+2026-05-07 15:57:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:57:49 | INFO | Time: 2026-05-07T15:57:49
+2026-05-07 15:57:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:57:49 | INFO | Path: /upload
+2026-05-07 15:57:49 | INFO | Content-Type: image/jpeg
+2026-05-07 15:57:49 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_15-58-58-99_00005.jpg"
+Expect: 100-continue
+Content-Length: 168294
+
+
+2026-05-07 15:57:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158670018.jpg
+2026-05-07 15:59:03 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:59:03 | INFO | Time: 2026-05-07T15:59:03
+2026-05-07 15:59:03 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:59:03 | INFO | Path: /upload
+2026-05-07 15:59:03 | INFO | Content-Type: image/jpeg
+2026-05-07 15:59:03 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-00-12-85_00020.jpg"
+Expect: 100-continue
+Content-Length: 130408
+
+
+2026-05-07 15:59:04 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158744402.jpg
+2026-05-07 15:59:04 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:59:04 | INFO | Time: 2026-05-07T15:59:04
+2026-05-07 15:59:04 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:59:04 | INFO | Path: /upload
+2026-05-07 15:59:04 | INFO | Content-Type: image/jpeg
+2026-05-07 15:59:04 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-00-12-92_00021.jpg"
+Expect: 100-continue
+Content-Length: 130210
+
+
+2026-05-07 15:59:05 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158745594.jpg
+2026-05-07 15:59:06 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:59:06 | INFO | Time: 2026-05-07T15:59:06
+2026-05-07 15:59:06 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:59:06 | INFO | Path: /upload
+2026-05-07 15:59:06 | INFO | Content-Type: image/jpeg
+2026-05-07 15:59:06 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-00-12-99_00022.jpg"
+Expect: 100-continue
+Content-Length: 130134
+
+
+2026-05-07 15:59:06 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158746809.jpg
+2026-05-07 15:59:07 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 15:59:07 | INFO | Time: 2026-05-07T15:59:07
+2026-05-07 15:59:07 | INFO | Client IP: 77.137.176.248
+2026-05-07 15:59:07 | INFO | Path: /upload
+2026-05-07 15:59:07 | INFO | Content-Type: image/jpeg
+2026-05-07 15:59:07 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-00-13-05_00023.jpg"
+Expect: 100-continue
+Content-Length: 129755
+
+
+2026-05-07 15:59:07 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158747930.jpg
+2026-05-07 16:00:28 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:00:28 | INFO | Time: 2026-05-07T16:00:28
+2026-05-07 16:00:28 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:00:28 | INFO | Path: /upload
+2026-05-07 16:00:28 | INFO | Content-Type: image/jpeg
+2026-05-07 16:00:28 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-01-38-84_00024.jpg"
+Expect: 100-continue
+Content-Length: 165759
+
+
+2026-05-07 16:00:30 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158830444.jpg
+2026-05-07 16:00:30 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:00:30 | INFO | Time: 2026-05-07T16:00:30
+2026-05-07 16:00:30 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:00:30 | INFO | Path: /upload
+2026-05-07 16:00:30 | INFO | Content-Type: image/jpeg
+2026-05-07 16:00:30 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-01-38-88_00025.jpg"
+Expect: 100-continue
+Content-Length: 166606
+
+
+2026-05-07 16:00:31 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158831613.jpg
+2026-05-07 16:00:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:00:46 | INFO | Time: 2026-05-07T16:00:46
+2026-05-07 16:00:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:00:46 | INFO | Path: /upload
+2026-05-07 16:00:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:00:46 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-01-57-67_00026.jpg"
+Expect: 100-continue
+Content-Length: 169176
+
+
+2026-05-07 16:00:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158848542.jpg
+2026-05-07 16:00:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:00:48 | INFO | Time: 2026-05-07T16:00:48
+2026-05-07 16:00:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:00:48 | INFO | Path: /upload
+2026-05-07 16:00:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:00:48 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-01-57-74_00027.jpg"
+Expect: 100-continue
+Content-Length: 166662
+
+
+2026-05-07 16:00:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158849655.jpg
+2026-05-07 16:00:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:00:50 | INFO | Time: 2026-05-07T16:00:50
+2026-05-07 16:00:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:00:50 | INFO | Path: /upload
+2026-05-07 16:00:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:00:50 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-01-57-77_00028.jpg"
+Expect: 100-continue
+Content-Length: 166813
+
+
+2026-05-07 16:00:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158850867.jpg
+2026-05-07 16:00:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:00:51 | INFO | Time: 2026-05-07T16:00:51
+2026-05-07 16:00:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:00:51 | INFO | Path: /upload
+2026-05-07 16:00:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:00:51 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-01-57-84_00029.jpg"
+Expect: 100-continue
+Content-Length: 164822
+
+
+2026-05-07 16:00:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158852024.jpg
+2026-05-07 16:01:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:01:46 | INFO | Time: 2026-05-07T16:01:46
+2026-05-07 16:01:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:01:46 | INFO | Path: /upload
+2026-05-07 16:01:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:01:46 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-02-57-37_00001.jpg"
+Expect: 100-continue
+Content-Length: 144610
+
+
+2026-05-07 16:01:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158908496.jpg
+2026-05-07 16:02:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:02:46 | INFO | Time: 2026-05-07T16:02:46
+2026-05-07 16:02:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:02:46 | INFO | Path: /upload
+2026-05-07 16:02:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:02:46 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-03-57-36_00002.jpg"
+Expect: 100-continue
+Content-Length: 111430
+
+
+2026-05-07 16:02:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158968397.jpg
+2026-05-07 16:02:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:02:48 | INFO | Time: 2026-05-07T16:02:48
+2026-05-07 16:02:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:02:48 | INFO | Path: /upload
+2026-05-07 16:02:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:02:48 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-03-57-39_00003.jpg"
+Expect: 100-continue
+Content-Length: 111297
+
+
+2026-05-07 16:02:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158969476.jpg
+2026-05-07 16:02:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:02:49 | INFO | Time: 2026-05-07T16:02:49
+2026-05-07 16:02:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:02:49 | INFO | Path: /upload
+2026-05-07 16:02:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:02:49 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-03-57-43_00004.jpg"
+Expect: 100-continue
+Content-Length: 110884
+
+
+2026-05-07 16:02:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158970500.jpg
+2026-05-07 16:02:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:02:50 | INFO | Time: 2026-05-07T16:02:50
+2026-05-07 16:02:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:02:50 | INFO | Path: /upload
+2026-05-07 16:02:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:02:50 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-03-57-46_00005.jpg"
+Expect: 100-continue
+Content-Length: 110494
+
+
+2026-05-07 16:02:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158971556.jpg
+2026-05-07 16:02:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:02:51 | INFO | Time: 2026-05-07T16:02:51
+2026-05-07 16:02:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:02:51 | INFO | Path: /upload
+2026-05-07 16:02:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:02:51 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-03-58-19_00006.jpg"
+Expect: 100-continue
+Content-Length: 110845
+
+
+2026-05-07 16:02:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778158972673.jpg
+2026-05-07 16:03:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:03:46 | INFO | Time: 2026-05-07T16:03:46
+2026-05-07 16:03:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:03:46 | INFO | Path: /upload
+2026-05-07 16:03:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:03:46 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-04-59-35_00001.jpg"
+Expect: 100-continue
+Content-Length: 122622
+
+
+2026-05-07 16:03:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159028424.jpg
+2026-05-07 16:03:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:03:48 | INFO | Time: 2026-05-07T16:03:48
+2026-05-07 16:03:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:03:48 | INFO | Path: /upload
+2026-05-07 16:03:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:03:48 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-04-59-39_00002.jpg"
+Expect: 100-continue
+Content-Length: 122732
+
+
+2026-05-07 16:03:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159029677.jpg
+2026-05-07 16:03:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:03:50 | INFO | Time: 2026-05-07T16:03:50
+2026-05-07 16:03:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:03:50 | INFO | Path: /upload
+2026-05-07 16:03:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:03:50 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-04-59-42_00003.jpg"
+Expect: 100-continue
+Content-Length: 122840
+
+
+2026-05-07 16:03:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159030814.jpg
+2026-05-07 16:03:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:03:51 | INFO | Time: 2026-05-07T16:03:51
+2026-05-07 16:03:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:03:51 | INFO | Path: /upload
+2026-05-07 16:03:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:03:51 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-04-59-45_00004.jpg"
+Expect: 100-continue
+Content-Length: 122856
+
+
+2026-05-07 16:03:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159031934.jpg
+2026-05-07 16:05:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:05:48 | INFO | Time: 2026-05-07T16:05:48
+2026-05-07 16:05:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:05:48 | INFO | Path: /upload
+2026-05-07 16:05:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:05:48 | INFO | Host: 46.210.122.162:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-07-00-88_00005.jpg"
+Expect: 100-continue
+Content-Length: 127339
+
+
+2026-05-07 16:05:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159149377.jpg
+2026-05-07 16:06:26 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:26 | INFO | Time: 2026-05-07T16:06:26
+2026-05-07 16:06:26 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:26 | INFO | Path: /upload
+2026-05-07 16:06:26 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:26 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-07-38-87_00001.jpg"
+Expect: 100-continue
+Content-Length: 125754
+
+
+2026-05-07 16:06:28 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159188109.jpg
+2026-05-07 16:06:28 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:28 | INFO | Time: 2026-05-07T16:06:28
+2026-05-07 16:06:28 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:28 | INFO | Path: /upload
+2026-05-07 16:06:28 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:28 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-07-38-90_00002.jpg"
+Expect: 100-continue
+Content-Length: 125526
+
+
+2026-05-07 16:06:29 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159189386.jpg
+2026-05-07 16:06:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:47 | INFO | Time: 2026-05-07T16:06:47
+2026-05-07 16:06:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:47 | INFO | Path: /upload
+2026-05-07 16:06:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-07-59-37_00001.jpg"
+Expect: 100-continue
+Content-Length: 120349
+
+
+2026-05-07 16:06:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159208315.jpg
+2026-05-07 16:06:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:48 | INFO | Time: 2026-05-07T16:06:48
+2026-05-07 16:06:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:48 | INFO | Path: /upload
+2026-05-07 16:06:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-07-59-40_00002.jpg"
+Expect: 100-continue
+Content-Length: 123930
+
+
+2026-05-07 16:06:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159209175.jpg
+2026-05-07 16:06:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:49 | INFO | Time: 2026-05-07T16:06:49
+2026-05-07 16:06:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:49 | INFO | Path: /upload
+2026-05-07 16:06:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-07-59-44_00003.jpg"
+Expect: 100-continue
+Content-Length: 126985
+
+
+2026-05-07 16:06:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159210040.jpg
+2026-05-07 16:06:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:50 | INFO | Time: 2026-05-07T16:06:50
+2026-05-07 16:06:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:50 | INFO | Path: /upload
+2026-05-07 16:06:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-00-54_00004.jpg"
+Expect: 100-continue
+Content-Length: 115152
+
+
+2026-05-07 16:06:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159210918.jpg
+2026-05-07 16:06:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:51 | INFO | Time: 2026-05-07T16:06:51
+2026-05-07 16:06:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:51 | INFO | Path: /upload
+2026-05-07 16:06:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-01-04_00005.jpg"
+Expect: 100-continue
+Content-Length: 108304
+
+
+2026-05-07 16:06:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159211885.jpg
+2026-05-07 16:06:56 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:56 | INFO | Time: 2026-05-07T16:06:56
+2026-05-07 16:06:56 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:56 | INFO | Path: /upload
+2026-05-07 16:06:56 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:56 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-09-33_00003.jpg"
+Expect: 100-continue
+Content-Length: 106704
+
+
+2026-05-07 16:06:57 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159217468.jpg
+2026-05-07 16:06:57 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:06:57 | INFO | Time: 2026-05-07T16:06:57
+2026-05-07 16:06:57 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:06:57 | INFO | Path: /upload
+2026-05-07 16:06:57 | INFO | Content-Type: image/jpeg
+2026-05-07 16:06:57 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-09-37_00004.jpg"
+Expect: 100-continue
+Content-Length: 106953
+
+
+2026-05-07 16:06:58 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159218496.jpg
+2026-05-07 16:07:33 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:33 | INFO | Time: 2026-05-07T16:07:33
+2026-05-07 16:07:33 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:33 | INFO | Path: /upload
+2026-05-07 16:07:33 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:33 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-45-76_00005.jpg"
+Expect: 100-continue
+Content-Length: 124627
+
+
+2026-05-07 16:07:34 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159254874.jpg
+2026-05-07 16:07:35 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:35 | INFO | Time: 2026-05-07T16:07:35
+2026-05-07 16:07:35 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:35 | INFO | Path: /upload
+2026-05-07 16:07:35 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:35 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-45-80_00006.jpg"
+Expect: 100-continue
+Content-Length: 122816
+
+
+2026-05-07 16:07:36 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159256266.jpg
+2026-05-07 16:07:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:47 | INFO | Time: 2026-05-07T16:07:47
+2026-05-07 16:07:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:47 | INFO | Path: /upload
+2026-05-07 16:07:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-59-33_00007.jpg"
+Expect: 100-continue
+Content-Length: 131413
+
+
+2026-05-07 16:07:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:47 | INFO | Time: 2026-05-07T16:07:47
+2026-05-07 16:07:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:47 | INFO | Path: /upload
+2026-05-07 16:07:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-59-36_00006.jpg"
+Expect: 100-continue
+Content-Length: 132482
+
+
+2026-05-07 16:07:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159268422.jpg
+2026-05-07 16:07:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159268602.jpg
+2026-05-07 16:07:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:48 | INFO | Time: 2026-05-07T16:07:48
+2026-05-07 16:07:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:48 | INFO | Path: /upload
+2026-05-07 16:07:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-08-59-36_00008.jpg"
+Expect: 100-continue
+Content-Length: 132482
+
+
+2026-05-07 16:07:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:48 | INFO | Time: 2026-05-07T16:07:48
+2026-05-07 16:07:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:48 | INFO | Path: /upload
+2026-05-07 16:07:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-00-93_00007.jpg"
+Expect: 100-continue
+Content-Length: 163707
+
+
+2026-05-07 16:07:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159269388.jpg
+2026-05-07 16:07:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159269724.jpg
+2026-05-07 16:07:59 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:07:59 | INFO | Time: 2026-05-07T16:07:59
+2026-05-07 16:07:59 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:07:59 | INFO | Path: /upload
+2026-05-07 16:07:59 | INFO | Content-Type: image/jpeg
+2026-05-07 16:07:59 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-11-43_00009.jpg"
+Expect: 100-continue
+Content-Length: 133894
+
+
+2026-05-07 16:08:00 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159280162.jpg
+2026-05-07 16:08:00 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:00 | INFO | Time: 2026-05-07T16:08:00
+2026-05-07 16:08:00 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:00 | INFO | Path: /upload
+2026-05-07 16:08:00 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:00 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-11-46_00010.jpg"
+Expect: 100-continue
+Content-Length: 134711
+
+
+2026-05-07 16:08:01 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159281390.jpg
+2026-05-07 16:08:41 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:41 | INFO | Time: 2026-05-07T16:08:41
+2026-05-07 16:08:41 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:41 | INFO | Path: /upload
+2026-05-07 16:08:41 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:41 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-54-02_00011.jpg"
+Expect: 100-continue
+Content-Length: 132829
+
+
+2026-05-07 16:08:43 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159323069.jpg
+2026-05-07 16:08:43 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:43 | INFO | Time: 2026-05-07T16:08:43
+2026-05-07 16:08:43 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:43 | INFO | Path: /upload
+2026-05-07 16:08:43 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:43 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-54-06_00012.jpg"
+Expect: 100-continue
+Content-Length: 132382
+
+
+2026-05-07 16:08:44 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159324312.jpg
+2026-05-07 16:08:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:47 | INFO | Time: 2026-05-07T16:08:47
+2026-05-07 16:08:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:47 | INFO | Path: /upload
+2026-05-07 16:08:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-59-36_00008.jpg"
+Expect: 100-continue
+Content-Length: 149234
+
+
+2026-05-07 16:08:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159328344.jpg
+2026-05-07 16:08:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:48 | INFO | Time: 2026-05-07T16:08:48
+2026-05-07 16:08:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:48 | INFO | Path: /upload
+2026-05-07 16:08:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-59-39_00009.jpg"
+Expect: 100-continue
+Content-Length: 147670
+
+
+2026-05-07 16:08:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159329457.jpg
+2026-05-07 16:08:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:49 | INFO | Time: 2026-05-07T16:08:49
+2026-05-07 16:08:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:49 | INFO | Path: /upload
+2026-05-07 16:08:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-59-42_00010.jpg"
+Expect: 100-continue
+Content-Length: 146638
+
+
+2026-05-07 16:08:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159330567.jpg
+2026-05-07 16:08:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:50 | INFO | Time: 2026-05-07T16:08:50
+2026-05-07 16:08:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:50 | INFO | Path: /upload
+2026-05-07 16:08:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-09-59-46_00011.jpg"
+Expect: 100-continue
+Content-Length: 146350
+
+
+2026-05-07 16:08:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159331748.jpg
+2026-05-07 16:08:52 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:08:52 | INFO | Time: 2026-05-07T16:08:52
+2026-05-07 16:08:52 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:08:52 | INFO | Path: /upload
+2026-05-07 16:08:52 | INFO | Content-Type: image/jpeg
+2026-05-07 16:08:52 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-00-82_00012.jpg"
+Expect: 100-continue
+Content-Length: 134583
+
+
+2026-05-07 16:08:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159332778.jpg
+2026-05-07 16:09:30 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:30 | INFO | Time: 2026-05-07T16:09:30
+2026-05-07 16:09:30 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:30 | INFO | Path: /upload
+2026-05-07 16:09:30 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:30 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-42-62_00013.jpg"
+Expect: 100-continue
+Content-Length: 116633
+
+
+2026-05-07 16:09:31 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159371485.jpg
+2026-05-07 16:09:31 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:31 | INFO | Time: 2026-05-07T16:09:31
+2026-05-07 16:09:31 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:31 | INFO | Path: /upload
+2026-05-07 16:09:31 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:31 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-42-65_00014.jpg"
+Expect: 100-continue
+Content-Length: 116353
+
+
+2026-05-07 16:09:32 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159372465.jpg
+2026-05-07 16:09:38 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:38 | INFO | Time: 2026-05-07T16:09:38
+2026-05-07 16:09:38 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:38 | INFO | Path: /upload
+2026-05-07 16:09:38 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:38 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-50-88_00015.jpg"
+Expect: 100-continue
+Content-Length: 117237
+
+
+2026-05-07 16:09:39 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159379435.jpg
+2026-05-07 16:09:39 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:39 | INFO | Time: 2026-05-07T16:09:39
+2026-05-07 16:09:39 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:39 | INFO | Path: /upload
+2026-05-07 16:09:39 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:39 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-51-28_00016.jpg"
+Expect: 100-continue
+Content-Length: 116502
+
+
+2026-05-07 16:09:40 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159380480.jpg
+2026-05-07 16:09:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:46 | INFO | Time: 2026-05-07T16:09:46
+2026-05-07 16:09:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:46 | INFO | Path: /upload
+2026-05-07 16:09:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-58-25_00017.jpg"
+Expect: 100-continue
+Content-Length: 115347
+
+
+2026-05-07 16:09:46 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159386722.jpg
+2026-05-07 16:09:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:47 | INFO | Time: 2026-05-07T16:09:47
+2026-05-07 16:09:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:47 | INFO | Path: /upload
+2026-05-07 16:09:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-10-58-82_00018.jpg"
+Expect: 100-continue
+Content-Length: 115148
+
+
+2026-05-07 16:09:47 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159387612.jpg
+2026-05-07 16:09:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:09:47 | INFO | Time: 2026-05-07T16:09:47
+2026-05-07 16:09:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:09:47 | INFO | Path: /upload
+2026-05-07 16:09:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:09:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-11-00-22_00013.jpg"
+Expect: 100-continue
+Content-Length: 118385
+
+
+2026-05-07 16:09:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159388470.jpg
+2026-05-07 16:10:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:10:47 | INFO | Time: 2026-05-07T16:10:47
+2026-05-07 16:10:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:10:47 | INFO | Path: /upload
+2026-05-07 16:10:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:10:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-11-59-88_00014.jpg"
+Expect: 100-continue
+Content-Length: 109599
+
+
+2026-05-07 16:10:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159448170.jpg
+2026-05-07 16:10:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:10:48 | INFO | Time: 2026-05-07T16:10:48
+2026-05-07 16:10:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:10:48 | INFO | Path: /upload
+2026-05-07 16:10:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:10:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-00-24_00015.jpg"
+Expect: 100-continue
+Content-Length: 109459
+
+
+2026-05-07 16:10:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159449187.jpg
+2026-05-07 16:10:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:10:49 | INFO | Time: 2026-05-07T16:10:49
+2026-05-07 16:10:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:10:49 | INFO | Path: /upload
+2026-05-07 16:10:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:10:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-00-71_00016.jpg"
+Expect: 100-continue
+Content-Length: 109474
+
+
+2026-05-07 16:10:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159450234.jpg
+2026-05-07 16:10:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:10:50 | INFO | Time: 2026-05-07T16:10:50
+2026-05-07 16:10:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:10:50 | INFO | Path: /upload
+2026-05-07 16:10:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:10:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-01-08_00017.jpg"
+Expect: 100-continue
+Content-Length: 109673
+
+
+2026-05-07 16:10:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159451217.jpg
+2026-05-07 16:11:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:11:46 | INFO | Time: 2026-05-07T16:11:46
+2026-05-07 16:11:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:11:46 | INFO | Path: /upload
+2026-05-07 16:11:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:11:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-59-40_00018.jpg"
+Expect: 100-continue
+Content-Length: 109579
+
+
+2026-05-07 16:11:47 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159507546.jpg
+2026-05-07 16:11:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:11:47 | INFO | Time: 2026-05-07T16:11:47
+2026-05-07 16:11:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:11:47 | INFO | Path: /upload
+2026-05-07 16:11:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:11:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-59-44_00019.jpg"
+Expect: 100-continue
+Content-Length: 109548
+
+
+2026-05-07 16:11:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159508425.jpg
+2026-05-07 16:11:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:11:48 | INFO | Time: 2026-05-07T16:11:48
+2026-05-07 16:11:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:11:48 | INFO | Path: /upload
+2026-05-07 16:11:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:11:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-59-47_00020.jpg"
+Expect: 100-continue
+Content-Length: 109724
+
+
+2026-05-07 16:11:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159509557.jpg
+2026-05-07 16:11:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:11:50 | INFO | Time: 2026-05-07T16:11:50
+2026-05-07 16:11:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:11:50 | INFO | Path: /upload
+2026-05-07 16:11:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:11:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-59-54_00021.jpg"
+Expect: 100-continue
+Content-Length: 109787
+
+
+2026-05-07 16:11:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159510691.jpg
+2026-05-07 16:11:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:11:51 | INFO | Time: 2026-05-07T16:11:51
+2026-05-07 16:11:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:11:51 | INFO | Path: /upload
+2026-05-07 16:11:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:11:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-12-59-97_00022.jpg"
+Expect: 100-continue
+Content-Length: 110113
+
+
+2026-05-07 16:11:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159511669.jpg
+2026-05-07 16:11:52 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:11:52 | INFO | Time: 2026-05-07T16:11:52
+2026-05-07 16:11:52 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:11:52 | INFO | Path: /upload
+2026-05-07 16:11:52 | INFO | Content-Type: image/jpeg
+2026-05-07 16:11:52 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-13-00-77_00023.jpg"
+Expect: 100-continue
+Content-Length: 109533
+
+
+2026-05-07 16:11:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159512599.jpg
+2026-05-07 16:12:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:12:48 | INFO | Time: 2026-05-07T16:12:48
+2026-05-07 16:12:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:12:48 | INFO | Path: /upload
+2026-05-07 16:12:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:12:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-00-03_00024.jpg"
+Expect: 100-continue
+Content-Length: 109538
+
+
+2026-05-07 16:12:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159568908.jpg
+2026-05-07 16:12:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:12:49 | INFO | Time: 2026-05-07T16:12:49
+2026-05-07 16:12:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:12:49 | INFO | Path: /upload
+2026-05-07 16:12:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:12:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-00-93_00025.jpg"
+Expect: 100-continue
+Content-Length: 109328
+
+
+2026-05-07 16:12:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159569862.jpg
+2026-05-07 16:13:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:13:46 | INFO | Time: 2026-05-07T16:13:46
+2026-05-07 16:13:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:13:46 | INFO | Path: /upload
+2026-05-07 16:13:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:13:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-59-39_00026.jpg"
+Expect: 100-continue
+Content-Length: 110905
+
+
+2026-05-07 16:13:47 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159627610.jpg
+2026-05-07 16:13:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:13:47 | INFO | Time: 2026-05-07T16:13:47
+2026-05-07 16:13:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:13:47 | INFO | Path: /upload
+2026-05-07 16:13:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:13:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-59-42_00027.jpg"
+Expect: 100-continue
+Content-Length: 110809
+
+
+2026-05-07 16:13:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159628656.jpg
+2026-05-07 16:13:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:13:48 | INFO | Time: 2026-05-07T16:13:48
+2026-05-07 16:13:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:13:48 | INFO | Path: /upload
+2026-05-07 16:13:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:13:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-59-46_00028.jpg"
+Expect: 100-continue
+Content-Length: 110664
+
+
+2026-05-07 16:13:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159629737.jpg
+2026-05-07 16:13:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:13:50 | INFO | Time: 2026-05-07T16:13:50
+2026-05-07 16:13:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:13:50 | INFO | Path: /upload
+2026-05-07 16:13:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:13:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-59-49_00029.jpg"
+Expect: 100-continue
+Content-Length: 110709
+
+
+2026-05-07 16:13:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159630643.jpg
+2026-05-07 16:13:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:13:51 | INFO | Time: 2026-05-07T16:13:51
+2026-05-07 16:13:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:13:51 | INFO | Path: /upload
+2026-05-07 16:13:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:13:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-14-59-92_00030.jpg"
+Expect: 100-continue
+Content-Length: 110793
+
+
+2026-05-07 16:13:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159631741.jpg
+2026-05-07 16:13:52 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:13:52 | INFO | Time: 2026-05-07T16:13:52
+2026-05-07 16:13:52 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:13:52 | INFO | Path: /upload
+2026-05-07 16:13:52 | INFO | Content-Type: image/jpeg
+2026-05-07 16:13:52 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-15-00-89_00031.jpg"
+Expect: 100-continue
+Content-Length: 111007
+
+
+2026-05-07 16:13:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159632710.jpg
+2026-05-07 16:14:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:14:48 | INFO | Time: 2026-05-07T16:14:48
+2026-05-07 16:14:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:14:48 | INFO | Path: /upload
+2026-05-07 16:14:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:14:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-16-00-05_00032.jpg"
+Expect: 100-continue
+Content-Length: 109432
+
+
+2026-05-07 16:14:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159689056.jpg
+2026-05-07 16:14:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:14:49 | INFO | Time: 2026-05-07T16:14:49
+2026-05-07 16:14:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:14:49 | INFO | Path: /upload
+2026-05-07 16:14:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:14:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-16-00-95_00033.jpg"
+Expect: 100-continue
+Content-Length: 109434
+
+
+2026-05-07 16:14:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159690125.jpg
+2026-05-07 16:15:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:15:48 | INFO | Time: 2026-05-07T16:15:48
+2026-05-07 16:15:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:15:48 | INFO | Path: /upload
+2026-05-07 16:15:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:15:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-17-00-08_00034.jpg"
+Expect: 100-continue
+Content-Length: 109479
+
+
+2026-05-07 16:15:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159749037.jpg
+2026-05-07 16:15:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:15:49 | INFO | Time: 2026-05-07T16:15:49
+2026-05-07 16:15:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:15:49 | INFO | Path: /upload
+2026-05-07 16:15:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:15:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-17-00-94_00035.jpg"
+Expect: 100-continue
+Content-Length: 109353
+
+
+2026-05-07 16:15:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159749888.jpg
+2026-05-07 16:16:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:16:46 | INFO | Time: 2026-05-07T16:16:46
+2026-05-07 16:16:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:16:46 | INFO | Path: /upload
+2026-05-07 16:16:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:16:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-17-59-40_00036.jpg"
+Expect: 100-continue
+Content-Length: 110510
+
+
+2026-05-07 16:16:47 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159807701.jpg
+2026-05-07 16:16:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:16:48 | INFO | Time: 2026-05-07T16:16:48
+2026-05-07 16:16:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:16:48 | INFO | Path: /upload
+2026-05-07 16:16:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:16:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-17-59-44_00037.jpg"
+Expect: 100-continue
+Content-Length: 110465
+
+
+2026-05-07 16:16:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159808701.jpg
+2026-05-07 16:16:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:16:49 | INFO | Time: 2026-05-07T16:16:49
+2026-05-07 16:16:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:16:49 | INFO | Path: /upload
+2026-05-07 16:16:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:16:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-00-17_00038.jpg"
+Expect: 100-continue
+Content-Length: 109589
+
+
+2026-05-07 16:16:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159809658.jpg
+2026-05-07 16:16:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:16:49 | INFO | Time: 2026-05-07T16:16:49
+2026-05-07 16:16:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:16:49 | INFO | Path: /upload
+2026-05-07 16:16:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:16:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-00-50_00039.jpg"
+Expect: 100-continue
+Content-Length: 109755
+
+
+2026-05-07 16:16:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159810892.jpg
+2026-05-07 16:16:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:16:51 | INFO | Time: 2026-05-07T16:16:51
+2026-05-07 16:16:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:16:51 | INFO | Path: /upload
+2026-05-07 16:16:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:16:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-00-90_00040.jpg"
+Expect: 100-continue
+Content-Length: 109670
+
+
+2026-05-07 16:16:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159811928.jpg
+2026-05-07 16:17:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:17:46 | INFO | Time: 2026-05-07T16:17:46
+2026-05-07 16:17:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:17:46 | INFO | Path: /upload
+2026-05-07 16:17:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:17:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-59-37_00041.jpg"
+Expect: 100-continue
+Content-Length: 109555
+
+
+2026-05-07 16:17:47 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159867573.jpg
+2026-05-07 16:17:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:17:47 | INFO | Time: 2026-05-07T16:17:47
+2026-05-07 16:17:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:17:47 | INFO | Path: /upload
+2026-05-07 16:17:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:17:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-59-40_00042.jpg"
+Expect: 100-continue
+Content-Length: 109692
+
+
+2026-05-07 16:17:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159868545.jpg
+2026-05-07 16:17:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:17:48 | INFO | Time: 2026-05-07T16:17:48
+2026-05-07 16:17:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:17:48 | INFO | Path: /upload
+2026-05-07 16:17:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:17:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-59-43_00043.jpg"
+Expect: 100-continue
+Content-Length: 109699
+
+
+2026-05-07 16:17:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159869599.jpg
+2026-05-07 16:17:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:17:49 | INFO | Time: 2026-05-07T16:17:49
+2026-05-07 16:17:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:17:49 | INFO | Path: /upload
+2026-05-07 16:17:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:17:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-59-50_00044.jpg"
+Expect: 100-continue
+Content-Length: 109719
+
+
+2026-05-07 16:17:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159870733.jpg
+2026-05-07 16:17:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:17:51 | INFO | Time: 2026-05-07T16:17:51
+2026-05-07 16:17:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:17:51 | INFO | Path: /upload
+2026-05-07 16:17:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:17:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-18-59-87_00045.jpg"
+Expect: 100-continue
+Content-Length: 109398
+
+
+2026-05-07 16:17:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159871676.jpg
+2026-05-07 16:17:52 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:17:52 | INFO | Time: 2026-05-07T16:17:52
+2026-05-07 16:17:52 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:17:52 | INFO | Path: /upload
+2026-05-07 16:17:52 | INFO | Content-Type: image/jpeg
+2026-05-07 16:17:52 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-19-00-70_00046.jpg"
+Expect: 100-continue
+Content-Length: 109456
+
+
+2026-05-07 16:17:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159872709.jpg
+2026-05-07 16:18:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:18:47 | INFO | Time: 2026-05-07T16:18:47
+2026-05-07 16:18:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:18:47 | INFO | Path: /upload
+2026-05-07 16:18:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:18:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-19-59-83_00047.jpg"
+Expect: 100-continue
+Content-Length: 109309
+
+
+2026-05-07 16:18:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159928167.jpg
+2026-05-07 16:18:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:18:48 | INFO | Time: 2026-05-07T16:18:48
+2026-05-07 16:18:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:18:48 | INFO | Path: /upload
+2026-05-07 16:18:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:18:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-00-13_00048.jpg"
+Expect: 100-continue
+Content-Length: 109610
+
+
+2026-05-07 16:18:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159929279.jpg
+2026-05-07 16:18:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:18:49 | INFO | Time: 2026-05-07T16:18:49
+2026-05-07 16:18:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:18:49 | INFO | Path: /upload
+2026-05-07 16:18:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:18:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-00-53_00049.jpg"
+Expect: 100-continue
+Content-Length: 109531
+
+
+2026-05-07 16:18:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159930324.jpg
+2026-05-07 16:18:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:18:50 | INFO | Time: 2026-05-07T16:18:50
+2026-05-07 16:18:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:18:50 | INFO | Path: /upload
+2026-05-07 16:18:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:18:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-00-96_00050.jpg"
+Expect: 100-continue
+Content-Length: 109393
+
+
+2026-05-07 16:18:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159931268.jpg
+2026-05-07 16:18:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:18:51 | INFO | Time: 2026-05-07T16:18:51
+2026-05-07 16:18:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:18:51 | INFO | Path: /upload
+2026-05-07 16:18:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:18:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-01-33_00051.jpg"
+Expect: 100-continue
+Content-Length: 109120
+
+
+2026-05-07 16:18:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159932213.jpg
+2026-05-07 16:19:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:19:46 | INFO | Time: 2026-05-07T16:19:46
+2026-05-07 16:19:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:19:46 | INFO | Path: /upload
+2026-05-07 16:19:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:19:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-59-45_00052.jpg"
+Expect: 100-continue
+Content-Length: 109510
+
+
+2026-05-07 16:19:47 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159987483.jpg
+2026-05-07 16:19:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:19:47 | INFO | Time: 2026-05-07T16:19:47
+2026-05-07 16:19:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:19:47 | INFO | Path: /upload
+2026-05-07 16:19:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:19:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-59-49_00053.jpg"
+Expect: 100-continue
+Content-Length: 109300
+
+
+2026-05-07 16:19:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159988326.jpg
+2026-05-07 16:19:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:19:48 | INFO | Time: 2026-05-07T16:19:48
+2026-05-07 16:19:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:19:48 | INFO | Path: /upload
+2026-05-07 16:19:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:19:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-59-52_00054.jpg"
+Expect: 100-continue
+Content-Length: 109359
+
+
+2026-05-07 16:19:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159989228.jpg
+2026-05-07 16:19:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:19:49 | INFO | Time: 2026-05-07T16:19:49
+2026-05-07 16:19:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:19:49 | INFO | Path: /upload
+2026-05-07 16:19:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:19:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-59-55_00055.jpg"
+Expect: 100-continue
+Content-Length: 109154
+
+
+2026-05-07 16:19:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159990238.jpg
+2026-05-07 16:19:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:19:50 | INFO | Time: 2026-05-07T16:19:50
+2026-05-07 16:19:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:19:50 | INFO | Path: /upload
+2026-05-07 16:19:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:19:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-20-59-89_00056.jpg"
+Expect: 100-continue
+Content-Length: 109499
+
+
+2026-05-07 16:19:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159991355.jpg
+2026-05-07 16:19:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:19:51 | INFO | Time: 2026-05-07T16:19:51
+2026-05-07 16:19:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:19:51 | INFO | Path: /upload
+2026-05-07 16:19:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:19:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-21-00-69_00057.jpg"
+Expect: 100-continue
+Content-Length: 109204
+
+
+2026-05-07 16:19:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778159992241.jpg
+2026-05-07 16:20:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:20:48 | INFO | Time: 2026-05-07T16:20:48
+2026-05-07 16:20:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:20:48 | INFO | Path: /upload
+2026-05-07 16:20:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:20:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-22-00-15_00058.jpg"
+Expect: 100-continue
+Content-Length: 109108
+
+
+2026-05-07 16:20:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160049042.jpg
+2026-05-07 16:20:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:20:49 | INFO | Time: 2026-05-07T16:20:49
+2026-05-07 16:20:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:20:49 | INFO | Path: /upload
+2026-05-07 16:20:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:20:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-22-00-91_00059.jpg"
+Expect: 100-continue
+Content-Length: 108658
+
+
+2026-05-07 16:20:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160049872.jpg
+2026-05-07 16:21:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:21:48 | INFO | Time: 2026-05-07T16:21:48
+2026-05-07 16:21:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:21:48 | INFO | Path: /upload
+2026-05-07 16:21:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:21:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-23-00-17_00060.jpg"
+Expect: 100-continue
+Content-Length: 108909
+
+
+2026-05-07 16:21:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160108994.jpg
+2026-05-07 16:21:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:21:49 | INFO | Time: 2026-05-07T16:21:49
+2026-05-07 16:21:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:21:49 | INFO | Path: /upload
+2026-05-07 16:21:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:21:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-23-00-91_00061.jpg"
+Expect: 100-continue
+Content-Length: 108870
+
+
+2026-05-07 16:21:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160109897.jpg
+2026-05-07 16:22:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:22:47 | INFO | Time: 2026-05-07T16:22:47
+2026-05-07 16:22:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:22:47 | INFO | Path: /upload
+2026-05-07 16:22:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:22:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-23-59-90_00062.jpg"
+Expect: 100-continue
+Content-Length: 110070
+
+
+2026-05-07 16:22:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160168255.jpg
+2026-05-07 16:22:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:22:48 | INFO | Time: 2026-05-07T16:22:48
+2026-05-07 16:22:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:22:48 | INFO | Path: /upload
+2026-05-07 16:22:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:22:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-00-20_00063.jpg"
+Expect: 100-continue
+Content-Length: 110151
+
+
+2026-05-07 16:22:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160169294.jpg
+2026-05-07 16:22:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:22:49 | INFO | Time: 2026-05-07T16:22:49
+2026-05-07 16:22:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:22:49 | INFO | Path: /upload
+2026-05-07 16:22:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:22:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-00-60_00064.jpg"
+Expect: 100-continue
+Content-Length: 110433
+
+
+2026-05-07 16:22:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160170186.jpg
+2026-05-07 16:22:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:22:50 | INFO | Time: 2026-05-07T16:22:50
+2026-05-07 16:22:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:22:50 | INFO | Path: /upload
+2026-05-07 16:22:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:22:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-01-00_00065.jpg"
+Expect: 100-continue
+Content-Length: 109975
+
+
+2026-05-07 16:22:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160171250.jpg
+2026-05-07 16:23:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:23:46 | INFO | Time: 2026-05-07T16:23:46
+2026-05-07 16:23:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:23:46 | INFO | Path: /upload
+2026-05-07 16:23:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:23:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-59-36_00066.jpg"
+Expect: 100-continue
+Content-Length: 110178
+
+
+2026-05-07 16:23:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160228472.jpg
+2026-05-07 16:23:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:23:48 | INFO | Time: 2026-05-07T16:23:48
+2026-05-07 16:23:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:23:48 | INFO | Path: /upload
+2026-05-07 16:23:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:23:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-59-39_00067.jpg"
+Expect: 100-continue
+Content-Length: 109926
+
+
+2026-05-07 16:23:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160229515.jpg
+2026-05-07 16:23:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:23:49 | INFO | Time: 2026-05-07T16:23:49
+2026-05-07 16:23:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:23:49 | INFO | Path: /upload
+2026-05-07 16:23:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:23:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-59-43_00068.jpg"
+Expect: 100-continue
+Content-Length: 110086
+
+
+2026-05-07 16:23:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160230566.jpg
+2026-05-07 16:23:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:23:50 | INFO | Time: 2026-05-07T16:23:50
+2026-05-07 16:23:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:23:50 | INFO | Path: /upload
+2026-05-07 16:23:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:23:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-24-59-46_00069.jpg"
+Expect: 100-continue
+Content-Length: 110008
+
+
+2026-05-07 16:23:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160231583.jpg
+2026-05-07 16:23:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:23:51 | INFO | Time: 2026-05-07T16:23:51
+2026-05-07 16:23:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:23:51 | INFO | Path: /upload
+2026-05-07 16:23:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:23:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-25-00-09_00070.jpg"
+Expect: 100-continue
+Content-Length: 109699
+
+
+2026-05-07 16:23:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160232606.jpg
+2026-05-07 16:24:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:24:46 | INFO | Time: 2026-05-07T16:24:46
+2026-05-07 16:24:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:24:46 | INFO | Path: /upload
+2026-05-07 16:24:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:24:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-25-59-39_00071.jpg"
+Expect: 100-continue
+Content-Length: 110407
+
+
+2026-05-07 16:24:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160288510.jpg
+2026-05-07 16:24:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:24:48 | INFO | Time: 2026-05-07T16:24:48
+2026-05-07 16:24:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:24:48 | INFO | Path: /upload
+2026-05-07 16:24:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:24:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-25-59-42_00072.jpg"
+Expect: 100-continue
+Content-Length: 110284
+
+
+2026-05-07 16:24:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160289610.jpg
+2026-05-07 16:24:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:24:49 | INFO | Time: 2026-05-07T16:24:49
+2026-05-07 16:24:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:24:49 | INFO | Path: /upload
+2026-05-07 16:24:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:24:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-25-59-45_00073.jpg"
+Expect: 100-continue
+Content-Length: 110213
+
+
+2026-05-07 16:24:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160290693.jpg
+2026-05-07 16:24:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:24:50 | INFO | Time: 2026-05-07T16:24:50
+2026-05-07 16:24:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:24:50 | INFO | Path: /upload
+2026-05-07 16:24:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:24:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-25-59-49_00074.jpg"
+Expect: 100-continue
+Content-Length: 110233
+
+
+2026-05-07 16:24:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160291713.jpg
+2026-05-07 16:24:52 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:24:52 | INFO | Time: 2026-05-07T16:24:52
+2026-05-07 16:24:52 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:24:52 | INFO | Path: /upload
+2026-05-07 16:24:52 | INFO | Content-Type: image/jpeg
+2026-05-07 16:24:52 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-26-00-15_00075.jpg"
+Expect: 100-continue
+Content-Length: 110347
+
+
+2026-05-07 16:24:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160292752.jpg
+2026-05-07 16:25:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:25:46 | INFO | Time: 2026-05-07T16:25:46
+2026-05-07 16:25:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:25:46 | INFO | Path: /upload
+2026-05-07 16:25:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:25:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-26-59-35_00076.jpg"
+Expect: 100-continue
+Content-Length: 108502
+
+
+2026-05-07 16:25:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160348547.jpg
+2026-05-07 16:25:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:25:48 | INFO | Time: 2026-05-07T16:25:48
+2026-05-07 16:25:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:25:48 | INFO | Path: /upload
+2026-05-07 16:25:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:25:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-26-59-38_00077.jpg"
+Expect: 100-continue
+Content-Length: 108331
+
+
+2026-05-07 16:25:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160349691.jpg
+2026-05-07 16:25:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:25:49 | INFO | Time: 2026-05-07T16:25:49
+2026-05-07 16:25:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:25:49 | INFO | Path: /upload
+2026-05-07 16:25:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:25:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-26-59-41_00078.jpg"
+Expect: 100-continue
+Content-Length: 108433
+
+
+2026-05-07 16:25:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160350592.jpg
+2026-05-07 16:25:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:25:50 | INFO | Time: 2026-05-07T16:25:50
+2026-05-07 16:25:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:25:50 | INFO | Path: /upload
+2026-05-07 16:25:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:25:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-26-59-45_00079.jpg"
+Expect: 100-continue
+Content-Length: 108759
+
+
+2026-05-07 16:25:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160351548.jpg
+2026-05-07 16:25:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:25:51 | INFO | Time: 2026-05-07T16:25:51
+2026-05-07 16:25:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:25:51 | INFO | Path: /upload
+2026-05-07 16:25:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:25:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-27-00-01_00080.jpg"
+Expect: 100-continue
+Content-Length: 108792
+
+
+2026-05-07 16:25:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160352534.jpg
+2026-05-07 16:26:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:26:46 | INFO | Time: 2026-05-07T16:26:46
+2026-05-07 16:26:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:26:46 | INFO | Path: /upload
+2026-05-07 16:26:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:26:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-27-59-41_00081.jpg"
+Expect: 100-continue
+Content-Length: 110509
+
+
+2026-05-07 16:26:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160408512.jpg
+2026-05-07 16:26:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:26:48 | INFO | Time: 2026-05-07T16:26:48
+2026-05-07 16:26:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:26:48 | INFO | Path: /upload
+2026-05-07 16:26:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:26:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-27-59-44_00082.jpg"
+Expect: 100-continue
+Content-Length: 110264
+
+
+2026-05-07 16:26:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160409559.jpg
+2026-05-07 16:26:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:26:49 | INFO | Time: 2026-05-07T16:26:49
+2026-05-07 16:26:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:26:49 | INFO | Path: /upload
+2026-05-07 16:26:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:26:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-27-59-47_00083.jpg"
+Expect: 100-continue
+Content-Length: 110387
+
+
+2026-05-07 16:26:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160410470.jpg
+2026-05-07 16:26:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:26:50 | INFO | Time: 2026-05-07T16:26:50
+2026-05-07 16:26:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:26:50 | INFO | Path: /upload
+2026-05-07 16:26:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:26:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-27-59-51_00084.jpg"
+Expect: 100-continue
+Content-Length: 110485
+
+
+2026-05-07 16:26:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160411442.jpg
+2026-05-07 16:26:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:26:51 | INFO | Time: 2026-05-07T16:26:51
+2026-05-07 16:26:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:26:51 | INFO | Path: /upload
+2026-05-07 16:26:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:26:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-28-00-11_00085.jpg"
+Expect: 100-continue
+Content-Length: 110223
+
+
+2026-05-07 16:26:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160412435.jpg
+2026-05-07 16:27:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:27:48 | INFO | Time: 2026-05-07T16:27:48
+2026-05-07 16:27:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:27:48 | INFO | Path: /upload
+2026-05-07 16:27:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:27:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-29-00-07_00086.jpg"
+Expect: 100-continue
+Content-Length: 109016
+
+
+2026-05-07 16:27:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160468980.jpg
+2026-05-07 16:27:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:27:49 | INFO | Time: 2026-05-07T16:27:49
+2026-05-07 16:27:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:27:49 | INFO | Path: /upload
+2026-05-07 16:27:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:27:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-29-00-87_00087.jpg"
+Expect: 100-continue
+Content-Length: 108850
+
+
+2026-05-07 16:27:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160470010.jpg
+2026-05-07 16:27:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:27:50 | INFO | Time: 2026-05-07T16:27:50
+2026-05-07 16:27:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:27:50 | INFO | Path: /upload
+2026-05-07 16:27:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:27:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-29-01-23_00088.jpg"
+Expect: 100-continue
+Content-Length: 108597
+
+
+2026-05-07 16:27:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160470951.jpg
+2026-05-07 16:28:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:28:47 | INFO | Time: 2026-05-07T16:28:47
+2026-05-07 16:28:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:28:47 | INFO | Path: /upload
+2026-05-07 16:28:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:28:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-29-59-86_00089.jpg"
+Expect: 100-continue
+Content-Length: 109310
+
+
+2026-05-07 16:28:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160528220.jpg
+2026-05-07 16:28:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:28:48 | INFO | Time: 2026-05-07T16:28:48
+2026-05-07 16:28:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:28:48 | INFO | Path: /upload
+2026-05-07 16:28:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:28:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-30-00-13_00090.jpg"
+Expect: 100-continue
+Content-Length: 108808
+
+
+2026-05-07 16:28:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160529334.jpg
+2026-05-07 16:28:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:28:49 | INFO | Time: 2026-05-07T16:28:49
+2026-05-07 16:28:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:28:49 | INFO | Path: /upload
+2026-05-07 16:28:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:28:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-30-00-53_00091.jpg"
+Expect: 100-continue
+Content-Length: 108180
+
+
+2026-05-07 16:28:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160530377.jpg
+2026-05-07 16:28:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:28:50 | INFO | Time: 2026-05-07T16:28:50
+2026-05-07 16:28:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:28:50 | INFO | Path: /upload
+2026-05-07 16:28:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:28:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-30-00-99_00092.jpg"
+Expect: 100-continue
+Content-Length: 107927
+
+
+2026-05-07 16:28:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160531331.jpg
+2026-05-07 16:29:47 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:29:47 | INFO | Time: 2026-05-07T16:29:47
+2026-05-07 16:29:47 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:29:47 | INFO | Path: /upload
+2026-05-07 16:29:47 | INFO | Content-Type: image/jpeg
+2026-05-07 16:29:47 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-30-59-89_00093.jpg"
+Expect: 100-continue
+Content-Length: 108331
+
+
+2026-05-07 16:29:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160588050.jpg
+2026-05-07 16:29:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:29:48 | INFO | Time: 2026-05-07T16:29:48
+2026-05-07 16:29:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:29:48 | INFO | Path: /upload
+2026-05-07 16:29:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:29:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-00-16_00094.jpg"
+Expect: 100-continue
+Content-Length: 108041
+
+
+2026-05-07 16:29:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160589011.jpg
+2026-05-07 16:29:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:29:49 | INFO | Time: 2026-05-07T16:29:49
+2026-05-07 16:29:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:29:49 | INFO | Path: /upload
+2026-05-07 16:29:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:29:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-00-46_00095.jpg"
+Expect: 100-continue
+Content-Length: 108321
+
+
+2026-05-07 16:29:50 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160590060.jpg
+2026-05-07 16:29:50 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:29:50 | INFO | Time: 2026-05-07T16:29:50
+2026-05-07 16:29:50 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:29:50 | INFO | Path: /upload
+2026-05-07 16:29:50 | INFO | Content-Type: image/jpeg
+2026-05-07 16:29:50 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-00-86_00096.jpg"
+Expect: 100-continue
+Content-Length: 108689
+
+
+2026-05-07 16:29:51 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160591235.jpg
+2026-05-07 16:29:51 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:29:51 | INFO | Time: 2026-05-07T16:29:51
+2026-05-07 16:29:51 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:29:51 | INFO | Path: /upload
+2026-05-07 16:29:51 | INFO | Content-Type: image/jpeg
+2026-05-07 16:29:51 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-01-19_00097.jpg"
+Expect: 100-continue
+Content-Length: 108335
+
+
+2026-05-07 16:29:52 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160592174.jpg
+2026-05-07 16:30:46 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:30:46 | INFO | Time: 2026-05-07T16:30:46
+2026-05-07 16:30:46 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:30:46 | INFO | Path: /upload
+2026-05-07 16:30:46 | INFO | Content-Type: image/jpeg
+2026-05-07 16:30:46 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-59-35_00098.jpg"
+Expect: 100-continue
+Content-Length: 108459
+
+
+2026-05-07 16:30:48 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160648434.jpg
+2026-05-07 16:30:48 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:30:48 | INFO | Time: 2026-05-07T16:30:48
+2026-05-07 16:30:48 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:30:48 | INFO | Path: /upload
+2026-05-07 16:30:48 | INFO | Content-Type: image/jpeg
+2026-05-07 16:30:48 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-59-38_00099.jpg"
+Expect: 100-continue
+Content-Length: 108380
+
+
+2026-05-07 16:30:49 | INFO | Upload accepted from 77.137.176.248 -> device=Mywifi file=1778160649482.jpg
+2026-05-07 16:30:49 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-07 16:30:49 | INFO | Time: 2026-05-07T16:30:49
+2026-05-07 16:30:49 | INFO | Client IP: 77.137.176.248
+2026-05-07 16:30:49 | INFO | Path: /upload
+2026-05-07 16:30:49 | INFO | Content-Type: image/jpeg
+2026-05-07 16:30:49 | INFO | Host: mador.omek.com:8443
+Accept: */*
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename="image26-05-07_16-31-59-42_00100.jpg"
+Expect: 100-continue
+Content-Length: 108456
+
+

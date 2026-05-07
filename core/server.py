@@ -8,12 +8,14 @@ Can expose an optional plain debug server on port 8080 when enabled.
 Incoming messages are placed in a shared queue for the UI to consume.
 """
 
+import logging
 import queue
 import ssl
 import threading
 import time
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -37,6 +39,38 @@ msg_queue: queue.Queue = queue.Queue()
 
 # Flask upload server
 flask_app = Flask(__name__)
+
+
+LOG_DIR = BASE_DIR / "logs"
+LOG_FILE = LOG_DIR / "backend.log"
+LOG_DIR.mkdir(exist_ok=True)
+
+_logger = logging.getLogger("shob.backend")
+if not _logger.handlers:
+    _logger.setLevel(logging.INFO)
+    _file_handler = RotatingFileHandler(
+        LOG_FILE,
+        maxBytes=5_000_000,
+        backupCount=3,
+        encoding="utf-8",
+    )
+    _file_handler.setFormatter(logging.Formatter(
+        "%(asctime)s | %(levelname)s | %(message)s",
+        "%Y-%m-%d %H:%M:%S",
+    ))
+    _logger.addHandler(_file_handler)
+    _logger.propagate = False
+
+
+def _log(message: str, level: str = "info"):
+    text = str(message)
+    print(text)
+    if level == "error":
+        _logger.error(text)
+    elif level == "warning":
+        _logger.warning(text)
+    else:
+        _logger.info(text)
 
 
 def _safe_device_lookup(ip: str):
@@ -69,20 +103,20 @@ def _client_ip() -> str:
 
 def _log_blocked_post(source: str, sender_ip: str, path: str, headers, body: bytes):
     now = datetime.now().isoformat(timespec="seconds")
-    print("\n" + "=" * 28 + " BLOCKED POST " + "=" * 28)
-    print(f"Time:        {now}")
-    print(f"Source:      {source}")
-    print(f"Client IP:   {sender_ip}")
-    print(f"Path:        {path}")
-    print("Reason:      sender IP is not in device database")
-    print("\n--- HEADERS ---")
-    print(headers)
+    _log("\n" + "=" * 28 + " BLOCKED POST " + "=" * 28, level="warning")
+    _log(f"Time:        {now}", level="warning")
+    _log(f"Source:      {source}", level="warning")
+    _log(f"Client IP:   {sender_ip}", level="warning")
+    _log(f"Path:        {path}", level="warning")
+    _log("Reason:      sender IP is not in device database", level="warning")
+    _log("\n--- HEADERS ---", level="warning")
+    _log(headers, level="warning")
 
     if body:
-        print("\n--- BODY (first 500 bytes) ---")
-        print(body[:500])
+        _log("\n--- BODY (first 500 bytes) ---", level="warning")
+        _log(body[:500], level="warning")
 
-    print("=" * 70)
+    _log("=" * 70, level="warning")
 
     # Also push this event to the UI queue so the UI can show it
     msg_queue.put({
@@ -100,7 +134,9 @@ def _log_blocked_post(source: str, sender_ip: str, path: str, headers, body: byt
 @flask_app.route("/internal/admin/device", methods=["POST"])
 def admin_device_event():
     sender_ip = _client_ip()
+    _log(f"Admin device event from {sender_ip}")
     if ADMIN_EVENT_ALLOWED_IPS and sender_ip not in ADMIN_EVENT_ALLOWED_IPS:
+        _log(f"Admin event blocked by IP policy: {sender_ip}", level="warning")
         return jsonify({
             "error": "blocked",
             "reason": "sender IP is not allowed",
@@ -110,22 +146,38 @@ def admin_device_event():
     if ADMIN_EVENT_TOKEN:
         provided = request.headers.get("X-Shob-Admin-Token", "")
         if provided != ADMIN_EVENT_TOKEN:
+            _log(f"Admin event unauthorized from {sender_ip}", level="warning")
             return jsonify({"error": "unauthorized"}), 401
 
     payload = request.get_json(silent=True) or {}
+    action = str(payload.get("action", payload.get("event", "add"))).strip().lower()
+    if payload.get("deleted") is True:
+        action = "delete"
     name = str(payload.get("name", "")).strip()
     ip = str(payload.get("ip", "")).strip()
     uuid = str(payload.get("uuid", "")).strip()
 
-    if not name or not ip or not uuid:
-        return jsonify({
-            "error": "invalid payload",
-            "required": ["name", "ip", "uuid"],
-        }), 400
+    if action in {"delete", "remove"}:
+        if not uuid and not ip and not name:
+            return jsonify({
+                "error": "invalid payload",
+                "required_any": ["uuid", "ip", "name"],
+            }), 400
+    else:
+        action = "add"
+        if not name or not ip or not uuid:
+            return jsonify({
+                "error": "invalid payload",
+                "required": ["name", "ip", "uuid"],
+            }), 400
 
     received_at = datetime.now()
+    _log(
+        f"Admin event accepted: action={action} name={name or '-'} ip={ip or '-'} uuid={uuid or '-'}"
+    )
     msg_queue.put({
         "admin_event": True,
+        "action": action,
         "name": name,
         "ip": ip,
         "uuid": uuid,
@@ -138,12 +190,12 @@ def admin_device_event():
 
 @flask_app.route("/upload", methods=["POST"])
 def upload():
-    print("\n==== FLASK UPLOAD RECEIVED ====")
-    print(f"Time: {datetime.now().isoformat(timespec='seconds')}")
-    print(f"Client IP: {request.remote_addr}")
-    print(f"Path: {request.path}")
-    print(f"Content-Type: {request.content_type}")
-    print(request.headers)
+    _log("\n==== FLASK UPLOAD RECEIVED ====")
+    _log(f"Time: {datetime.now().isoformat(timespec='seconds')}")
+    _log(f"Client IP: {request.remote_addr}")
+    _log(f"Path: {request.path}")
+    _log(f"Content-Type: {request.content_type}")
+    _log(request.headers)
     sender_ip = _client_ip()
     device = _safe_device_lookup(sender_ip)
 
@@ -190,6 +242,9 @@ def upload():
         tmp_path.write_bytes(raw_data)
 
     received_at = datetime.now()
+    _log(
+        f"Upload accepted from {sender_ip} -> device={device['name']} file={tmp_path.name}"
+    )
     msg_queue.put({
         "device": device,
         "path": tmp_path,
@@ -254,18 +309,18 @@ class _DebugHandler(BaseHTTPRequestHandler):
             self.wfile.write(b"Blocked: unknown device IP")
             return
         else:
-            print("\n==== NEW REQUEST ====")
-            print(f"Time: {datetime.now().isoformat(timespec='seconds')}")
-            print(f"Client IP:   {self.client_address[0]}")
-            print(f"Client Port: {self.client_address[1]}")
-            print(f"Path: {self.path}")
-            print("CGI PARAMS:", parse_qs(urlparse(self.path).query))
-            print("\n--- HEADERS ---")
-            print(self.headers)
+            _log("\n==== NEW REQUEST ====")
+            _log(f"Time: {datetime.now().isoformat(timespec='seconds')}")
+            _log(f"Client IP:   {self.client_address[0]}")
+            _log(f"Client Port: {self.client_address[1]}")
+            _log(f"Path: {self.path}")
+            _log(f"CGI PARAMS: {parse_qs(urlparse(self.path).query)}")
+            _log("\n--- HEADERS ---")
+            _log(self.headers)
             if body:
-                print("\n--- BODY (first 500 bytes) ---")
-                print(body[:500])
-            print("=" * 60 + " 200 " + "=" * 60)
+                _log("\n--- BODY (first 500 bytes) ---")
+                _log(body[:500])
+            _log("=" * 60 + " 200 " + "=" * 60)
 
         self.send_response(200)
         self.send_header("Content-Type", "text/plain")
@@ -273,14 +328,14 @@ class _DebugHandler(BaseHTTPRequestHandler):
         self.wfile.write(b"OK")
 
     def log_message(self, fmt, *args):
-        print(f"{self.client_address[0]} [{self.log_date_time_string()}] {fmt % args}")
+        _log(f"{self.client_address[0]} [{self.log_date_time_string()}] {fmt % args}")
 
 
 def start_debug_server(port: int = 8080):
     """Launch the plain-HTTP debug server in a daemon thread."""
     def _run():
         srv = HTTPServer(("0.0.0.0", port), _DebugHandler)
-        print(f"Debug server listening on 0.0.0.0:{port}")
+        _log(f"Debug server listening on 0.0.0.0:{port}")
         srv.serve_forever()
 
     threading.Thread(target=_run, daemon=True).start()

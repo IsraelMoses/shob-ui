@@ -45,10 +45,17 @@ def _default_tls_file(filename: str) -> Path:
     return BASE_DIR / filename
 
 
+def _default_logo_file() -> Path:
+    desktop_logo = Path.home() / "Desktop" / "logo.png"
+    if desktop_logo.exists():
+        return desktop_logo
+    return BASE_DIR / "logo.png"
+
+
 DEVICES_JSON = BASE_DIR / "devices.json"
 DEVICES_DB = BASE_DIR / "devices.db"
 GALLERY_DIR = BASE_DIR / "gallery"
-LOGO_FILE = BASE_DIR / "logo.png"
+LOGO_FILE = _env_path("SHOB_LOGO_FILE", _default_logo_file())
 GALLERY_DIR.mkdir(exist_ok=True)
 
 SERVER_HOST = os.environ.get("SHOB_SERVER_HOST", "0.0.0.0")
@@ -131,7 +138,7 @@ def load_devices():
     init_device_store()
     with _db_conn() as conn:
         rows = conn.execute(
-            "SELECT uuid, ip, name FROM devices ORDER BY name COLLATE NOCASE, uuid"
+            "SELECT uuid, ip, name FROM devices ORDER BY rowid DESC"
         ).fetchall()
     return [dict(row) for row in rows]
 

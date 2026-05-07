@@ -3,6 +3,7 @@ SQLite-backed gallery metadata and local media storage helpers.
 """
 
 import json
+import re
 import shutil
 import sqlite3
 from datetime import datetime
@@ -14,6 +15,7 @@ from .backend import BASE_DIR, GALLERY_DIR
 
 
 GALLERY_DB = BASE_DIR / "gallery.db"
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".gif", ".webp", ".tif", ".tiff"}
 
 
 def _db_conn():
@@ -164,3 +166,39 @@ def clear_gallery_for(uuid: str) -> int:
         conn.commit()
 
     return removed
+
+
+def image_items_for(uuid: str) -> list:
+    items = gallery_items_for(uuid)
+    return [
+        (received, media_path)
+        for received, media_path in items
+        if media_path.suffix.lower() in IMAGE_EXTENSIONS
+    ]
+
+
+def _safe_export_segment(value: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", value.strip())
+    return cleaned.strip("._") or "device"
+
+
+def export_images_for(uuid: str, destination_root, device_name: str = "") -> tuple[int, Path]:
+    destination_root = Path(destination_root)
+    destination_root.mkdir(parents=True, exist_ok=True)
+
+    name_part = _safe_export_segment(device_name or uuid)
+    uuid_part = _safe_export_segment(uuid)
+    base_dir = destination_root / f"{name_part}_{uuid_part}_photos"
+
+    export_dir = base_dir
+    suffix = 2
+    while export_dir.exists():
+        export_dir = destination_root / f"{base_dir.name}_{suffix}"
+        suffix += 1
+    export_dir.mkdir(parents=True, exist_ok=False)
+
+    count = 0
+    for _, media_path in image_items_for(uuid):
+        shutil.copy2(media_path, export_dir / media_path.name)
+        count += 1
+    return count, export_dir

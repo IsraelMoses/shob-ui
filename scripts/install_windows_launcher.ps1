@@ -14,6 +14,14 @@ if (-not (Test-Path $PywLauncher)) {
 }
 
 function Get-PythonWindowLauncher {
+    $venvPythonw = Join-Path $ProjectRoot ".venv\Scripts\pythonw.exe"
+    if (Test-Path $venvPythonw) {
+        return @{
+            Target = $venvPythonw
+            Arguments = "`"$PywLauncher`""
+        }
+    }
+
     $pyw = Get-Command "pyw.exe" -ErrorAction SilentlyContinue
     if ($pyw) {
         return @{
