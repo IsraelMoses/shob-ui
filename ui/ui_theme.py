@@ -82,14 +82,14 @@ def _first_existing_path(paths):
     return None
 
 
-def load_logo(height_px: int = 44) -> "ImageTk.PhotoImage | None":
-    if not LOGO_FILE.exists():
+def _load_logo_image(path: Path, height_px: int) -> "ImageTk.PhotoImage | None":
+    if not path or not path.exists():
         return None
     original_limit = Image.MAX_IMAGE_PIXELS
     try:
         # Trusted local logo file; allow loading large source images.
         Image.MAX_IMAGE_PIXELS = None
-        result = Image.open(LOGO_FILE).convert("RGBA")
+        result = Image.open(path).convert("RGBA")
 
         if "A" in result.getbands():
             bbox = result.getchannel("A").getbbox()
@@ -100,10 +100,31 @@ def load_logo(height_px: int = 44) -> "ImageTk.PhotoImage | None":
         result.thumbnail((max_w, height_px), Image.LANCZOS)
         return ImageTk.PhotoImage(result)
     except Exception as exc:
-        print(f"Logo load error: {exc}")
+        print(f"Logo load error ({path}): {exc}")
         return None
     finally:
         Image.MAX_IMAGE_PIXELS = original_limit
+
+
+def load_logo(height_px: int = 44) -> "ImageTk.PhotoImage | None":
+    return _load_logo_image(LOGO_FILE, height_px)
+
+
+def load_logo2(height_px: int = 44) -> "ImageTk.PhotoImage | None":
+    env_path = os.environ.get("SHOB_LOGO2_FILE", "").strip()
+    env_file = Path(env_path).expanduser() if env_path else None
+    repo_root = LOGO_FILE.parent
+    logo2_file = _first_existing_path((
+        env_file,
+        repo_root / "logo2.png",
+        repo_root / "logo2.jpg",
+        repo_root / "logo2.jpeg",
+        repo_root / "logo2.webp",
+        repo_root / "logo2",
+    ))
+    if not logo2_file:
+        return None
+    return _load_logo_image(logo2_file, height_px)
 
 
 def load_title_banner(

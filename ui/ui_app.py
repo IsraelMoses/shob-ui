@@ -18,7 +18,7 @@ from core.gallery_store import export_images_for, image_items_for
 from .ui_devices import DeviceDialog
 from .ui_gallery import GalleryWindow
 from .ui_media import MediaSlot
-from .ui_theme import C, apply_ttk_style, load_logo, load_title_banner
+from .ui_theme import C, apply_ttk_style, load_logo, load_logo2
 
 
 class RoundedActionButton(tk.Canvas):
@@ -213,6 +213,7 @@ class SecCamApp(tk.Tk):
         self._active_slots = []
         self._gallery_windows = {}
         self._logo_photo = None
+        self._logo2_photo = None
         self._devices_title_var = tk.StringVar(value="DEVICES (0)")
         self._flash_device_uuids = set()
         self._flash_clear_after_ids = {}
@@ -221,6 +222,7 @@ class SecCamApp(tk.Tk):
         self._banner_anim_after_id = None
         self._title_banner_photo = None
         self._title_banner_label = None
+        self._title_subtitle_label = None
         self._title_box = None
         self._title_banner_size = (0, 0)
         self._auto_refresh_interval_ms = 60_000
@@ -263,30 +265,30 @@ class SecCamApp(tk.Tk):
         brand.pack(side=tk.LEFT, padx=(12, 10), pady=10)
 
         logo_photo = load_logo(height_px=86)
+        logo2_photo = load_logo2(height_px=86)
         if logo_photo:
             self._logo_photo = logo_photo
-            logo_box = tk.Frame(
-                brand,
-                bg=C["bg_card"],
-                highlightbackground=C["border"],
-                highlightthickness=1,
-                padx=8,
-                pady=6,
-            )
-            logo_box.pack(side=tk.LEFT)
-            lbl = tk.Label(logo_box, image=logo_photo, bg=C["bg_card"], bd=0)
+            lbl = tk.Label(brand, image=logo_photo, bg=C["bg_toolbar"], bd=0)
             lbl.image = logo_photo
-            lbl.pack()
+            lbl.pack(side=tk.LEFT)
+            if logo2_photo:
+                self._logo2_photo = logo2_photo
+                lbl2 = tk.Label(brand, image=logo2_photo, bg=C["bg_toolbar"], bd=0)
+                lbl2.image = logo2_photo
+                lbl2.pack(side=tk.LEFT, padx=(10, 0))
+        elif logo2_photo:
+            self._logo2_photo = logo2_photo
+            lbl2 = tk.Label(brand, image=logo2_photo, bg=C["bg_toolbar"], bd=0)
+            lbl2.image = logo2_photo
+            lbl2.pack(side=tk.LEFT)
         else:
-            badge = tk.Frame(brand, bg=C["tx_green"], padx=10, pady=5)
-            badge.pack(side=tk.LEFT)
             tk.Label(
-                badge,
+                brand,
                 text="SC",
                 font=("Helvetica", 12, "bold"),
-                bg=C["tx_green"],
-                fg="white",
-            ).pack()
+                bg=C["bg_toolbar"],
+                fg=C["tx_green"],
+            ).pack(side=tk.LEFT)
 
         right_info = tk.Frame(toolbar, bg=C["bg_toolbar"])
         right_info.pack(side=tk.RIGHT, padx=(0, 10), pady=20)
@@ -332,7 +334,15 @@ class SecCamApp(tk.Tk):
             anchor="center",
             justify="center",
         )
-        self._title_banner_label.pack(fill=tk.BOTH, expand=True)
+        self._title_banner_label.pack(side=tk.TOP, fill=tk.X, expand=True, pady=(8, 0))
+        self._title_subtitle_label = tk.Label(
+            self._title_box,
+            bg=C["bg_toolbar"],
+            bd=0,
+            anchor="center",
+            justify="center",
+        )
+        self._title_subtitle_label.pack(side=tk.TOP, fill=tk.X, pady=(0, 10))
         self._title_box.bind("<Configure>", self._on_title_banner_resize)
         self.after(10, self._render_title_banner)
 
@@ -340,43 +350,39 @@ class SecCamApp(tk.Tk):
         self._render_title_banner()
 
     def _render_title_banner(self):
-        if not self._title_box or not self._title_banner_label:
+        if not self._title_box or not self._title_banner_label or not self._title_subtitle_label:
             return
-        if not self._title_box.winfo_exists() or not self._title_banner_label.winfo_exists():
+        if (
+            not self._title_box.winfo_exists()
+            or not self._title_banner_label.winfo_exists()
+            or not self._title_subtitle_label.winfo_exists()
+        ):
             return
 
         width = max(self._title_box.winfo_width(), 80)
         height = max(self._title_box.winfo_height(), 40)
         current_size = (width, height)
-        if current_size == self._title_banner_size and self._title_banner_photo:
+        if current_size == self._title_banner_size:
             return
         self._title_banner_size = current_size
 
-        target_width = max(int(width * 0.95), 180)
-        target_height = max(int(height * 0.90), 64)
-        banner_photo = load_title_banner(
-            height_px=target_height,
-            width_px=target_width,
-            stretch=False,
-            cover=False,
-            crop_to_content=True,
+        font_size = max(28, min(60, int(height * 0.45)))
+        subtitle_size = max(12, min(22, int(font_size * 0.38)))
+        self._title_banner_photo = None
+        self._title_banner_label.configure(
+            image="",
+            text="\u05E9\u05D5\"\u05D1 \u05E8\u05E4\u05D0\u05D9\u05DD",
+            font=("Segoe UI", font_size, "bold"),
+            fg="#ffffff",
+            bg=C["bg_toolbar"],
         )
-        if banner_photo:
-            self._title_banner_photo = banner_photo
-            self._title_banner_label.configure(
-                image=banner_photo,
-                text="",
-                fg=C["tx_primary"],
-            )
-            self._title_banner_label.image = banner_photo
-        else:
-            self._title_banner_photo = None
-            self._title_banner_label.configure(
-                image="",
-                text="\u05DE\u05E2\u05E8\u05DB\u05EA \u05E8\u05E4\u05D0\u05D9\u05DD",
-                font=("Segoe UI", 24, "bold"),
-                fg=C["tx_primary"],
-            )
+        self._title_banner_label.image = None
+        self._title_subtitle_label.configure(
+            text=" - \u05DE\u05D3\u05D5\u05E8 \u05E2\u05D5\u05DE\u05E7 - ",
+            font=("Segoe UI", subtitle_size, "normal"),
+            fg=C["tx_green"],
+            bg=C["bg_toolbar"],
+        )
 
     def _build_sidebar(self, parent):
         hdr = tk.Frame(parent, bg=C["bg_sidebar"])
