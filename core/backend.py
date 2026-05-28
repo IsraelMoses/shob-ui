@@ -7,6 +7,7 @@ Manages device registry, configuration, and shared filesystem paths.
 import json
 import os
 import sqlite3
+from datetime import datetime
 from pathlib import Path
 
 
@@ -98,7 +99,42 @@ def _create_schema(conn):
             name TEXT NOT NULL
         )
     """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS camera_profiles (
+            device_uuid TEXT PRIMARY KEY,
+            username TEXT NOT NULL DEFAULT '',
+            password TEXT NOT NULL DEFAULT '',
+            camera_type TEXT NOT NULL DEFAULT '',
+            rtsp_port INTEGER NOT NULL DEFAULT 8554,
+            stream_path TEXT NOT NULL DEFAULT '/cam/realmonitor?channel=1&subtype=0',
+            last_status TEXT NOT NULL DEFAULT '',
+            last_error TEXT NOT NULL DEFAULT '',
+            last_checked_at TEXT NOT NULL DEFAULT '',
+            updated_at TEXT NOT NULL
+        )
+    """)
+    _ensure_camera_profile_columns(conn)
     conn.commit()
+
+
+def _ensure_camera_profile_columns(conn):
+    columns = {
+        row["name"]
+        for row in conn.execute("PRAGMA table_info(camera_profiles)").fetchall()
+    }
+    migrations = {
+        "rtsp_port": "ALTER TABLE camera_profiles ADD COLUMN rtsp_port INTEGER NOT NULL DEFAULT 8554",
+        "stream_path": (
+            "ALTER TABLE camera_profiles ADD COLUMN stream_path TEXT NOT NULL "
+            "DEFAULT '/cam/realmonitor?channel=1&subtype=0'"
+        ),
+        "last_status": "ALTER TABLE camera_profiles ADD COLUMN last_status TEXT NOT NULL DEFAULT ''",
+        "last_error": "ALTER TABLE camera_profiles ADD COLUMN last_error TEXT NOT NULL DEFAULT ''",
+        "last_checked_at": "ALTER TABLE camera_profiles ADD COLUMN last_checked_at TEXT NOT NULL DEFAULT ''",
+    }
+    for column, statement in migrations.items():
+        if column not in columns:
+            conn.execute(statement)
 
 
 def _import_devices(conn, devices):
@@ -195,5 +231,88 @@ def add_device_if_missing(uuid: str, ip: str, name: str) -> str:
 def remove_device(uuid: str):
     init_device_store()
     with _db_conn() as conn:
+        conn.execute("DELETE FROM camera_profiles WHERE device_uuid = ?", (uuid,))
         conn.execute("DELETE FROM devices WHERE uuid = ?", (uuid,))
+        conn.commit()
+
+
+def save_camera_profile(
+    device_uuid: str,
+    username: str,
+    password: str,
+    camera_type: str,
+    rtsp_port: int = 8554,
+    stream_path: str = "/cam/realmonitor?channel=1&subtype=0",
+):
+    init_device_store()
+    now = datetime.now().isoformat(timespec="seconds")
+    try:
+        rtsp_port = int(rtsp_port)
+    except (TypeError, ValueError):
+        rtsp_port = 8554
+    stream_path = (stream_path or "/cam/realmonitor?channel=1&subtype=0").strip()
+    with _db_conn() as conn:
+        conn.execute(
+            """
+            INSERT INTO camera_profiles (
+                device_uuid, username, password, camera_type, rtsp_port, stream_path, updated_at
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(device_uuid) DO UPDATE SET
+                username = excluded.username,
+                password = excluded.password,
+                camera_type = excluded.camera_type,
+                rtsp_port = excluded.rtsp_port,
+                stream_path = excluded.stream_path,
+                updated_at = excluded.updated_at
+            """,
+            (
+                device_uuid.strip(),
+                username.strip(),
+                password,
+                camera_type.strip(),
+                rtsp_port,
+                stream_path,
+                now,
+            ),
+        )
+        conn.commit()
+
+
+def load_camera_profile(device_uuid: str) -> "dict | None":
+    init_device_store()
+    with _db_conn() as conn:
+        row = conn.execute(
+            """
+            SELECT
+                device_uuid,
+                username,
+                password,
+                camera_type,
+                rtsp_port,
+                stream_path,
+                last_status,
+                last_error,
+                last_checked_at,
+                updated_at
+            FROM camera_profiles
+            WHERE device_uuid = ?
+            """,
+            (device_uuid.strip(),),
+        ).fetchone()
+    return dict(row) if row else None
+
+
+def save_camera_connection_status(device_uuid: str, status: str, error: str = ""):
+    init_device_store()
+    now = datetime.now().isoformat(timespec="seconds")
+    with _db_conn() as conn:
+        conn.execute(
+            """
+            UPDATE camera_profiles
+            SET last_status = ?, last_error = ?, last_checked_at = ?
+            WHERE device_uuid = ?
+            """,
+            (status.strip(), (error or "").strip(), now, device_uuid.strip()),
+        )
         conn.commit()

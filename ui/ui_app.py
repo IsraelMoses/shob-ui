@@ -3,20 +3,27 @@ Main Tk application shell that composes the UI feature modules.
 """
 
 from datetime import datetime, timedelta
+import threading
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+from tkinter import filedialog, messagebox, scrolledtext, ttk
 
 from core.backend import (
+    BASE_DIR,
     add_device_if_missing,
     add_device,
+    load_camera_profile,
     load_devices,
     remove_device,
+    save_camera_profile,
+    save_camera_connection_status,
 )
 from core.gallery_store import extract_video_thumbnail, gallery_items_for, save_to_gallery
 from core.gallery_store import export_images_for, image_items_for
+from core.rtsp_service import make_target, test_rtsp_connection
 
-from .ui_devices import DeviceDialog
+from .ui_devices import CameraCredentialsDialog, DeviceDialog
 from .ui_gallery import GalleryWindow
+from .ui_live_stream import LiveStreamSlot
 from .ui_media import MediaSlot
 from .ui_theme import C, apply_ttk_style, load_logo, load_logo2
 
@@ -227,6 +234,12 @@ class SecCamApp(tk.Tk):
         self._title_banner_size = (0, 0)
         self._auto_refresh_interval_ms = 60_000
         self._auto_refresh_after_id = None
+        self._pending_credential_prompts = set()
+        self._backend_log_file = BASE_DIR / "logs" / "backend.log"
+        self._logs_window = None
+        self._logs_text = None
+        self._logs_refresh_after_id = None
+        self._live_stream_slots = {}
         self._build_ui()
         self.protocol("WM_DELETE_WINDOW", self._on_close)
         self._schedule_auto_refresh()
@@ -462,6 +475,31 @@ class SecCamApp(tk.Tk):
             side=tk.LEFT,
             fill=tk.X,
             expand=True,
+            padx=(6, 0),
+        )
+
+        logs_btn = tk.Button(
+            actions,
+            text="Logs",
+            command=self._open_logs_window,
+            bg=C["bg_card"],
+            fg=C["tx_green"],
+            activebackground=C["bg_card_hv"],
+            activeforeground=C["tx_green"],
+            relief=tk.FLAT,
+            highlightbackground=C["tx_green"],
+            highlightthickness=1,
+            bd=0,
+            padx=10,
+            pady=8,
+            font=("Segoe UI", 10, "bold"),
+            cursor="hand2",
+        )
+        logs_btn.pack(
+            side=tk.LEFT,
+            fill=tk.X,
+            expand=True,
+            padx=(0, 6),
         )
 
         self._refresh_device_list()
@@ -505,6 +543,112 @@ class SecCamApp(tk.Tk):
             return
         self._refresh_device_list()
         self._schedule_auto_refresh()
+
+    def _open_logs_window(self):
+        if self._logs_window and self._logs_window.winfo_exists():
+            self._logs_window.lift()
+            self._logs_window.focus_force()
+            self._refresh_logs_window()
+            return
+
+        win = tk.Toplevel(self)
+        win.title("Shob Backend Logs")
+        win.configure(bg=C["bg_toolbar"])
+        win.geometry("980x560")
+        win.minsize(700, 380)
+        win.transient(self)
+        win.protocol("WM_DELETE_WINDOW", self._close_logs_window)
+        self._logs_window = win
+
+        header = tk.Frame(win, bg=C["bg_toolbar"], padx=12, pady=10)
+        header.pack(fill=tk.X)
+        tk.Label(
+            header,
+            text="Backend Logs",
+            font=("Segoe UI", 11, "bold"),
+            bg=C["bg_toolbar"],
+            fg=C["tx_primary"],
+        ).pack(side=tk.LEFT)
+        ttk.Button(header, text="Refresh", command=self._refresh_logs_window).pack(side=tk.RIGHT)
+
+        path_label = tk.Label(
+            win,
+            text=str(self._backend_log_file),
+            font=("Segoe UI", 8),
+            bg=C["bg_toolbar"],
+            fg=C["tx_secondary"],
+            anchor="w",
+            justify="left",
+            padx=12,
+        )
+        path_label.pack(fill=tk.X)
+
+        self._logs_text = scrolledtext.ScrolledText(
+            win,
+            bg=C["bg_player"],
+            fg="#a7f2c8",
+            insertbackground="#a7f2c8",
+            relief=tk.FLAT,
+            bd=0,
+            wrap=tk.NONE,
+            font=("Consolas", 9),
+        )
+        self._logs_text.pack(fill=tk.BOTH, expand=True, padx=12, pady=(8, 12))
+        self._logs_text.configure(state=tk.DISABLED)
+        self._refresh_logs_window()
+        win.update_idletasks()
+        self._center_child_window(win)
+
+    def _read_backend_logs_tail(self, max_bytes: int = 220_000) -> str:
+        try:
+            if not self._backend_log_file.exists():
+                return "No log file yet. Waiting for backend activity...\n"
+
+            file_size = self._backend_log_file.stat().st_size
+            start = max(file_size - max_bytes, 0)
+            with self._backend_log_file.open("rb") as f:
+                f.seek(start)
+                data = f.read()
+
+            text = data.decode("utf-8", errors="replace")
+            if start > 0 and "\n" in text:
+                text = text.split("\n", 1)[1]
+            return text or "Log file is currently empty.\n"
+        except Exception as exc:
+            return f"Could not read backend logs: {exc}\n"
+
+    def _refresh_logs_window(self):
+        if not self._logs_window or not self._logs_window.winfo_exists() or not self._logs_text:
+            self._close_logs_window()
+            return
+
+        text = self._read_backend_logs_tail()
+        self._logs_text.configure(state=tk.NORMAL)
+        self._logs_text.delete("1.0", tk.END)
+        self._logs_text.insert("1.0", text)
+        self._logs_text.see(tk.END)
+        self._logs_text.configure(state=tk.DISABLED)
+
+        if self._logs_refresh_after_id:
+            try:
+                self.after_cancel(self._logs_refresh_after_id)
+            except Exception:
+                pass
+        self._logs_refresh_after_id = self.after(1500, self._refresh_logs_window)
+
+    def _close_logs_window(self):
+        if self._logs_refresh_after_id:
+            try:
+                self.after_cancel(self._logs_refresh_after_id)
+            except Exception:
+                pass
+            self._logs_refresh_after_id = None
+
+        if self._logs_window and self._logs_window.winfo_exists():
+            self._logs_window.destroy()
+
+        self._logs_window = None
+        self._logs_text = None
 
     def _build_device_card(self, dev):
         items = gallery_items_for(dev["uuid"])
@@ -561,6 +705,25 @@ class SecCamApp(tk.Tk):
         )
         items_lbl.pack(fill=tk.X, pady=(6, 0))
 
+        live_btn = RoundedActionButton(
+            actions,
+            text="Live Stream",
+            command=lambda d=dev: self._start_live_stream_for_device(d),
+            fill_color="#083c66",
+            hover_fill_color="#0d5d98",
+            press_fill_color="#062f50",
+            border_color="#24c8ff",
+            border_hover_color="#78e2ff",
+            text_color=C["tx_white"],
+            icon_text="\u25b6",
+            icon_color="#d8f7ff",
+            icon_box_fill_color="#092f4d",
+            width=120,
+            height=33,
+            radius=8,
+        )
+        live_btn.pack(side=tk.TOP, fill=tk.X)
+
         export_btn = RoundedActionButton(
             actions,
             text="Export Photos",
@@ -578,7 +741,7 @@ class SecCamApp(tk.Tk):
             height=33,
             radius=8,
         )
-        export_btn.pack(side=tk.TOP, fill=tk.X)
+        export_btn.pack(side=tk.TOP, fill=tk.X, pady=(7, 0))
 
         delete_btn = RoundedActionButton(
             actions,
@@ -618,6 +781,7 @@ class SecCamApp(tk.Tk):
 
         for widget in hover_widgets:
             widget.configure(bg=base_bg)
+        live_btn.set_container_bg(base_bg)
         export_btn.set_container_bg(base_bg)
         delete_btn.set_container_bg(base_bg)
 
@@ -686,6 +850,7 @@ class SecCamApp(tk.Tk):
             _draw_card_background()
             for widget in hover_widgets:
                 widget.configure(bg=hover_bg)
+            live_btn.set_container_bg(hover_bg)
             export_btn.set_container_bg(hover_bg)
             delete_btn.set_container_bg(hover_bg)
 
@@ -694,6 +859,7 @@ class SecCamApp(tk.Tk):
             _draw_card_background()
             for widget in hover_widgets:
                 widget.configure(bg=base_bg)
+            live_btn.set_container_bg(base_bg)
             export_btn.set_container_bg(base_bg)
             delete_btn.set_container_bg(base_bg)
 
@@ -714,7 +880,7 @@ class SecCamApp(tk.Tk):
             widget.bind("<Enter>", _enter)
             widget.bind("<Leave>", _leave)
 
-        for btn in (export_btn, delete_btn):
+        for btn in (live_btn, export_btn, delete_btn):
             btn.bind("<Enter>", _enter)
             btn.bind("<Leave>", _leave)
 
@@ -1076,6 +1242,11 @@ class SecCamApp(tk.Tk):
                     tone="alert",
                     duration_ms=8000,
                 )
+                self._schedule_camera_credentials_prompt(
+                    uuid=uuid,
+                    name=name,
+                    ip=ip,
+                )
             elif save_status == "exists_uuid":
                 self.set_server_status("Admin device already exists", C["status_warn"])
                 self._show_top_notice(
@@ -1083,6 +1254,12 @@ class SecCamApp(tk.Tk):
                     detail=f"{name}  |  {ip}",
                     tone="warn",
                     duration_ms=7000,
+                )
+                self._schedule_camera_credentials_prompt(
+                    uuid=uuid,
+                    name=name,
+                    ip=ip,
+                    only_if_missing=True,
                 )
             else:
                 self.set_server_status("Admin device IP already exists", C["status_warn"])
@@ -1092,6 +1269,14 @@ class SecCamApp(tk.Tk):
                     tone="warn",
                     duration_ms=7000,
                 )
+                existing = next((d for d in load_devices() if d["ip"] == ip), None)
+                if existing:
+                    self._schedule_camera_credentials_prompt(
+                        uuid=existing["uuid"],
+                        name=existing["name"],
+                        ip=existing["ip"],
+                        only_if_missing=True,
+                    )
         except Exception as exc:
             self.set_server_status("Admin device save failed", C["status_err"])
             self._show_top_notice(
@@ -1108,15 +1293,23 @@ class SecCamApp(tk.Tk):
             except Exception:
                 pass
             self._auto_refresh_after_id = None
+        self._close_logs_window()
         self._hide_top_notice(immediate=True)
+        for item in list(self._active_slots):
+            slot = item.get("slot")
+            if hasattr(slot, "destroy"):
+                try:
+                    slot.destroy()
+                except Exception:
+                    pass
         self.destroy()
 
     def _center_child_window(self, win):
         win.update_idletasks()
         self.update_idletasks()
 
-        width = win.winfo_reqwidth()
-        height = win.winfo_reqheight()
+        width = win.winfo_width() or win.winfo_reqwidth()
+        height = win.winfo_height() or win.winfo_reqheight()
         root_x = self.winfo_rootx()
         root_y = self.winfo_rooty()
         root_w = self.winfo_width()
@@ -1125,6 +1318,215 @@ class SecCamApp(tk.Tk):
         x = root_x + max((root_w - width) // 2, 0)
         y = root_y + max((root_h - height) // 2, 0)
         win.geometry(f"+{x}+{y}")
+
+    def _prompt_camera_credentials(self, device_uuid: str, name: str, ip: str):
+        initial_values = None
+        while True:
+            dlg = CameraCredentialsDialog(
+                self,
+                device_name=name or device_uuid,
+                device_ip=ip or "-",
+                initial_values=initial_values,
+            )
+            self.wait_window(dlg)
+            if not dlg.result:
+                self.set_server_status(
+                    f"Camera credentials pending for {name or device_uuid}",
+                    C["status_warn"],
+                )
+                self._show_top_notice(
+                    title="Camera credentials not saved",
+                    detail=f"{name or device_uuid}  |  Please complete setup",
+                    tone="warn",
+                    duration_ms=6000,
+                )
+                return
+
+            initial_values = dlg.result
+            self.set_server_status(
+                f"Testing RTSP credentials for {name or device_uuid}",
+                C["status_warn"],
+            )
+            self.update_idletasks()
+
+            try:
+                target = make_target(
+                    host=ip,
+                    port=dlg.result["rtsp_port"],
+                    username=dlg.result["username"],
+                    password=dlg.result["password"],
+                    stream_path=dlg.result["stream_path"],
+                )
+            except Exception as exc:
+                messagebox.showerror(
+                    "Camera Credentials",
+                    f"Invalid RTSP settings:\n{exc}\n\nPlease enter the details again.",
+                    parent=self,
+                )
+                continue
+
+            rtsp_result = test_rtsp_connection(target)
+            if not rtsp_result.get("ok"):
+                error = rtsp_result.get("error") or "Could not connect to the camera stream."
+                self.set_server_status(
+                    f"RTSP credentials rejected for {name or device_uuid}",
+                    C["status_err"],
+                )
+                messagebox.showerror(
+                    "Camera Credentials",
+                    "Could not open the RTSP stream with these details.\n\n"
+                    f"{error}\n\n"
+                    "Please check the username, password, RTSP port, and RTSP path.",
+                    parent=self,
+                )
+                continue
+
+            break
+
+        try:
+            save_camera_profile(
+                device_uuid=device_uuid,
+                username=dlg.result["username"],
+                password=dlg.result["password"],
+                camera_type=dlg.result["camera_type"],
+                rtsp_port=dlg.result["rtsp_port"],
+                stream_path=dlg.result["stream_path"],
+            )
+        except Exception as exc:
+            self.set_server_status("Camera credentials save failed", C["status_err"])
+            self._show_top_notice(
+                title="Camera credentials save failed",
+                detail=f"{name or device_uuid}  |  {exc}",
+                tone="err",
+                duration_ms=7000,
+            )
+            return
+
+        try:
+            save_camera_connection_status(device_uuid, "connected", "")
+        except Exception:
+            pass
+
+        self.set_server_status(
+            f"Camera credentials saved and verified for {name or device_uuid}",
+            C["status_ok"],
+        )
+        self._handle_rtsp_connection_result(
+            device_uuid=device_uuid,
+            name=name,
+            status="connected",
+            error="",
+            result=rtsp_result,
+        )
+        self._start_live_stream_for_device(
+            {"uuid": device_uuid, "name": name or device_uuid, "ip": ip},
+            profile=dlg.result,
+        )
+
+    def _prompt_camera_credentials_if_missing(self, uuid: str, name: str, ip: str):
+        profile = load_camera_profile(uuid)
+        if (
+            profile
+            and profile.get("username")
+            and profile.get("password")
+            and profile.get("camera_type")
+            and profile.get("rtsp_port")
+            and profile.get("stream_path")
+        ):
+            return
+        self._prompt_camera_credentials(uuid, name, ip)
+
+    def _start_rtsp_connection_check(self, device_uuid: str, name: str, ip: str, profile: dict):
+        try:
+            target = make_target(
+                host=ip,
+                port=profile.get("rtsp_port", 8554),
+                username=profile.get("username", ""),
+                password=profile.get("password", ""),
+                stream_path=profile.get("stream_path", ""),
+            )
+        except Exception as exc:
+            save_camera_connection_status(device_uuid, "invalid_profile", str(exc))
+            self._show_top_notice(
+                title="Camera RTSP profile is invalid",
+                detail=f"{name or device_uuid}  |  {exc}",
+                tone="err",
+                duration_ms=7000,
+            )
+            return
+
+        def _run_check():
+            result = test_rtsp_connection(target)
+            status = "connected" if result.get("ok") else "failed"
+            error = "" if result.get("ok") else str(result.get("error", "Unknown RTSP error"))
+            try:
+                save_camera_connection_status(device_uuid, status, error)
+            except Exception:
+                pass
+            self.after(
+                0,
+                lambda r=result, s=status, e=error: self._handle_rtsp_connection_result(
+                    device_uuid=device_uuid,
+                    name=name,
+                    status=s,
+                    error=e,
+                    result=r,
+                ),
+            )
+
+        threading.Thread(target=_run_check, daemon=True).start()
+
+    def _handle_rtsp_connection_result(
+        self,
+        device_uuid: str,
+        name: str,
+        status: str,
+        error: str,
+        result: dict,
+    ):
+        display_name = name or device_uuid
+        if status == "connected":
+            self.set_server_status(f"RTSP connected: {display_name}", C["status_ok"])
+            detail = result.get("frame_shape") or "First frame received"
+            self._show_top_notice(
+                title="Camera RTSP connected",
+                detail=f"{display_name}  |  {detail}",
+                tone="ok",
+                duration_ms=6500,
+            )
+        else:
+            self.set_server_status(f"RTSP failed: {display_name}", C["status_err"])
+            self._show_top_notice(
+                title="Camera RTSP check failed",
+                detail=f"{display_name}  |  {error}",
+                tone="err",
+                duration_ms=9000,
+            )
+        self._refresh_device_list(preferred_uuid=device_uuid)
+
+    def _schedule_camera_credentials_prompt(
+        self,
+        uuid: str,
+        name: str,
+        ip: str,
+        only_if_missing: bool = False,
+    ):
+        if not uuid:
+            return
+        if uuid in self._pending_credential_prompts:
+            return
+        self._pending_credential_prompts.add(uuid)
+
+        def _open_prompt():
+            try:
+                if only_if_missing:
+                    self._prompt_camera_credentials_if_missing(uuid, name, ip)
+                else:
+                    self._prompt_camera_credentials(uuid, name, ip)
+            finally:
+                self._pending_credential_prompts.discard(uuid)
+
+        self.after(80, _open_prompt)
 
     def _next_device_uuid(self) -> str:
         existing = {d["uuid"] for d in load_devices()}
@@ -1173,8 +1575,98 @@ class SecCamApp(tk.Tk):
         gw = self._gallery_windows.pop(device["uuid"], None)
         if gw and gw.winfo_exists():
             gw.destroy()
+        live_slot = self._live_stream_slots.pop(device["uuid"], None)
+        if live_slot and live_slot.winfo_exists():
+            live_slot.destroy()
+            self._active_slots = [
+                item for item in self._active_slots if item.get("slot") is not live_slot
+            ]
         self._refresh_device_list()
+        self._rebuild_grid()
         self.set_server_status(f"Device deleted: {device['name']}", C["status_ok"])
+
+    def _start_live_stream_for_device(self, device, profile=None):
+        uuid = device.get("uuid")
+        if not uuid:
+            return
+
+        existing = self._live_stream_slots.get(uuid)
+        if existing and existing.winfo_exists():
+            self.set_server_status(f"Live stream already open: {device['name']}", C["status_ok"])
+            return
+
+        if profile is None:
+            profile = load_camera_profile(uuid)
+        if (
+            not profile
+            or not profile.get("username")
+            or not profile.get("password")
+            or not profile.get("rtsp_port")
+            or not profile.get("stream_path")
+        ):
+            self._prompt_camera_credentials(uuid, device.get("name", uuid), device.get("ip", ""))
+            return
+
+        try:
+            target = make_target(
+                host=device.get("ip", ""),
+                port=profile.get("rtsp_port", 8554),
+                username=profile.get("username", ""),
+                password=profile.get("password", ""),
+                stream_path=profile.get("stream_path", ""),
+            )
+        except Exception as exc:
+            messagebox.showerror(
+                "Live Stream",
+                f"Could not build RTSP stream details:\n{exc}",
+            )
+            return
+
+        slot = LiveStreamSlot(
+            self._player_frame,
+            device,
+            target,
+            on_close=self._live_stream_closed,
+            on_status=self._live_stream_status_changed,
+        )
+        self._live_stream_slots[uuid] = slot
+        self._active_slots.append({
+            "kind": "live",
+            "device_uuid": uuid,
+            "msg": {"live": True, "device": device},
+            "slot": slot,
+        })
+        self._rebuild_grid()
+        self.set_server_status(f"Opening live stream: {device['name']}", C["status_warn"])
+
+    def _live_stream_closed(self, device, slot):
+        uuid = device.get("uuid")
+        if uuid:
+            self._live_stream_slots.pop(uuid, None)
+        self._active_slots = [
+            item for item in self._active_slots if item.get("slot") is not slot
+        ]
+        self._rebuild_grid()
+        self.set_server_status(f"Live stream stopped: {device.get('name', uuid)}", C["status_warn"])
+
+    def _live_stream_status_changed(self, device, status: str, error: str = ""):
+        uuid = device.get("uuid")
+        if uuid:
+            try:
+                save_camera_connection_status(uuid, status, error)
+            except Exception:
+                pass
+
+        if status == "connected":
+            self.set_server_status(f"Live stream active: {device['name']}", C["status_ok"])
+        elif status == "failed":
+            self.set_server_status(f"Live stream failed: {device['name']}", C["status_err"])
+            self._show_top_notice(
+                title="Live stream failed",
+                detail=f"{device['name']}  |  {error}",
+                tone="err",
+                duration_ms=8000,
+            )
 
     def _rebuild_grid(self):
         count = len(self._active_slots)

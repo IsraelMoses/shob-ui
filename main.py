@@ -8,6 +8,8 @@ Wires together:
   - ui/    (tkinter application)
 """
 
+import queue as py_queue
+
 from ui import SecCamApp, C
 from core.backend import DEBUG_SERVER_ENABLED, DEBUG_SERVER_PORT
 from core.server import start_flask_server, start_debug_server, msg_queue
@@ -15,17 +17,24 @@ from core.server import start_flask_server, start_debug_server, msg_queue
 
 def _poll_queue(app: SecCamApp):
     """Drain the inter-thread message queue and hand messages to the UI."""
-    try:
-        while True:
+    while True:
+        try:
             msg = msg_queue.get_nowait()
+        except py_queue.Empty:
+            break
+        except Exception as exc:
+            app.set_server_status(f"Queue read error: {exc}", C["status_err"])
+            break
+
+        try:
             if msg.get("admin_event"):
                 app.show_admin_device_event(msg)
             elif msg.get("blocked"):
                 app.show_blocked_upload(msg)
             else:
                 app.add_slot(msg)
-    except Exception:
-        pass
+        except Exception as exc:
+            app.set_server_status(f"Queue handling error: {exc}", C["status_err"])
     app.after(200, _poll_queue, app)
 
 

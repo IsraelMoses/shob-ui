@@ -257,6 +257,24 @@ def upload():
     return jsonify({"status": "ok", "device": device["name"]}), 200
 
 
+@flask_app.route("/ping", methods=["GET", "HEAD", "POST"])
+def ping():
+    sender_ip = _client_ip()
+    path = request.full_path if request.query_string else request.path
+    user_agent = request.headers.get("User-Agent", "-")
+    content_len = request.content_length or 0
+    _log(
+        "Ping request received: "
+        f"method={request.method} ip={sender_ip} path={path} "
+        f"user_agent={user_agent} bytes={content_len}"
+    )
+    return jsonify({
+        "status": "ok",
+        "pong": True,
+        "server_time": datetime.now().isoformat(timespec="seconds"),
+    }), 200
+
+
 def _run_flask(on_ready, on_error):
     """Run the werkzeug server in its own thread."""
     try:
