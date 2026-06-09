@@ -4046,3 +4046,7 @@ Content-Length: 264
 2026-06-09 15:55:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009722864_Image_20210101_120856.jpg
 2026-06-09 15:56:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009783677_Image_20210101_120957.jpg
 2026-06-09 15:57:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009844486_Image_20210101_121058.jpg
+2026-06-09 15:58:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009905499_Image_20210101_121159.jpg
+2026-06-09 15:59:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009966408_Image_20210101_121300.jpg
+2026-06-09 16:00:04 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-09 16:00:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781010027316_Image_20210101_121401.jpg
