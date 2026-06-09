@@ -63,6 +63,13 @@ SERVER_HOST = os.environ.get("SHOB_SERVER_HOST", "0.0.0.0")
 SERVER_PORT = _env_int("SHOB_SERVER_PORT", 8443)
 DEBUG_SERVER_ENABLED = _env_bool("SHOB_DEBUG_SERVER", False)
 DEBUG_SERVER_PORT = _env_int("SHOB_DEBUG_PORT", 8080)
+FTP_SERVER_ENABLED = _env_bool("SHOB_FTP_ENABLED", True)
+FTP_SERVER_HOST = os.environ.get("SHOB_FTP_HOST", "0.0.0.0")
+FTP_SERVER_PORT = _env_int("SHOB_FTP_PORT", 2121)
+FTP_PASSIVE_PORT_START = _env_int("SHOB_FTP_PASSIVE_PORT_START", 30000)
+FTP_PASSIVE_PORT_END = _env_int("SHOB_FTP_PASSIVE_PORT_END", 30100)
+FTP_USERNAME = os.environ.get("SHOB_FTP_USERNAME", "shob")
+FTP_PASSWORD = os.environ.get("SHOB_FTP_PASSWORD", "shob123")
 TLS_ENABLED = _env_bool("SHOB_TLS_ENABLED", True)
 TRUSTED_PROXY_IPS = {
     ip.strip()
@@ -107,6 +114,7 @@ def _create_schema(conn):
             camera_type TEXT NOT NULL DEFAULT '',
             rtsp_port INTEGER NOT NULL DEFAULT 8554,
             stream_path TEXT NOT NULL DEFAULT '/cam/realmonitor?channel=1&subtype=0',
+            onvif_port INTEGER NOT NULL DEFAULT 80,
             last_status TEXT NOT NULL DEFAULT '',
             last_error TEXT NOT NULL DEFAULT '',
             last_checked_at TEXT NOT NULL DEFAULT '',
@@ -128,6 +136,7 @@ def _ensure_camera_profile_columns(conn):
             "ALTER TABLE camera_profiles ADD COLUMN stream_path TEXT NOT NULL "
             "DEFAULT '/cam/realmonitor?channel=1&subtype=0'"
         ),
+        "onvif_port": "ALTER TABLE camera_profiles ADD COLUMN onvif_port INTEGER NOT NULL DEFAULT 80",
         "last_status": "ALTER TABLE camera_profiles ADD COLUMN last_status TEXT NOT NULL DEFAULT ''",
         "last_error": "ALTER TABLE camera_profiles ADD COLUMN last_error TEXT NOT NULL DEFAULT ''",
         "last_checked_at": "ALTER TABLE camera_profiles ADD COLUMN last_checked_at TEXT NOT NULL DEFAULT ''",
@@ -243,6 +252,7 @@ def save_camera_profile(
     camera_type: str,
     rtsp_port: int = 8554,
     stream_path: str = "/cam/realmonitor?channel=1&subtype=0",
+    onvif_port: int = 80,
 ):
     init_device_store()
     now = datetime.now().isoformat(timespec="seconds")
@@ -250,20 +260,25 @@ def save_camera_profile(
         rtsp_port = int(rtsp_port)
     except (TypeError, ValueError):
         rtsp_port = 8554
+    try:
+        onvif_port = int(onvif_port)
+    except (TypeError, ValueError):
+        onvif_port = 80
     stream_path = (stream_path or "/cam/realmonitor?channel=1&subtype=0").strip()
     with _db_conn() as conn:
         conn.execute(
             """
             INSERT INTO camera_profiles (
-                device_uuid, username, password, camera_type, rtsp_port, stream_path, updated_at
+                device_uuid, username, password, camera_type, rtsp_port, stream_path, onvif_port, updated_at
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(device_uuid) DO UPDATE SET
                 username = excluded.username,
                 password = excluded.password,
                 camera_type = excluded.camera_type,
                 rtsp_port = excluded.rtsp_port,
                 stream_path = excluded.stream_path,
+                onvif_port = excluded.onvif_port,
                 updated_at = excluded.updated_at
             """,
             (
@@ -273,6 +288,7 @@ def save_camera_profile(
                 camera_type.strip(),
                 rtsp_port,
                 stream_path,
+                onvif_port,
                 now,
             ),
         )
@@ -291,6 +307,7 @@ def load_camera_profile(device_uuid: str) -> "dict | None":
                 camera_type,
                 rtsp_port,
                 stream_path,
+                onvif_port,
                 last_status,
                 last_error,
                 last_checked_at,

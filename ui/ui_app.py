@@ -3,6 +3,8 @@ Main Tk application shell that composes the UI feature modules.
 """
 
 from datetime import datetime, timedelta
+import ctypes
+import sys
 import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext, ttk
@@ -28,6 +30,85 @@ from .ui_media import MediaSlot
 from .ui_theme import C, apply_ttk_style, load_logo, load_logo2
 
 
+DEVICE_UI = {
+    "panel": "#07111c",
+    "toolbar": "#09121c",
+    "card": "#09131d",
+    "card_hover": "#0c1c29",
+    "card_flash": "#2a1b1b",
+    "card_flash_hover": "#3a2323",
+    "border": "#1b2a36",
+    "border_hover": "#28645d",
+    "primary": "#2dd4bf",
+    "primary_dim": "#193b3a",
+    "foreground": "#e7f0f5",
+    "muted": "#7f95a5",
+    "online": "#34d399",
+    "live_fill": "#0b342e",
+    "live_fill_hover": "#0e483e",
+    "live_border": "#1d6658",
+    "live_border_hover": "#2fae92",
+    "live_text": "#38e6bd",
+    "export_fill": "#36290d",
+    "export_fill_hover": "#4a380f",
+    "export_border": "#73541a",
+    "export_border_hover": "#a77b1d",
+    "export_text": "#f2b72e",
+    "delete_fill": "#371821",
+    "delete_fill_hover": "#4b1f2b",
+    "delete_border": "#743040",
+    "delete_border_hover": "#a24355",
+    "delete_text": "#f36f7f",
+}
+
+
+def _enable_windows_dpi_awareness():
+    if sys.platform != "win32":
+        return
+    try:
+        ctypes.windll.shcore.SetProcessDpiAwareness(1)
+    except Exception:
+        try:
+            ctypes.windll.user32.SetProcessDPIAware()
+        except Exception:
+            pass
+
+
+def _create_smooth_rounded_rect(
+    canvas: tk.Canvas,
+    x1: int,
+    y1: int,
+    x2: int,
+    y2: int,
+    radius: int = 10,
+    **kwargs,
+):
+    radius = max(0, min(radius, (x2 - x1) // 2, (y2 - y1) // 2))
+    points = [
+        x1 + radius, y1,
+        x1 + radius, y1,
+        x2 - radius, y1,
+        x2 - radius, y1,
+        x2, y1,
+        x2, y1 + radius,
+        x2, y1 + radius,
+        x2, y2 - radius,
+        x2, y2 - radius,
+        x2, y2,
+        x2 - radius, y2,
+        x2 - radius, y2,
+        x1 + radius, y2,
+        x1 + radius, y2,
+        x1, y2,
+        x1, y2 - radius,
+        x1, y2 - radius,
+        x1, y1 + radius,
+        x1, y1 + radius,
+        x1, y1,
+    ]
+    return canvas.create_polygon(points, smooth=True, splinesteps=18, **kwargs)
+
+
 class RoundedActionButton(tk.Canvas):
     def __init__(
         self,
@@ -45,8 +126,8 @@ class RoundedActionButton(tk.Canvas):
         icon_box_fill_color: str | None = None,
         width: int = 112,
         height: int = 34,
-        radius: int = 10,
-        font=("Helvetica", 9, "bold"),
+        radius: int = 8,
+        font=("Segoe UI", 9, "bold"),
         icon_font=("Segoe UI", 9, "bold"),
     ):
         super().__init__(
@@ -120,22 +201,9 @@ class RoundedActionButton(tk.Canvas):
             fill = self._fill_color
             border = self._border_color
 
-        # Soft outer glow
         self._rounded_rect(
             0,
             0,
-            w,
-            h,
-            radius=max(self._radius + 1, self._radius),
-            fill=self.cget("bg"),
-            outline=border,
-            width=1,
-        )
-
-        # Main button body
-        self._rounded_rect(
-            1,
-            1,
             w - 1,
             h - 1,
             radius=self._radius,
@@ -146,28 +214,34 @@ class RoundedActionButton(tk.Canvas):
         text_x = w // 2
         text_anchor = "center"
         if self._icon_text:
-            icon_size = max(min(h - 14, 16), 14)
-            icon_left = 9
-            icon_top = (h - icon_size) // 2
-            icon_box_fill = self._icon_box_fill_color or fill
-            self._rounded_rect(
-                icon_left,
-                icon_top,
-                icon_left + icon_size,
-                icon_top + icon_size,
-                radius=4,
-                fill=icon_box_fill,
-                outline=border,
-                width=1,
-            )
+            icon_size = max(min(h - 14, 15), 12)
+            icon_left = 10
+            if self._icon_box_fill_color is not None:
+                icon_top = (h - icon_size) // 2
+                self._rounded_rect(
+                    icon_left,
+                    icon_top,
+                    icon_left + icon_size,
+                    icon_top + icon_size,
+                    radius=4,
+                    fill=self._icon_box_fill_color,
+                    outline=border,
+                    width=1,
+                )
+                icon_x = icon_left + (icon_size // 2)
+                text_x = icon_left + icon_size + 8
+            else:
+                icon_x = icon_left
+                text_x = icon_left + icon_size + 6
+
             self.create_text(
-                icon_left + (icon_size // 2),
+                icon_x,
                 h // 2,
                 text=self._icon_text,
                 fill=self._icon_color,
                 font=self._icon_font,
+                anchor="w" if self._icon_box_fill_color is None else "center",
             )
-            text_x = icon_left + icon_size + 8
             text_anchor = "w"
 
         self.create_text(
@@ -180,36 +254,93 @@ class RoundedActionButton(tk.Canvas):
         )
 
     def _rounded_rect(self, x1, y1, x2, y2, radius=10, **kwargs):
-        radius = max(0, min(radius, (x2 - x1) // 2, (y2 - y1) // 2))
-        points = [
-            x1 + radius, y1,
-            x1 + radius, y1,
-            x2 - radius, y1,
-            x2 - radius, y1,
-            x2, y1,
-            x2, y1 + radius,
-            x2, y1 + radius,
-            x2, y2 - radius,
-            x2, y2 - radius,
-            x2, y2,
-            x2 - radius, y2,
-            x2 - radius, y2,
-            x1 + radius, y2,
-            x1 + radius, y2,
-            x1, y2,
-            x1, y2 - radius,
-            x1, y2 - radius,
-            x1, y1 + radius,
-            x1, y1 + radius,
-            x1, y1,
-        ]
-        return self.create_polygon(points, smooth=True, splinesteps=24, **kwargs)
+        return _create_smooth_rounded_rect(self, x1, y1, x2, y2, radius, **kwargs)
+
+
+class ToolbarActionButton(tk.Canvas):
+    def __init__(
+        self,
+        master,
+        text: str,
+        icon_text: str,
+        command,
+        width: int = 118,
+        height: int = 42,
+    ):
+        super().__init__(
+            master,
+            width=width,
+            height=height,
+            bd=0,
+            highlightthickness=0,
+            bg=master.cget("bg"),
+            cursor="hand2",
+        )
+        self._text = text
+        self._icon_text = icon_text
+        self._command = command
+        self._hover = False
+        self._font = ("Segoe UI", 9, "bold")
+        self._icon_font = ("Segoe MDL2 Assets", 11)
+        self._draw()
+        self.bind("<Enter>", self._on_enter)
+        self.bind("<Leave>", self._on_leave)
+        self.bind("<ButtonRelease-1>", self._on_release)
+
+    def _on_enter(self, _event):
+        self._hover = True
+        self._draw()
+
+    def _on_leave(self, _event):
+        self._hover = False
+        self._draw()
+
+    def _on_release(self, event):
+        if self._command and 0 <= event.x <= self.winfo_width() and 0 <= event.y <= self.winfo_height():
+            self._command()
+        return "break"
+
+    def _draw(self):
+        self.delete("all")
+        w = max(self.winfo_width(), int(self["width"]))
+        h = max(self.winfo_height(), int(self["height"]))
+        fill = "#0b2428" if self._hover else self.cget("bg")
+        outline = "#174947" if self._hover else self.cget("bg")
+        _create_smooth_rounded_rect(
+            self,
+            1,
+            4,
+            w - 1,
+            h - 4,
+            radius=9,
+            fill=fill,
+            outline=outline,
+            width=1,
+        )
+        center_x = w // 2
+        self.create_text(
+            center_x - 24,
+            h // 2,
+            text=self._icon_text,
+            fill=DEVICE_UI["primary"],
+            font=self._icon_font,
+            anchor="center",
+        )
+        self.create_text(
+            center_x - 8,
+            h // 2,
+            text=self._text,
+            fill=DEVICE_UI["primary"],
+            font=self._font,
+            anchor="w",
+        )
 
 
 class SecCamApp(tk.Tk):
     SIDEBAR_W = 320
 
     def __init__(self):
+        _enable_windows_dpi_awareness()
         super().__init__()
         apply_ttk_style()
         self.title("Security Camera Player")
@@ -221,7 +352,8 @@ class SecCamApp(tk.Tk):
         self._gallery_windows = {}
         self._logo_photo = None
         self._logo2_photo = None
-        self._devices_title_var = tk.StringVar(value="DEVICES (0)")
+        self._devices_title_var = tk.StringVar(value="DEVICES")
+        self._devices_count_var = tk.StringVar(value="0 connected")
         self._flash_device_uuids = set()
         self._flash_clear_after_ids = {}
         self._banner_window = None
@@ -398,30 +530,67 @@ class SecCamApp(tk.Tk):
         )
 
     def _build_sidebar(self, parent):
-        hdr = tk.Frame(parent, bg=C["bg_sidebar"])
-        hdr.pack(fill=tk.X, padx=12, pady=(14, 8))
-        tk.Label(
-            hdr,
-            textvariable=self._devices_title_var,
-            font=("Helvetica", 10, "bold"),
-            bg=C["bg_sidebar"],
-            fg=C["tx_green"],
-        ).pack(side=tk.LEFT)
-        tk.Frame(parent, bg=C["border"], height=1).pack(fill=tk.X)
+        parent.configure(bg=DEVICE_UI["panel"])
 
-        scroll_f = tk.Frame(parent, bg=C["bg_sidebar"])
+        hdr = tk.Frame(parent, bg=DEVICE_UI["panel"])
+        hdr.pack(fill=tk.X, padx=28, pady=(14, 8))
+
+        monitor_icon = tk.Canvas(
+            hdr,
+            width=34,
+            height=34,
+            bg=DEVICE_UI["panel"],
+            bd=0,
+            highlightthickness=0,
+        )
+        monitor_icon.pack(side=tk.LEFT, padx=(0, 10))
+        _create_smooth_rounded_rect(
+            monitor_icon,
+            1,
+            1,
+            33,
+            33,
+            radius=9,
+            fill="#092326",
+            outline="#174b49",
+            width=1,
+        )
+        monitor_icon.create_rectangle(10, 9, 24, 20, outline=DEVICE_UI["primary"], width=1)
+        monitor_icon.create_line(17, 20, 17, 24, fill=DEVICE_UI["primary"], width=1)
+        monitor_icon.create_line(13, 24, 21, 24, fill=DEVICE_UI["primary"], width=1)
+
+        title_stack = tk.Frame(hdr, bg=DEVICE_UI["panel"])
+        title_stack.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        tk.Label(
+            title_stack,
+            textvariable=self._devices_title_var,
+            font=("Segoe UI", 10, "bold"),
+            bg=DEVICE_UI["panel"],
+            fg=DEVICE_UI["primary"],
+            anchor="w",
+        ).pack(fill=tk.X)
+        tk.Label(
+            title_stack,
+            textvariable=self._devices_count_var,
+            font=("Segoe UI", 9),
+            bg=DEVICE_UI["panel"],
+            fg=DEVICE_UI["muted"],
+            anchor="w",
+        ).pack(fill=tk.X)
+
+        scroll_f = tk.Frame(parent, bg=DEVICE_UI["panel"])
         scroll_f.pack(fill=tk.BOTH, expand=True)
-        vsb = ttk.Scrollbar(scroll_f, orient="vertical")
+        vsb = ttk.Scrollbar(scroll_f, orient="vertical", style="Vertical.TScrollbar")
         vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self._dev_canvas = tk.Canvas(
             scroll_f,
-            bg=C["bg_sidebar"],
+            bg=DEVICE_UI["panel"],
             highlightthickness=0,
             yscrollcommand=vsb.set,
         )
         self._dev_canvas.pack(fill=tk.BOTH, expand=True)
         vsb.config(command=self._dev_canvas.yview)
-        self._dev_list = tk.Frame(self._dev_canvas, bg=C["bg_sidebar"])
+        self._dev_list = tk.Frame(self._dev_canvas, bg=DEVICE_UI["panel"])
         self._dev_window_id = self._dev_canvas.create_window(
             (0, 0),
             window=self._dev_list,
@@ -433,74 +602,34 @@ class SecCamApp(tk.Tk):
         )
         self._dev_canvas.bind("<Configure>", self._resize_device_list_canvas)
 
-        tk.Frame(parent, bg=C["border"], height=1).pack(fill=tk.X)
-        actions = tk.Frame(parent, bg=C["bg_sidebar"])
-        actions.pack(fill=tk.X, padx=12, pady=10)
+        tk.Frame(parent, bg=DEVICE_UI["border"], height=1).pack(fill=tk.X)
+        actions_outer = tk.Frame(parent, bg=DEVICE_UI["toolbar"])
+        actions_outer.pack(fill=tk.X)
+        actions = tk.Frame(actions_outer, bg=DEVICE_UI["toolbar"])
+        actions.pack(fill=tk.X, padx=18, pady=10)
 
-        add_btn = tk.Button(
+        refresh_btn = ToolbarActionButton(
             actions,
-            text="➕  Add Device",
-            command=self._show_add_device_dialog,
-            bg=C["tx_green"],
-            fg=C["tx_white"],
-            activebackground="#0f6f3f",
-            activeforeground=C["tx_white"],
-            relief=tk.FLAT,
-            bd=0,
-            padx=10,
-            pady=8,
-            font=("Segoe UI", 10, "bold"),
-            cursor="hand2",
-        )
-        # Add Device button hidden by request.
-
-        refresh_btn = tk.Button(
-            actions,
-            text="🔄  Refresh",
+            text="Refresh",
+            icon_text="\ue72c",
             command=self._manual_refresh_devices,
-            bg=C["bg_card"],
-            fg=C["tx_green"],
-            activebackground=C["bg_card_hv"],
-            activeforeground=C["tx_green"],
-            relief=tk.FLAT,
-            highlightbackground=C["tx_green"],
-            highlightthickness=1,
-            bd=0,
-            padx=10,
-            pady=8,
-            font=("Segoe UI", 10, "bold"),
-            cursor="hand2",
         )
-        refresh_btn.pack(
+        refresh_btn.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        tk.Frame(actions, bg=DEVICE_UI["border"], width=1).pack(
             side=tk.LEFT,
-            fill=tk.X,
-            expand=True,
-            padx=(6, 0),
+            fill=tk.Y,
+            padx=8,
+            pady=8,
         )
 
-        logs_btn = tk.Button(
+        logs_btn = ToolbarActionButton(
             actions,
             text="Logs",
+            icon_text="\ue8a5",
             command=self._open_logs_window,
-            bg=C["bg_card"],
-            fg=C["tx_green"],
-            activebackground=C["bg_card_hv"],
-            activeforeground=C["tx_green"],
-            relief=tk.FLAT,
-            highlightbackground=C["tx_green"],
-            highlightthickness=1,
-            bd=0,
-            padx=10,
-            pady=8,
-            font=("Segoe UI", 10, "bold"),
-            cursor="hand2",
         )
-        logs_btn.pack(
-            side=tk.LEFT,
-            fill=tk.X,
-            expand=True,
-            padx=(0, 6),
-        )
+        logs_btn.pack(side=tk.LEFT, fill=tk.X, expand=True)
 
         self._refresh_device_list()
 
@@ -514,7 +643,8 @@ class SecCamApp(tk.Tk):
                 if dev.get("uuid") == preferred_uuid:
                     devices.insert(0, devices.pop(idx))
                     break
-        self._devices_title_var.set(f"DEVICES ({len(devices)})")
+        self._devices_title_var.set("DEVICES")
+        self._devices_count_var.set(f"{len(devices)} connected")
 
         for widget in self._dev_list.winfo_children():
             widget.destroy()
@@ -655,72 +785,113 @@ class SecCamApp(tk.Tk):
         items_count = len(items)
         card_canvas = tk.Canvas(
             self._dev_list,
-            bg=C["bg_sidebar"],
+            bg=DEVICE_UI["panel"],
             bd=0,
             highlightthickness=0,
-            height=132,
+            height=108,
             cursor="hand2",
         )
-        card_canvas.pack(fill=tk.X, padx=10, pady=6)
+        card_canvas.pack(fill=tk.X, padx=12, pady=3)
 
-        card = tk.Frame(card_canvas, bg=C["bg_card"])
-        card_window = card_canvas.create_window(12, 10, window=card, anchor="nw")
+        card = tk.Frame(card_canvas, bg=DEVICE_UI["card"])
+        card_window = card_canvas.create_window(12, 8, window=card, anchor="nw")
 
-        top = tk.Frame(card, bg=C["bg_card"], padx=10, pady=9)
-        top.pack(fill=tk.X)
-        top.grid_columnconfigure(0, weight=1)
+        content = tk.Frame(card, bg=DEVICE_UI["card"], padx=9, pady=10)
+        content.pack(fill=tk.X)
+        content.grid_columnconfigure(0, weight=1, minsize=132)
 
-        info = tk.Frame(top, bg=C["bg_card"])
+        info = tk.Frame(content, bg=DEVICE_UI["card"])
         info.grid(row=0, column=0, sticky="nsew")
-        actions = tk.Frame(top, bg=C["bg_card"])
-        actions.grid(row=0, column=1, sticky="ne", padx=(10, 0))
+        actions = tk.Frame(content, bg=DEVICE_UI["card"])
+        actions.grid(row=0, column=1, sticky="e", padx=(7, 0))
+
+        name_row = tk.Frame(info, bg=DEVICE_UI["card"])
+        name_row.pack(fill=tk.X, pady=(0, 2))
+        status_dot = tk.Canvas(
+            name_row,
+            width=10,
+            height=10,
+            bg=DEVICE_UI["card"],
+            bd=0,
+            highlightthickness=0,
+        )
+        status_dot.pack(side=tk.LEFT, padx=(0, 6), pady=(2, 0))
+        status_dot.create_oval(2, 2, 8, 8, fill=DEVICE_UI["online"], outline="")
 
         name_lbl = tk.Label(
-            info,
+            name_row,
             text=dev["name"],
-            font=("Helvetica", 12, "bold"),
-            bg=C["bg_card"],
-            fg=C["tx_primary"],
+            font=("Segoe UI", 12, "bold"),
+            bg=DEVICE_UI["card"],
+            fg=DEVICE_UI["foreground"],
             anchor="w",
         )
-        name_lbl.pack(fill=tk.X)
+        name_lbl.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        ip_row = tk.Frame(info, bg=DEVICE_UI["card"])
+        ip_row.pack(fill=tk.X, pady=(3, 0))
+        wifi_icon = tk.Label(
+            ip_row,
+            text="\ue701",
+            font=("Segoe MDL2 Assets", 11),
+            bg=DEVICE_UI["card"],
+            fg=DEVICE_UI["muted"],
+            anchor="center",
+            width=2,
+        )
+        wifi_icon.pack(side=tk.LEFT, padx=(0, 7))
 
         ip_lbl = tk.Label(
-            info,
+            ip_row,
             text=dev["ip"],
-            font=("Helvetica", 10),
-            bg=C["bg_card"],
-            fg=C["tx_secondary"],
+            font=("Consolas", 10),
+            bg=DEVICE_UI["card"],
+            fg="#b7c9d4",
             anchor="w",
         )
-        ip_lbl.pack(fill=tk.X, pady=(2, 0))
+        ip_lbl.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        gallery_row = tk.Frame(info, bg=DEVICE_UI["card"])
+        gallery_row.pack(fill=tk.X, pady=(3, 0))
+        gallery_icon = tk.Label(
+            gallery_row,
+            text="\ue8b9",
+            font=("Segoe MDL2 Assets", 11),
+            bg=DEVICE_UI["card"],
+            fg=DEVICE_UI["muted"],
+            anchor="center",
+            width=2,
+        )
+        gallery_icon.pack(side=tk.LEFT, padx=(0, 7))
 
         items_lbl = tk.Label(
-            info,
+            gallery_row,
             text=f"{items_count} items in gallery",
-            font=("Helvetica", 10, "bold"),
-            bg=C["bg_card"],
-            fg=C["tx_green_lt"],
+            font=("Segoe UI", 10),
+            bg=DEVICE_UI["card"],
+            fg="#b7c9d4",
             anchor="w",
         )
-        items_lbl.pack(fill=tk.X, pady=(6, 0))
+        items_lbl.pack(side=tk.LEFT, fill=tk.X, expand=True)
 
         live_btn = RoundedActionButton(
             actions,
             text="Live Stream",
             command=lambda d=dev: self._start_live_stream_for_device(d),
-            fill_color="#083c66",
-            hover_fill_color="#0d5d98",
-            press_fill_color="#062f50",
-            border_color="#24c8ff",
-            border_hover_color="#78e2ff",
-            text_color=C["tx_white"],
-            icon_text="\u25b6",
-            icon_color="#d8f7ff",
-            icon_box_fill_color="#092f4d",
-            width=120,
-            height=33,
+            fill_color=DEVICE_UI["live_fill"],
+            hover_fill_color=DEVICE_UI["live_fill_hover"],
+            press_fill_color="#092b26",
+            border_color=DEVICE_UI["live_border"],
+            border_hover_color=DEVICE_UI["live_border_hover"],
+            text_color=DEVICE_UI["live_text"],
+            icon_text="\ue768",
+            icon_color=DEVICE_UI["live_text"],
+            icon_box_fill_color=None,
+            width=104,
+            height=24,
             radius=8,
+            font=("Segoe UI", 8, "bold"),
+            icon_font=("Segoe MDL2 Assets", 9),
         )
         live_btn.pack(side=tk.TOP, fill=tk.X)
 
@@ -728,56 +899,66 @@ class SecCamApp(tk.Tk):
             actions,
             text="Export Photos",
             command=lambda d=dev: self._export_device_images(d),
-            fill_color="#0a5c41",
-            hover_fill_color="#11865d",
-            press_fill_color="#084a35",
-            border_color="#24ffb2",
-            border_hover_color="#63ffd0",
-            text_color=C["tx_white"],
-            icon_text="\u2B07",
-            icon_color="#d8ffee",
-            icon_box_fill_color="#0b4f39",
-            width=120,
-            height=33,
+            fill_color=DEVICE_UI["export_fill"],
+            hover_fill_color=DEVICE_UI["export_fill_hover"],
+            press_fill_color="#2d2109",
+            border_color=DEVICE_UI["export_border"],
+            border_hover_color=DEVICE_UI["export_border_hover"],
+            text_color=DEVICE_UI["export_text"],
+            icon_text="\ue896",
+            icon_color=DEVICE_UI["export_text"],
+            icon_box_fill_color=None,
+            width=104,
+            height=24,
             radius=8,
+            font=("Segoe UI", 8, "bold"),
+            icon_font=("Segoe MDL2 Assets", 9),
         )
-        export_btn.pack(side=tk.TOP, fill=tk.X, pady=(7, 0))
+        export_btn.pack(side=tk.TOP, fill=tk.X, pady=(5, 0))
 
         delete_btn = RoundedActionButton(
             actions,
             text="Delete",
             command=lambda d=dev: self._remove_device(d),
-            fill_color="#7b1125",
-            hover_fill_color="#a01933",
-            press_fill_color="#640d1e",
-            border_color="#ff3158",
-            border_hover_color="#ff6788",
-            text_color=C["tx_white"],
-            icon_text="\u2716",
-            icon_color="#ffd9e0",
-            icon_box_fill_color="#651020",
-            width=120,
-            height=33,
+            fill_color=DEVICE_UI["delete_fill"],
+            hover_fill_color=DEVICE_UI["delete_fill_hover"],
+            press_fill_color="#2d121a",
+            border_color=DEVICE_UI["delete_border"],
+            border_hover_color=DEVICE_UI["delete_border_hover"],
+            text_color=DEVICE_UI["delete_text"],
+            icon_text="\ue74d",
+            icon_color=DEVICE_UI["delete_text"],
+            icon_box_fill_color=None,
+            width=104,
+            height=24,
             radius=8,
+            font=("Segoe UI", 8, "bold"),
+            icon_font=("Segoe MDL2 Assets", 9),
         )
-        delete_btn.pack(side=tk.TOP, fill=tk.X, pady=(7, 0))
+        delete_btn.pack(side=tk.TOP, fill=tk.X, pady=(5, 0))
 
         card.update_idletasks()
-        card_canvas.configure(height=card.winfo_reqheight() + 20)
+        card_canvas.configure(height=card.winfo_reqheight() + 10)
 
         hover_widgets = [
             card,
-            top,
+            content,
             info,
             actions,
+            name_row,
+            ip_row,
+            gallery_row,
+            status_dot,
+            wifi_icon,
+            gallery_icon,
             name_lbl,
             ip_lbl,
             items_lbl,
         ]
         hover = {"on": False}
         flashing = dev["uuid"] in self._flash_device_uuids
-        base_bg = "#2a1b1b" if flashing else "#0b1f36"
-        hover_bg = "#3a2323" if flashing else "#112b4a"
+        base_bg = DEVICE_UI["card_flash"] if flashing else DEVICE_UI["card"]
+        hover_bg = DEVICE_UI["card_flash_hover"] if flashing else DEVICE_UI["card_hover"]
 
         for widget in hover_widgets:
             widget.configure(bg=base_bg)
@@ -788,80 +969,55 @@ class SecCamApp(tk.Tk):
         def _draw_card_background():
             width = max(card_canvas.winfo_width(), 80)
             height = max(card_canvas.winfo_height(), 80)
-            if flashing:
-                fill = hover_bg if hover["on"] else base_bg
-                outline = "#be2323" if hover["on"] else "#d62828"
-            else:
-                fill = hover_bg if hover["on"] else base_bg
-                outline = "#2a668f" if hover["on"] else "#1a4f79"
+            fill = hover_bg if hover["on"] else base_bg
+            outline = "#a24355" if flashing else (DEVICE_UI["border_hover"] if hover["on"] else DEVICE_UI["border"])
             card_canvas.delete("card_bg")
-            card_canvas.delete("card_accent")
             self._rounded_rect(
                 card_canvas,
-                10,
-                3,
-                width - 4,
-                height - 4,
-                radius=12,
+                0,
+                2,
+                width - 1,
+                height - 3,
+                radius=10,
                 fill=fill,
                 outline=outline,
                 width=1,
                 tags="card_bg",
             )
+            if hover["on"] and not flashing:
+                self._rounded_rect(
+                    card_canvas,
+                    1,
+                    3,
+                    width - 2,
+                    height - 4,
+                    radius=10,
+                    fill="",
+                    outline="#123d3a",
+                    width=1,
+                    tags="card_bg",
+                )
             card_canvas.tag_lower("card_bg")
-
-            # Single slim neon strip on the left, integrated inside the card.
-            accent_top = 12
-            accent_bottom = max(height - 12, accent_top + 20)
-            accent_outer = "#25dcff" if hover["on"] else "#17c8ef"
-            accent_core = "#b4fbff" if hover["on"] else "#7cf3ff"
-
-            self._rounded_rect(
-                card_canvas,
-                13,
-                accent_top,
-                19,
-                accent_bottom,
-                radius=4,
-                fill="#041425",
-                outline=accent_outer,
-                width=1,
-                tags="card_accent",
-            )
-            self._rounded_rect(
-                card_canvas,
-                15,
-                accent_top + 4,
-                17,
-                accent_bottom - 4,
-                radius=2,
-                fill=accent_core,
-                outline=accent_core,
-                width=1,
-                tags="card_accent",
-            )
-
-            card_canvas.coords(card_window, 22, 10)
-            card_canvas.itemconfigure(card_window, width=max(width - 28, 120))
+            card_canvas.coords(card_window, 12, 8)
+            card_canvas.itemconfigure(card_window, width=max(width - 24, 120))
             card_canvas.tag_raise(card_window)
+
+        def _set_card_bg(bg_color: str):
+            for widget in hover_widgets:
+                widget.configure(bg=bg_color)
+            live_btn.set_container_bg(bg_color)
+            export_btn.set_container_bg(bg_color)
+            delete_btn.set_container_bg(bg_color)
 
         def _enter(_event):
             hover["on"] = True
             _draw_card_background()
-            for widget in hover_widgets:
-                widget.configure(bg=hover_bg)
-            live_btn.set_container_bg(hover_bg)
-            export_btn.set_container_bg(hover_bg)
-            delete_btn.set_container_bg(hover_bg)
+            _set_card_bg(hover_bg)
 
         def _leave(_event):
             hover["on"] = False
             _draw_card_background()
-            for widget in hover_widgets:
-                widget.configure(bg=base_bg)
-            live_btn.set_container_bg(base_bg)
-            export_btn.set_container_bg(base_bg)
-            delete_btn.set_container_bg(base_bg)
+            _set_card_bg(base_bg)
 
         card_canvas.bind("<Configure>", lambda _e: _draw_card_background())
         _draw_card_background()
@@ -869,8 +1025,14 @@ class SecCamApp(tk.Tk):
         clickable = [
             card_canvas,
             card,
-            top,
+            content,
             info,
+            name_row,
+            ip_row,
+            gallery_row,
+            status_dot,
+            wifi_icon,
+            gallery_icon,
             name_lbl,
             ip_lbl,
             items_lbl,
@@ -881,8 +1043,8 @@ class SecCamApp(tk.Tk):
             widget.bind("<Leave>", _leave)
 
         for btn in (live_btn, export_btn, delete_btn):
-            btn.bind("<Enter>", _enter)
-            btn.bind("<Leave>", _leave)
+            btn.bind("<Enter>", _enter, add="+")
+            btn.bind("<Leave>", _leave, add="+")
 
     def _rounded_rect(
         self,
@@ -894,30 +1056,7 @@ class SecCamApp(tk.Tk):
         radius: int = 10,
         **kwargs,
     ):
-        radius = max(0, min(radius, (x2 - x1) // 2, (y2 - y1) // 2))
-        points = [
-            x1 + radius, y1,
-            x1 + radius, y1,
-            x2 - radius, y1,
-            x2 - radius, y1,
-            x2, y1,
-            x2, y1 + radius,
-            x2, y1 + radius,
-            x2, y2 - radius,
-            x2, y2 - radius,
-            x2, y2,
-            x2 - radius, y2,
-            x2 - radius, y2,
-            x1 + radius, y2,
-            x1 + radius, y2,
-            x1, y2,
-            x1, y2 - radius,
-            x1, y2 - radius,
-            x1, y1 + radius,
-            x1, y1 + radius,
-            x1, y1,
-        ]
-        return canvas.create_polygon(points, smooth=True, splinesteps=24, **kwargs)
+        return _create_smooth_rounded_rect(canvas, x1, y1, x2, y2, radius, **kwargs)
 
     def _build_device_status(self, latest_received):
         if not latest_received:
@@ -1177,6 +1316,28 @@ class SecCamApp(tk.Tk):
         sender = msg.get("sender_ip", "unknown")
         self.set_server_status(f"Blocked upload from {sender}", C["status_err"])
 
+    def show_post_test_event(self, msg):
+        sender = msg.get("sender_ip", "unknown")
+        content_type = msg.get("content_type") or "no content-type"
+        content_length = msg.get("content_length") or 0
+        path = msg.get("path") or "/post-test"
+        known = bool(msg.get("known_device"))
+        tone = "alert" if known else "warn"
+        known_text = "known device" if known else "unknown sender"
+
+        self.set_server_status(
+            f"POST received from {sender} ({content_length} bytes)",
+            C["status_ok"] if known else C["status_warn"],
+        )
+        self._show_top_notice(
+            title="POST received",
+            detail=f"{sender}  |  {path}  |  {content_type}  |  {content_length} bytes  |  {known_text}",
+            tone=tone,
+            duration_ms=8000,
+        )
+        if self._logs_window and self._logs_window.winfo_exists():
+            self._refresh_logs_window()
+
     def show_admin_device_event(self, msg):
         action = str(msg.get("action", "add")).strip().lower()
         name = msg.get("name", "")
@@ -1376,7 +1537,7 @@ class SecCamApp(tk.Tk):
                     "Camera Credentials",
                     "Could not open the RTSP stream with these details.\n\n"
                     f"{error}\n\n"
-                    "Please check the username, password, RTSP port, and RTSP path.",
+                    "Please check the username, password, RTSP port, and camera type.",
                     parent=self,
                 )
                 continue
@@ -1391,6 +1552,7 @@ class SecCamApp(tk.Tk):
                 camera_type=dlg.result["camera_type"],
                 rtsp_port=dlg.result["rtsp_port"],
                 stream_path=dlg.result["stream_path"],
+                onvif_port=dlg.result.get("onvif_port", 80),
             )
         except Exception as exc:
             self.set_server_status("Camera credentials save failed", C["status_err"])
@@ -1626,6 +1788,7 @@ class SecCamApp(tk.Tk):
             self._player_frame,
             device,
             target,
+            profile=profile,
             on_close=self._live_stream_closed,
             on_status=self._live_stream_status_changed,
         )

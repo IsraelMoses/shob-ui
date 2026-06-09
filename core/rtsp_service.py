@@ -7,16 +7,19 @@ from __future__ import annotations
 import socket
 import time
 from dataclasses import dataclass
+from ipaddress import ip_address
 from typing import Any
 from urllib.parse import quote
 
 
 DEFAULT_RTSP_PORT = 8554
+DIRECT_RTSP_PORT = 554
 DEFAULT_RTSP_PATH = "/cam/realmonitor?channel=1&subtype=0"
 
 CAMERA_DEFAULTS = {
     "Generic RTSP": {"port": DEFAULT_RTSP_PORT, "path": DEFAULT_RTSP_PATH},
     "Dahua": {"port": DEFAULT_RTSP_PORT, "path": DEFAULT_RTSP_PATH},
+    "IDIS": {"port": DEFAULT_RTSP_PORT, "path": "/trackID=1"},
     "Hikvision": {"port": DEFAULT_RTSP_PORT, "path": "/Streaming/Channels/101"},
     "Axis": {"port": DEFAULT_RTSP_PORT, "path": "/axis-media/media.amp"},
 }
@@ -31,8 +34,19 @@ class RtspTarget:
     stream_path: str
 
 
-def camera_defaults(camera_type: str) -> dict[str, Any]:
-    return dict(CAMERA_DEFAULTS.get(camera_type, CAMERA_DEFAULTS["Generic RTSP"]))
+def _is_direct_camera_host(host: str) -> bool:
+    try:
+        parsed = ip_address((host or "").strip())
+    except ValueError:
+        return False
+    return parsed.is_private or parsed.is_loopback or parsed.is_link_local
+
+
+def camera_defaults(camera_type: str, host: str = "") -> dict[str, Any]:
+    defaults = dict(CAMERA_DEFAULTS.get(camera_type, CAMERA_DEFAULTS["Generic RTSP"]))
+    if _is_direct_camera_host(host):
+        defaults["port"] = DIRECT_RTSP_PORT
+    return defaults
 
 
 def normalize_stream_path(stream_path: str) -> str:

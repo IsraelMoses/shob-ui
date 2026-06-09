@@ -2398,3 +2398,1651 @@ Expect: 100-continue
 Content-Length: 108456
 
 
+2026-05-17 16:57:22 | INFO | Admin device event from 127.0.0.1
+2026-05-17 16:57:22 | INFO | Admin event accepted: action=add name=Mywifi ip=77.137.176.248 uuid=15284fcd-d54b-46d3-afeb-86726a00736e
+2026-05-17 17:11:35 | INFO | Admin device event from 127.0.0.1
+2026-05-17 17:11:35 | INFO | Admin event accepted: action=add name=636 ip=2.54.96.171 uuid=96fbced5-e37b-4252-b383-c9591c5f04db
+2026-05-17 17:37:06 | INFO | Admin device event from 127.0.0.1
+2026-05-17 17:37:06 | INFO | Admin event accepted: action=delete name=Mywifi ip=77.137.176.248 uuid=15284fcd-d54b-46d3-afeb-86726a00736e
+2026-05-18 11:07:47 | INFO | Admin device event from 127.0.0.1
+2026-05-18 11:07:47 | INFO | Admin event accepted: action=add name=my wifi ip=1.1.1.1 uuid=64f3685a-4164-4d8a-a905-53ca7bc2ee3e
+2026-05-18 11:07:53 | INFO | Admin device event from 127.0.0.1
+2026-05-18 11:07:53 | INFO | Admin event accepted: action=delete name=my wifi ip=1.1.1.1 uuid=64f3685a-4164-4d8a-a905-53ca7bc2ee3e
+2026-05-18 11:59:40 | INFO | Admin device event from 127.0.0.1
+2026-05-18 11:59:40 | INFO | Admin event accepted: action=add name=this wifi ip=192.168.1.1 uuid=1d7aadb3-1220-4019-bdab-2040696a7740
+2026-05-18 13:24:23 | INFO | Admin device event from 127.0.0.1
+2026-05-18 13:24:23 | INFO | Admin event accepted: action=add name=636 ip=2.54.96.171 uuid=96fbced5-e37b-4252-b383-c9591c5f04db
+2026-05-19 15:12:07 | INFO | Admin device event from 127.0.0.1
+2026-05-19 15:12:07 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:07 | INFO | Time: 2026-05-19T15:12:07
+2026-05-19 15:12:07 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:07 | INFO | Path: /upload
+2026-05-19 15:12:07 | INFO | Content-Type: multipart/form-data; boundary=fb6beacc628c0e98fe546adc31bf252b
+2026-05-19 15:12:07 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=fb6beacc628c0e98fe546adc31bf252b
+
+
+2026-05-19 15:12:07 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:07 | WARNING | Time:        2026-05-19T15:12:07
+2026-05-19 15:12:07 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:07 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:07 | WARNING | Path:        /upload
+2026-05-19 15:12:07 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:07 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:07 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=fb6beacc628c0e98fe546adc31bf252b
+
+
+2026-05-19 15:12:07 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:07 | WARNING | b'--fb6beacc628c0e98fe546adc31bf252b\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:07 | WARNING | ======================================================================
+2026-05-19 15:12:08 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:08 | INFO | Time: 2026-05-19T15:12:08
+2026-05-19 15:12:08 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:08 | INFO | Path: /upload
+2026-05-19 15:12:08 | INFO | Content-Type: multipart/form-data; boundary=5c058f385dbd2658379cb042865d4e98
+2026-05-19 15:12:08 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=5c058f385dbd2658379cb042865d4e98
+
+
+2026-05-19 15:12:08 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:08 | WARNING | Time:        2026-05-19T15:12:08
+2026-05-19 15:12:08 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:08 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:08 | WARNING | Path:        /upload
+2026-05-19 15:12:08 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:08 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:08 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=5c058f385dbd2658379cb042865d4e98
+
+
+2026-05-19 15:12:08 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:08 | WARNING | b'--5c058f385dbd2658379cb042865d4e98\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:08 | WARNING | ======================================================================
+2026-05-19 15:12:09 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:09 | INFO | Time: 2026-05-19T15:12:09
+2026-05-19 15:12:09 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:09 | INFO | Path: /upload
+2026-05-19 15:12:09 | INFO | Content-Type: multipart/form-data; boundary=a13fe4afedaae7adf6f1d2145eee533b
+2026-05-19 15:12:09 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=a13fe4afedaae7adf6f1d2145eee533b
+
+
+2026-05-19 15:12:09 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:09 | WARNING | Time:        2026-05-19T15:12:09
+2026-05-19 15:12:09 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:09 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:09 | WARNING | Path:        /upload
+2026-05-19 15:12:09 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:09 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:09 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=a13fe4afedaae7adf6f1d2145eee533b
+
+
+2026-05-19 15:12:09 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:09 | WARNING | b'--a13fe4afedaae7adf6f1d2145eee533b\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:09 | WARNING | ======================================================================
+2026-05-19 15:12:10 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:10 | INFO | Time: 2026-05-19T15:12:10
+2026-05-19 15:12:10 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:10 | INFO | Path: /upload
+2026-05-19 15:12:10 | INFO | Content-Type: multipart/form-data; boundary=8d6b59cc2446e759deb2d958aafbbaf6
+2026-05-19 15:12:10 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=8d6b59cc2446e759deb2d958aafbbaf6
+
+
+2026-05-19 15:12:10 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:10 | WARNING | Time:        2026-05-19T15:12:10
+2026-05-19 15:12:10 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:10 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:10 | WARNING | Path:        /upload
+2026-05-19 15:12:10 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:10 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:10 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=8d6b59cc2446e759deb2d958aafbbaf6
+
+
+2026-05-19 15:12:10 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:10 | WARNING | b'--8d6b59cc2446e759deb2d958aafbbaf6\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:10 | WARNING | ======================================================================
+2026-05-19 15:12:11 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:11 | INFO | Time: 2026-05-19T15:12:11
+2026-05-19 15:12:11 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:11 | INFO | Path: /upload
+2026-05-19 15:12:11 | INFO | Content-Type: multipart/form-data; boundary=f0c8beb2e396f7b4794fe4320908a304
+2026-05-19 15:12:11 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=f0c8beb2e396f7b4794fe4320908a304
+
+
+2026-05-19 15:12:11 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:11 | WARNING | Time:        2026-05-19T15:12:11
+2026-05-19 15:12:11 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:11 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:11 | WARNING | Path:        /upload
+2026-05-19 15:12:11 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:11 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:11 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=f0c8beb2e396f7b4794fe4320908a304
+
+
+2026-05-19 15:12:11 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:11 | WARNING | b'--f0c8beb2e396f7b4794fe4320908a304\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:11 | WARNING | ======================================================================
+2026-05-19 15:12:12 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:12 | INFO | Time: 2026-05-19T15:12:12
+2026-05-19 15:12:12 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:12 | INFO | Path: /upload
+2026-05-19 15:12:12 | INFO | Content-Type: multipart/form-data; boundary=2fdc65eb13bbc2f6c4f4f06592e9aeff
+2026-05-19 15:12:12 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=2fdc65eb13bbc2f6c4f4f06592e9aeff
+
+
+2026-05-19 15:12:12 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:12 | WARNING | Time:        2026-05-19T15:12:12
+2026-05-19 15:12:12 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:12 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:12 | WARNING | Path:        /upload
+2026-05-19 15:12:12 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:12 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:12 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=2fdc65eb13bbc2f6c4f4f06592e9aeff
+
+
+2026-05-19 15:12:12 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:12 | WARNING | b'--2fdc65eb13bbc2f6c4f4f06592e9aeff\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:12 | WARNING | ======================================================================
+2026-05-19 15:12:13 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:13 | INFO | Time: 2026-05-19T15:12:13
+2026-05-19 15:12:13 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:13 | INFO | Path: /upload
+2026-05-19 15:12:13 | INFO | Content-Type: multipart/form-data; boundary=1abdc48a60e927ba01bf9c7dbd5bff23
+2026-05-19 15:12:13 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1abdc48a60e927ba01bf9c7dbd5bff23
+
+
+2026-05-19 15:12:13 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:13 | WARNING | Time:        2026-05-19T15:12:13
+2026-05-19 15:12:13 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:13 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:13 | WARNING | Path:        /upload
+2026-05-19 15:12:13 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:13 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:13 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1abdc48a60e927ba01bf9c7dbd5bff23
+
+
+2026-05-19 15:12:13 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:13 | WARNING | b'--1abdc48a60e927ba01bf9c7dbd5bff23\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:13 | WARNING | ======================================================================
+2026-05-19 15:12:14 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:14 | INFO | Time: 2026-05-19T15:12:14
+2026-05-19 15:12:14 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:14 | INFO | Path: /upload
+2026-05-19 15:12:14 | INFO | Content-Type: multipart/form-data; boundary=06c9808c25007eb0b385610be53205e3
+2026-05-19 15:12:14 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=06c9808c25007eb0b385610be53205e3
+
+
+2026-05-19 15:12:14 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:14 | WARNING | Time:        2026-05-19T15:12:14
+2026-05-19 15:12:14 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:14 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:14 | WARNING | Path:        /upload
+2026-05-19 15:12:14 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:14 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:14 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=06c9808c25007eb0b385610be53205e3
+
+
+2026-05-19 15:12:14 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:14 | WARNING | b'--06c9808c25007eb0b385610be53205e3\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:14 | WARNING | ======================================================================
+2026-05-19 15:12:15 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:15 | INFO | Time: 2026-05-19T15:12:15
+2026-05-19 15:12:15 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:15 | INFO | Path: /upload
+2026-05-19 15:12:15 | INFO | Content-Type: multipart/form-data; boundary=a175e4de760d4d635ab495385d0f76cb
+2026-05-19 15:12:15 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=a175e4de760d4d635ab495385d0f76cb
+
+
+2026-05-19 15:12:15 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:15 | WARNING | Time:        2026-05-19T15:12:15
+2026-05-19 15:12:15 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:15 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:15 | WARNING | Path:        /upload
+2026-05-19 15:12:15 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:15 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:15 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=a175e4de760d4d635ab495385d0f76cb
+
+
+2026-05-19 15:12:15 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:15 | WARNING | b'--a175e4de760d4d635ab495385d0f76cb\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:15 | WARNING | ======================================================================
+2026-05-19 15:12:16 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:16 | INFO | Time: 2026-05-19T15:12:16
+2026-05-19 15:12:16 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:16 | INFO | Path: /upload
+2026-05-19 15:12:16 | INFO | Content-Type: multipart/form-data; boundary=1064a6b127f126e3063bae445aae9ebb
+2026-05-19 15:12:16 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1064a6b127f126e3063bae445aae9ebb
+
+
+2026-05-19 15:12:16 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:16 | WARNING | Time:        2026-05-19T15:12:16
+2026-05-19 15:12:16 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:16 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:16 | WARNING | Path:        /upload
+2026-05-19 15:12:16 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:16 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:16 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1064a6b127f126e3063bae445aae9ebb
+
+
+2026-05-19 15:12:16 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:16 | WARNING | b'--1064a6b127f126e3063bae445aae9ebb\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:16 | WARNING | ======================================================================
+2026-05-19 15:12:54 | INFO | Admin device event from 127.0.0.1
+2026-05-19 15:12:55 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:55 | INFO | Time: 2026-05-19T15:12:55
+2026-05-19 15:12:55 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:55 | INFO | Path: /upload
+2026-05-19 15:12:55 | INFO | Content-Type: multipart/form-data; boundary=9ba8a7aca4e6d7c47f42f62645011694
+2026-05-19 15:12:55 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=9ba8a7aca4e6d7c47f42f62645011694
+
+
+2026-05-19 15:12:55 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:55 | WARNING | Time:        2026-05-19T15:12:55
+2026-05-19 15:12:55 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:55 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:55 | WARNING | Path:        /upload
+2026-05-19 15:12:55 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:55 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:55 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=9ba8a7aca4e6d7c47f42f62645011694
+
+
+2026-05-19 15:12:55 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:55 | WARNING | b'--9ba8a7aca4e6d7c47f42f62645011694\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:55 | WARNING | ======================================================================
+2026-05-19 15:12:55 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:55 | INFO | Time: 2026-05-19T15:12:55
+2026-05-19 15:12:55 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:55 | INFO | Path: /upload
+2026-05-19 15:12:55 | INFO | Content-Type: multipart/form-data; boundary=75878b55a0aa6d4547dab039aa52e5b9
+2026-05-19 15:12:55 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=75878b55a0aa6d4547dab039aa52e5b9
+
+
+2026-05-19 15:12:55 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:55 | WARNING | Time:        2026-05-19T15:12:55
+2026-05-19 15:12:55 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:55 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:55 | WARNING | Path:        /upload
+2026-05-19 15:12:55 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:55 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:55 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=75878b55a0aa6d4547dab039aa52e5b9
+
+
+2026-05-19 15:12:55 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:55 | WARNING | b'--75878b55a0aa6d4547dab039aa52e5b9\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:55 | WARNING | ======================================================================
+2026-05-19 15:12:56 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:56 | INFO | Time: 2026-05-19T15:12:56
+2026-05-19 15:12:56 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:56 | INFO | Path: /upload
+2026-05-19 15:12:56 | INFO | Content-Type: multipart/form-data; boundary=c46398f62b1635208dca5f7af7503397
+2026-05-19 15:12:56 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=c46398f62b1635208dca5f7af7503397
+
+
+2026-05-19 15:12:56 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:56 | WARNING | Time:        2026-05-19T15:12:56
+2026-05-19 15:12:56 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:56 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:56 | WARNING | Path:        /upload
+2026-05-19 15:12:56 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:56 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:56 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=c46398f62b1635208dca5f7af7503397
+
+
+2026-05-19 15:12:56 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:56 | WARNING | b'--c46398f62b1635208dca5f7af7503397\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:56 | WARNING | ======================================================================
+2026-05-19 15:12:57 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:57 | INFO | Time: 2026-05-19T15:12:57
+2026-05-19 15:12:57 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:57 | INFO | Path: /upload
+2026-05-19 15:12:57 | INFO | Content-Type: multipart/form-data; boundary=9b54f528dbe204370e7ae57f686cdc88
+2026-05-19 15:12:57 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=9b54f528dbe204370e7ae57f686cdc88
+
+
+2026-05-19 15:12:57 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:57 | WARNING | Time:        2026-05-19T15:12:57
+2026-05-19 15:12:57 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:57 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:57 | WARNING | Path:        /upload
+2026-05-19 15:12:57 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:57 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:57 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=9b54f528dbe204370e7ae57f686cdc88
+
+
+2026-05-19 15:12:57 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:57 | WARNING | b'--9b54f528dbe204370e7ae57f686cdc88\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:57 | WARNING | ======================================================================
+2026-05-19 15:12:58 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:58 | INFO | Time: 2026-05-19T15:12:58
+2026-05-19 15:12:58 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:58 | INFO | Path: /upload
+2026-05-19 15:12:58 | INFO | Content-Type: multipart/form-data; boundary=d35a70acae1f1ac21340bd225124314e
+2026-05-19 15:12:58 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=d35a70acae1f1ac21340bd225124314e
+
+
+2026-05-19 15:12:58 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:58 | WARNING | Time:        2026-05-19T15:12:58
+2026-05-19 15:12:58 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:58 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:58 | WARNING | Path:        /upload
+2026-05-19 15:12:58 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:58 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:58 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=d35a70acae1f1ac21340bd225124314e
+
+
+2026-05-19 15:12:58 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:58 | WARNING | b'--d35a70acae1f1ac21340bd225124314e\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:58 | WARNING | ======================================================================
+2026-05-19 15:12:59 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:12:59 | INFO | Time: 2026-05-19T15:12:59
+2026-05-19 15:12:59 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:12:59 | INFO | Path: /upload
+2026-05-19 15:12:59 | INFO | Content-Type: multipart/form-data; boundary=b4a99781aa49bd38aa85ccc8c5b0a363
+2026-05-19 15:12:59 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=b4a99781aa49bd38aa85ccc8c5b0a363
+
+
+2026-05-19 15:12:59 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:12:59 | WARNING | Time:        2026-05-19T15:12:59
+2026-05-19 15:12:59 | WARNING | Source:      flask-upload-server
+2026-05-19 15:12:59 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:12:59 | WARNING | Path:        /upload
+2026-05-19 15:12:59 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:12:59 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:12:59 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=b4a99781aa49bd38aa85ccc8c5b0a363
+
+
+2026-05-19 15:12:59 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:12:59 | WARNING | b'--b4a99781aa49bd38aa85ccc8c5b0a363\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:12:59 | WARNING | ======================================================================
+2026-05-19 15:13:00 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:13:00 | INFO | Time: 2026-05-19T15:13:00
+2026-05-19 15:13:00 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:13:00 | INFO | Path: /upload
+2026-05-19 15:13:00 | INFO | Content-Type: multipart/form-data; boundary=18293ea1ff45db4d56a7a9bf984be7d4
+2026-05-19 15:13:00 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=18293ea1ff45db4d56a7a9bf984be7d4
+
+
+2026-05-19 15:13:00 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:13:00 | WARNING | Time:        2026-05-19T15:13:00
+2026-05-19 15:13:00 | WARNING | Source:      flask-upload-server
+2026-05-19 15:13:00 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:13:00 | WARNING | Path:        /upload
+2026-05-19 15:13:00 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:13:00 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:13:00 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=18293ea1ff45db4d56a7a9bf984be7d4
+
+
+2026-05-19 15:13:00 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:13:00 | WARNING | b'--18293ea1ff45db4d56a7a9bf984be7d4\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:13:00 | WARNING | ======================================================================
+2026-05-19 15:13:01 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:13:01 | INFO | Time: 2026-05-19T15:13:01
+2026-05-19 15:13:01 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:13:01 | INFO | Path: /upload
+2026-05-19 15:13:01 | INFO | Content-Type: multipart/form-data; boundary=c6f1d6c4512909e504c5db0db7fe09fa
+2026-05-19 15:13:01 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=c6f1d6c4512909e504c5db0db7fe09fa
+
+
+2026-05-19 15:13:01 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:13:01 | WARNING | Time:        2026-05-19T15:13:01
+2026-05-19 15:13:01 | WARNING | Source:      flask-upload-server
+2026-05-19 15:13:01 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:13:01 | WARNING | Path:        /upload
+2026-05-19 15:13:01 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:13:01 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:13:01 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=c6f1d6c4512909e504c5db0db7fe09fa
+
+
+2026-05-19 15:13:01 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:13:01 | WARNING | b'--c6f1d6c4512909e504c5db0db7fe09fa\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:13:01 | WARNING | ======================================================================
+2026-05-19 15:13:02 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:13:02 | INFO | Time: 2026-05-19T15:13:02
+2026-05-19 15:13:02 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:13:02 | INFO | Path: /upload
+2026-05-19 15:13:02 | INFO | Content-Type: multipart/form-data; boundary=1c9cd1b88a623f3db27b5fdfb37c0b70
+2026-05-19 15:13:02 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1c9cd1b88a623f3db27b5fdfb37c0b70
+
+
+2026-05-19 15:13:02 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:13:02 | WARNING | Time:        2026-05-19T15:13:02
+2026-05-19 15:13:02 | WARNING | Source:      flask-upload-server
+2026-05-19 15:13:02 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:13:02 | WARNING | Path:        /upload
+2026-05-19 15:13:02 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:13:02 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:13:02 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1c9cd1b88a623f3db27b5fdfb37c0b70
+
+
+2026-05-19 15:13:02 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:13:02 | WARNING | b'--1c9cd1b88a623f3db27b5fdfb37c0b70\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:13:02 | WARNING | ======================================================================
+2026-05-19 15:13:03 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:13:03 | INFO | Time: 2026-05-19T15:13:03
+2026-05-19 15:13:03 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:13:03 | INFO | Path: /upload
+2026-05-19 15:13:03 | INFO | Content-Type: multipart/form-data; boundary=b15792e63142020cce78d10715eb098b
+2026-05-19 15:13:03 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=b15792e63142020cce78d10715eb098b
+
+
+2026-05-19 15:13:03 | WARNING | 
+============================ BLOCKED POST ============================
+2026-05-19 15:13:03 | WARNING | Time:        2026-05-19T15:13:03
+2026-05-19 15:13:03 | WARNING | Source:      flask-upload-server
+2026-05-19 15:13:03 | WARNING | Client IP:   127.0.0.1
+2026-05-19 15:13:03 | WARNING | Path:        /upload
+2026-05-19 15:13:03 | WARNING | Reason:      sender IP is not in device database
+2026-05-19 15:13:03 | WARNING | 
+--- HEADERS ---
+2026-05-19 15:13:03 | WARNING | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=b15792e63142020cce78d10715eb098b
+
+
+2026-05-19 15:13:03 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-05-19 15:13:03 | WARNING | b'--b15792e63142020cce78d10715eb098b\r\nContent-Disposition: form-data; name="file"; filename="test_frame.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x07\x07\x07\t\t\x08\n\x0c\x14\r\x0c\x0b\x0b\x0c\x19\x12\x13\x0f\x14\x1d\x1a\x1f\x1e\x1d\x1a\x1c\x1c $.\' ",#\x1c\x1c(7),01444\x1f\'9=82<.342\xff\xdb\x00C\x01\t\t\t\x0c\x0b\x0c\x18\r\r\x182!\x1c!22222222222222222222222222222222222222222222222222\xff\xc0\x00\x11\x08\x01\xe0\x02\x80\x03\x01"\x00\x02\x11\x01\x03\x11\x01\xff\xc4\x00\x1f\x00\x00\x01\x05\x01\x01\x01\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\xff\xc4\x00\xb5\x10\x00\x02\x01\x03\x03\x02\x04\x03\x05\x05\x04\x04\x00\x00\x01}\x01\x02\x03\x00\x04\x11\x05\x12!1A\x06\x13Qa\x07"q\x142\x81\x91\xa1\x08#B\xb1\xc1\x15R\xd1\xf0$3br\x82\t\n\x16\x17\x18\x19\x1a%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz\x83\x84\x85\x86\x87\x88\x89\x8a\x92\x93\x94\x95\x96\x97\x98\x99\x9a\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca'
+2026-05-19 15:13:03 | WARNING | ======================================================================
+2026-05-19 15:13:04 | INFO | Admin device event from 127.0.0.1
+2026-05-19 15:20:50 | INFO | Admin device event from 127.0.0.1
+2026-05-19 15:20:50 | INFO | Admin event accepted: action=add name=SIM-CAM ip=127.0.0.1 uuid=sim-0cd30602
+2026-05-19 15:20:52 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:52 | INFO | Time: 2026-05-19T15:20:52
+2026-05-19 15:20:52 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:52 | INFO | Path: /upload
+2026-05-19 15:20:52 | INFO | Content-Type: multipart/form-data; boundary=dad44d5bae0aa3aa95a046e78087092d
+2026-05-19 15:20:52 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=dad44d5bae0aa3aa95a046e78087092d
+
+
+2026-05-19 15:20:52 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193252711.jpg
+2026-05-19 15:20:53 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:53 | INFO | Time: 2026-05-19T15:20:53
+2026-05-19 15:20:53 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:53 | INFO | Path: /upload
+2026-05-19 15:20:53 | INFO | Content-Type: multipart/form-data; boundary=55cdef5ddf9ee65dbdfea0fe24fe062f
+2026-05-19 15:20:53 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=55cdef5ddf9ee65dbdfea0fe24fe062f
+
+
+2026-05-19 15:20:53 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193253639.jpg
+2026-05-19 15:20:54 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:54 | INFO | Time: 2026-05-19T15:20:54
+2026-05-19 15:20:54 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:54 | INFO | Path: /upload
+2026-05-19 15:20:54 | INFO | Content-Type: multipart/form-data; boundary=31fabfd7e2159f665e1fc612c2ae300d
+2026-05-19 15:20:54 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=31fabfd7e2159f665e1fc612c2ae300d
+
+
+2026-05-19 15:20:54 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193254581.jpg
+2026-05-19 15:20:55 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:55 | INFO | Time: 2026-05-19T15:20:55
+2026-05-19 15:20:55 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:55 | INFO | Path: /upload
+2026-05-19 15:20:55 | INFO | Content-Type: multipart/form-data; boundary=5882cd7c59c7e0756e2604f48a760348
+2026-05-19 15:20:55 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=5882cd7c59c7e0756e2604f48a760348
+
+
+2026-05-19 15:20:55 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193255514.jpg
+2026-05-19 15:20:56 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:56 | INFO | Time: 2026-05-19T15:20:56
+2026-05-19 15:20:56 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:56 | INFO | Path: /upload
+2026-05-19 15:20:56 | INFO | Content-Type: multipart/form-data; boundary=34c9cefd23c6faff77369d05cc87673c
+2026-05-19 15:20:56 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=34c9cefd23c6faff77369d05cc87673c
+
+
+2026-05-19 15:20:56 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193256440.jpg
+2026-05-19 15:20:57 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:57 | INFO | Time: 2026-05-19T15:20:57
+2026-05-19 15:20:57 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:57 | INFO | Path: /upload
+2026-05-19 15:20:57 | INFO | Content-Type: multipart/form-data; boundary=91beab7f34042345756696c853b498f1
+2026-05-19 15:20:57 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=91beab7f34042345756696c853b498f1
+
+
+2026-05-19 15:20:57 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193257368.jpg
+2026-05-19 15:20:58 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:58 | INFO | Time: 2026-05-19T15:20:58
+2026-05-19 15:20:58 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:58 | INFO | Path: /upload
+2026-05-19 15:20:58 | INFO | Content-Type: multipart/form-data; boundary=cd041203974e2e62f3015c78f456946a
+2026-05-19 15:20:58 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=cd041203974e2e62f3015c78f456946a
+
+
+2026-05-19 15:20:58 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193258295.jpg
+2026-05-19 15:20:59 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:20:59 | INFO | Time: 2026-05-19T15:20:59
+2026-05-19 15:20:59 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:20:59 | INFO | Path: /upload
+2026-05-19 15:20:59 | INFO | Content-Type: multipart/form-data; boundary=ce5a91fadc5cc338cf380b33a1df1d4b
+2026-05-19 15:20:59 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=ce5a91fadc5cc338cf380b33a1df1d4b
+
+
+2026-05-19 15:20:59 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193259223.jpg
+2026-05-19 15:21:00 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:21:00 | INFO | Time: 2026-05-19T15:21:00
+2026-05-19 15:21:00 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:21:00 | INFO | Path: /upload
+2026-05-19 15:21:00 | INFO | Content-Type: multipart/form-data; boundary=1fadcdf5ea275a68bfc1e5fc5febcf72
+2026-05-19 15:21:00 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=1fadcdf5ea275a68bfc1e5fc5febcf72
+
+
+2026-05-19 15:21:00 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193260157.jpg
+2026-05-19 15:21:01 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-05-19 15:21:01 | INFO | Time: 2026-05-19T15:21:01
+2026-05-19 15:21:01 | INFO | Client IP: 127.0.0.1
+2026-05-19 15:21:01 | INFO | Path: /upload
+2026-05-19 15:21:01 | INFO | Content-Type: multipart/form-data; boundary=893107fcba01ca0bb800e5660c97df9f
+2026-05-19 15:21:01 | INFO | Host: 127.0.0.1:8443
+User-Agent: python-requests/2.33.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 5605
+Content-Type: multipart/form-data; boundary=893107fcba01ca0bb800e5660c97df9f
+
+
+2026-05-19 15:21:01 | INFO | Upload accepted from 127.0.0.1 -> device=SIM-CAM file=1779193261075.jpg
+2026-05-19 15:26:27 | INFO | Admin device event from 127.0.0.1
+2026-05-19 15:26:27 | INFO | Admin event accepted: action=add name=SIM-CAM ip=127.0.0.1 uuid=sim-939bad16
+2026-05-26 11:12:51 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:12:51 | INFO | Admin event accepted: action=add name=a ip=1.2.3.1 uuid=c98ff82d-abbe-4ecb-84bb-166bbcb100a1
+2026-05-26 11:13:11 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:13:11 | INFO | Admin event accepted: action=delete name=a ip=1.2.3.1 uuid=c98ff82d-abbe-4ecb-84bb-166bbcb100a1
+2026-05-26 11:13:27 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:13:27 | INFO | Admin event accepted: action=add name=a ip=1.2.3.4 uuid=08308d29-d80d-4c14-beda-156c4413be6f
+2026-05-26 11:16:09 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:16:09 | INFO | Admin event accepted: action=delete name=a ip=1.2.3.4 uuid=08308d29-d80d-4c14-beda-156c4413be6f
+2026-05-26 11:16:31 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:16:31 | INFO | Admin event accepted: action=add name=a ip=1.2.3.4 uuid=d43ec74e-4b36-4997-8066-d6dc4cffad13
+2026-05-26 11:16:47 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:16:47 | INFO | Admin event accepted: action=delete name=a ip=1.2.3.4 uuid=d43ec74e-4b36-4997-8066-d6dc4cffad13
+2026-05-26 11:18:59 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:18:59 | INFO | Admin event accepted: action=add name=DiagCam ip=10.200.200.113 uuid=diag-4a74b183
+2026-05-26 11:29:21 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:29:21 | INFO | Admin event accepted: action=add name=a ip=1.2.3.4 uuid=0e6c2b3c-6b97-4e72-b305-0e0df2b134f3
+2026-05-26 11:33:25 | INFO | Admin device event from 127.0.0.1
+2026-05-26 11:33:25 | INFO | Admin event accepted: action=delete name=a ip=1.2.3.4 uuid=0e6c2b3c-6b97-4e72-b305-0e0df2b134f3
+2026-05-28 09:37:08 | INFO | Admin device event from 127.0.0.1
+2026-05-28 09:37:08 | INFO | Admin event accepted: action=add name=1 ip=1.2.3.4 uuid=30c5bdf4-798b-49ca-b79f-c6e4245d33f6
+2026-05-28 09:44:58 | INFO | Admin device event from 127.0.0.1
+2026-05-28 09:44:58 | INFO | Admin event accepted: action=delete name=1 ip=1.2.3.4 uuid=30c5bdf4-798b-49ca-b79f-c6e4245d33f6
+2026-05-28 11:29:33 | INFO | Admin device event from 127.0.0.1
+2026-05-28 11:29:33 | INFO | Admin event accepted: action=add name=test ip=1.2.3.4 uuid=cc12de22-a51a-45da-8af0-9787d854a567
+2026-05-28 11:31:03 | INFO | Admin device event from 127.0.0.1
+2026-05-28 11:31:03 | INFO | Admin event accepted: action=delete name=test ip=1.2.3.4 uuid=cc12de22-a51a-45da-8af0-9787d854a567
+2026-05-28 11:38:11 | INFO | Admin device event from 127.0.0.1
+2026-05-28 11:38:11 | INFO | Admin event accepted: action=add name=test ip=1.2.3.4 uuid=788e2802-0892-4496-8e93-ef70156b4f68
+2026-05-28 11:39:33 | INFO | Admin device event from 127.0.0.1
+2026-05-28 11:39:33 | INFO | Admin event accepted: action=add name=636 ip=2.54.96.171 uuid=96fbced5-e37b-4252-b383-c9591c5f04db
+2026-05-28 13:14:28 | INFO | Admin device event from 127.0.0.1
+2026-05-28 13:14:28 | INFO | Admin event accepted: action=delete name=this wifi ip=192.168.1.1 uuid=1d7aadb3-1220-4019-bdab-2040696a7740
+2026-05-28 13:14:29 | INFO | Admin device event from 127.0.0.1
+2026-05-28 13:14:29 | INFO | Admin event accepted: action=delete name=test ip=1.2.3.4 uuid=788e2802-0892-4496-8e93-ef70156b4f68
+2026-05-28 13:47:19 | INFO | Admin device event from 127.0.0.1
+2026-05-28 13:47:19 | INFO | Admin event accepted: action=add name=636 ip=2.54.96.171 uuid=96fbced5-e37b-4252-b383-c9591c5f04db
+2026-05-28 14:20:29 | INFO | Admin device event from 127.0.0.1
+2026-05-28 14:20:29 | INFO | Admin event accepted: action=add name=dsriughdf ip=2.3.5.6 uuid=e70b0cac-694c-4bd4-b463-7ea566b0a0a2
+2026-05-28 14:21:16 | INFO | Admin device event from 127.0.0.1
+2026-05-28 14:21:16 | INFO | Admin event accepted: action=delete name=dsriughdf ip=2.3.5.6 uuid=e70b0cac-694c-4bd4-b463-7ea566b0a0a2
+2026-05-28 15:27:13 | INFO | Admin device event from 127.0.0.1
+2026-05-28 15:27:13 | INFO | Admin event accepted: action=add name=test ip=1.2.3.4 uuid=01caa517-1263-438f-82e0-379e1b7dc1bf
+2026-05-31 11:30:52 | INFO | Admin device event from 127.0.0.1
+2026-05-31 11:30:52 | INFO | Admin event accepted: action=add name=RUT200 ip=46.210.122.162 uuid=17912db6-5f28-4c5e-97ff-7cc88048978e
+2026-05-31 17:47:44 | INFO | Admin device event from 127.0.0.1
+2026-05-31 17:47:44 | INFO | Admin event accepted: action=add name=ghijcfvgb ip=1.1.1.1 uuid=4da53550-3ba4-4eab-af61-52452e9f0458
+2026-05-31 17:49:25 | INFO | Admin device event from 127.0.0.1
+2026-05-31 17:49:25 | INFO | Admin event accepted: action=delete name=ghijcfvgb ip=1.1.1.1 uuid=4da53550-3ba4-4eab-af61-52452e9f0458
+2026-06-01 13:14:21 | INFO | Admin device event from 127.0.0.1
+2026-06-01 13:14:21 | INFO | Admin event accepted: action=add name=nati ip=1.2.3.5 uuid=370f058b-9572-4665-b558-a52f59eceb7c
+2026-06-03 11:18:00 | INFO | Admin device event from 127.0.0.1
+2026-06-03 11:18:00 | INFO | Admin event accepted: action=add name=test11 ip=192.168.1.130 uuid=69f02e4d-950e-4068-be01-b884ddf40e90
+2026-06-03 11:31:56 | INFO | Admin device event from 127.0.0.1
+2026-06-03 11:31:56 | INFO | Admin event accepted: action=delete name=test11 ip=192.168.1.130 uuid=69f02e4d-950e-4068-be01-b884ddf40e90
+2026-06-03 11:32:40 | INFO | Admin device event from 127.0.0.1
+2026-06-03 11:32:40 | INFO | Admin event accepted: action=add name=idis ip=192.168.1.130 uuid=3d9b8160-8b8d-4f2c-9e54-6f799ba40730
+2026-06-03 14:35:23 | INFO | 
+============================= POST TEST =============================
+2026-06-03 14:35:23 | INFO | Time:          2026-06-03T14:35:23
+2026-06-03 14:35:23 | INFO | Client IP:     127.0.0.1
+2026-06-03 14:35:23 | INFO | Known device:  no
+2026-06-03 14:35:23 | INFO | Path:          /post-test
+2026-06-03 14:35:23 | INFO | Content-Type:  text/plain
+2026-06-03 14:35:23 | INFO | Content-Length:11
+2026-06-03 14:35:23 | INFO | 
+--- HEADERS ---
+2026-06-03 14:35:23 | INFO | {'User-Agent': 'Werkzeug/3.1.8', 'Host': 'localhost', 'Content-Type': 'text/plain', 'Content-Length': '11'}
+2026-06-03 14:35:23 | INFO | 
+--- BODY PREVIEW ---
+2026-06-03 14:35:23 | INFO | manual-post
+2026-06-03 14:35:23 | INFO | =====================================================================
+2026-06-04 11:44:12 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-06-04 11:44:12 | INFO | Time: 2026-06-04T11:44:12
+2026-06-04 11:44:12 | INFO | Client IP: 127.0.0.1
+2026-06-04 11:44:12 | INFO | Path: /camera-post
+2026-06-04 11:44:12 | INFO | Content-Type: application/octet-stream
+2026-06-04 11:44:12 | INFO | User-Agent: Werkzeug/3.1.8
+Host: localhost
+Content-Type: application/octet-stream
+Content-Length: 15
+
+
+2026-06-04 11:44:12 | WARNING | 
+============================ BLOCKED POST ============================
+2026-06-04 11:44:12 | WARNING | Time:        2026-06-04T11:44:12
+2026-06-04 11:44:12 | WARNING | Source:      flask-upload-server
+2026-06-04 11:44:12 | WARNING | Client IP:   127.0.0.1
+2026-06-04 11:44:12 | WARNING | Path:        /camera-post
+2026-06-04 11:44:12 | WARNING | Reason:      sender IP is not in device database
+2026-06-04 11:44:12 | WARNING | 
+--- HEADERS ---
+2026-06-04 11:44:12 | WARNING | User-Agent: Werkzeug/3.1.8
+Host: localhost
+Content-Type: application/octet-stream
+Content-Length: 15
+
+
+2026-06-04 11:44:12 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-06-04 11:44:12 | WARNING | b'\xff\xd8\xff\xe0fake-jpeg\xff\xd9'
+2026-06-04 11:44:12 | WARNING | ======================================================================
+2026-06-04 11:44:12 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-06-04 11:44:12 | INFO | Time: 2026-06-04T11:44:12
+2026-06-04 11:44:12 | INFO | Client IP: 127.0.0.1
+2026-06-04 11:44:12 | INFO | Path: /camera-post
+2026-06-04 11:44:12 | INFO | Content-Type: multipart/form-data; boundary="---------------WerkzeugFormPart_1780562652.04991670.15241913286705255"
+2026-06-04 11:44:12 | INFO | User-Agent: Werkzeug/3.1.8
+Host: localhost
+Content-Type: multipart/form-data; boundary="---------------WerkzeugFormPart_1780562652.04991670.15241913286705255"
+Content-Length: 264
+
+
+2026-06-04 11:44:12 | WARNING | 
+============================ BLOCKED POST ============================
+2026-06-04 11:44:12 | WARNING | Time:        2026-06-04T11:44:12
+2026-06-04 11:44:12 | WARNING | Source:      flask-upload-server
+2026-06-04 11:44:12 | WARNING | Client IP:   127.0.0.1
+2026-06-04 11:44:12 | WARNING | Path:        /camera-post
+2026-06-04 11:44:12 | WARNING | Reason:      sender IP is not in device database
+2026-06-04 11:44:12 | WARNING | 
+--- HEADERS ---
+2026-06-04 11:44:12 | WARNING | User-Agent: Werkzeug/3.1.8
+Host: localhost
+Content-Type: multipart/form-data; boundary="---------------WerkzeugFormPart_1780562652.04991670.15241913286705255"
+Content-Length: 264
+
+
+2026-06-04 11:44:12 | WARNING | 
+--- BODY (first 500 bytes) ---
+2026-06-04 11:44:12 | WARNING | b'\r\n-----------------WerkzeugFormPart_1780562652.04991670.15241913286705255\r\nContent-Disposition: form-data; name="snapshot"; filename="cam.jpg"\r\nContent-Type: image/jpeg\r\n\r\n\xff\xd8\xff\xe0fake-jpeg\xff\xd9\r\n-----------------WerkzeugFormPart_1780562652.04991670.15241913286705255--\r\n'
+2026-06-04 11:44:12 | WARNING | ======================================================================
+2026-06-04 11:45:10 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-06-04 11:45:10 | INFO | Time: 2026-06-04T11:45:10
+2026-06-04 11:45:10 | INFO | Client IP: 127.0.0.1
+2026-06-04 11:45:10 | INFO | Path: /camera-post
+2026-06-04 11:45:10 | INFO | Content-Type: application/octet-stream
+2026-06-04 11:45:10 | INFO | User-Agent: Werkzeug/3.1.8
+Host: localhost
+Content-Type: application/octet-stream
+Content-Length: 15
+
+
+2026-06-04 11:45:10 | INFO | Upload accepted from 127.0.0.1 -> device=TEMP POST TEST file=1780562710255.jpg
+2026-06-04 11:45:10 | INFO | 
+==== FLASK UPLOAD RECEIVED ====
+2026-06-04 11:45:10 | INFO | Time: 2026-06-04T11:45:10
+2026-06-04 11:45:10 | INFO | Client IP: 127.0.0.1
+2026-06-04 11:45:10 | INFO | Path: /camera-post
+2026-06-04 11:45:10 | INFO | Content-Type: multipart/form-data; boundary="---------------WerkzeugFormPart_1780562710.28260450.22787948062115615"
+2026-06-04 11:45:10 | INFO | User-Agent: Werkzeug/3.1.8
+Host: localhost
+Content-Type: multipart/form-data; boundary="---------------WerkzeugFormPart_1780562710.28260450.22787948062115615"
+Content-Length: 264
+
+
+2026-06-04 11:45:10 | INFO | Upload accepted from 127.0.0.1 -> device=TEMP POST TEST file=1780562710284.jpg
+2026-06-04 12:01:34 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 12:01:34 | INFO | FTP upload accepted from 127.0.0.1 -> device=TEMP FTP TEST file=1780563694806_image.jpg
+2026-06-04 12:04:08 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 12:07:42 | WARNING | FTP session error from 127.0.0.1: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-04 12:08:03 | WARNING | FTP session error from 192.168.1.161: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-04 12:12:51 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:12:51 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:12:58 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:12:58 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:13:13 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:13:13 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:13:39 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 12:14:08 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:14:08 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:14:34 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:14:34 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:14:35 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:14:35 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:15:07 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:15:08 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:15:31 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:15:31 | WARNING | FTP unsupported file from 192.168.1.130: upload_test.txt
+2026-06-04 12:19:33 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 12:19:41 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:19:41 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:19:42 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:19:42 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:20:10 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 12:20:52 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:20:53 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:22:55 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 12:23:06 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 12:23:06 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 13:09:02 | INFO | FTP test upload accepted from 192.168.1.130: upload_test.txt
+2026-06-04 13:09:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567746810_Image_20210101_132650.jpg
+2026-06-04 13:09:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567747888_Image_20210101_132652.jpg
+2026-06-04 13:09:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567748855_Image_20210101_132653.jpg
+2026-06-04 13:09:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567749920_Image_20210101_132654.jpg
+2026-06-04 13:09:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567750996_Image_20210101_132655.jpg
+2026-06-04 13:09:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567751962_Image_20210101_132656.jpg
+2026-06-04 13:09:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567753028_Image_20210101_132657.jpg
+2026-06-04 13:09:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567753995_Image_20210101_132658.jpg
+2026-06-04 13:09:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567755061_Image_20210101_132659.jpg
+2026-06-04 13:09:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567756131_Image_20210101_132700.jpg
+2026-06-04 13:09:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567757096_Image_20210101_132701.jpg
+2026-06-04 13:09:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567758163_Image_20210101_132702.jpg
+2026-06-04 13:09:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567759232_Image_20210101_132703.jpg
+2026-06-04 13:09:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567760199_Image_20210101_132704.jpg
+2026-06-04 13:09:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567761265_Image_20210101_132705.jpg
+2026-06-04 13:09:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567762332_Image_20210101_132706.jpg
+2026-06-04 13:09:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567763299_Image_20210101_132707.jpg
+2026-06-04 13:09:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567764366_Image_20210101_132708.jpg
+2026-06-04 13:09:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567765336_Image_20210101_132709.jpg
+2026-06-04 13:09:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567766404_Image_20210101_132710.jpg
+2026-06-04 13:09:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567767479_Image_20210101_132711.jpg
+2026-06-04 13:09:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567768444_Image_20210101_132712.jpg
+2026-06-04 13:09:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567769513_Image_20210101_132713.jpg
+2026-06-04 13:09:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567770579_Image_20210101_132714.jpg
+2026-06-04 13:09:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567771545_Image_20210101_132715.jpg
+2026-06-04 13:09:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567772611_Image_20210101_132716.jpg
+2026-06-04 13:09:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567773678_Image_20210101_132717.jpg
+2026-06-04 13:09:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567774649_Image_20210101_132718.jpg
+2026-06-04 13:09:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567775716_Image_20210101_132719.jpg
+2026-06-04 13:09:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567776785_Image_20210101_132720.jpg
+2026-06-04 13:10:54 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858363_Image_20210101_132724.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858437_Image_20210101_132725.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858508_Image_20210101_132726.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858573_Image_20210101_132727.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858637_Image_20210101_132728.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858707_Image_20210101_132729.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858775_Image_20210101_132730.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858840_Image_20210101_132731.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858904_Image_20210101_132732.jpg
+2026-06-04 13:10:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567858966_Image_20210101_132733.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859030_Image_20210101_132734.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859096_Image_20210101_132735.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859160_Image_20210101_132736.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859228_Image_20210101_132737.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859292_Image_20210101_132738.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859355_Image_20210101_132739.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859420_Image_20210101_132740.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859485_Image_20210101_132741.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859550_Image_20210101_132742.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859616_Image_20210101_132743.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859681_Image_20210101_132744.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859748_Image_20210101_132745.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859812_Image_20210101_132746.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859877_Image_20210101_132747.jpg
+2026-06-04 13:10:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567859946_Image_20210101_132748.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860010_Image_20210101_132749.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860073_Image_20210101_132750.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860142_Image_20210101_132751.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860209_Image_20210101_132752.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860278_Image_20210101_132753.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860344_Image_20210101_132754.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860408_Image_20210101_132756.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860473_Image_20210101_132757.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860536_Image_20210101_132758.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860600_Image_20210101_132759.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860669_Image_20210101_132800.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860732_Image_20210101_132801.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860802_Image_20210101_132802.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860870_Image_20210101_132803.jpg
+2026-06-04 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567860936_Image_20210101_132804.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861004_Image_20210101_132805.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861082_Image_20210101_132806.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861146_Image_20210101_132807.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861211_Image_20210101_132808.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861282_Image_20210101_132809.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861349_Image_20210101_132810.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861413_Image_20210101_132811.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861477_Image_20210101_132812.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861541_Image_20210101_132813.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861605_Image_20210101_132814.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861676_Image_20210101_132815.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861741_Image_20210101_132816.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861807_Image_20210101_132817.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861870_Image_20210101_132818.jpg
+2026-06-04 13:11:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861933_Image_20210101_132819.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567861995_Image_20210101_132820.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567862060_Image_20210101_132821.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567862124_Image_20210101_132822.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567862189_Image_20210101_132823.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567862253_Image_20210101_132824.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567862316_Image_20210101_132825.jpg
+2026-06-04 13:11:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567862379_Image_20210101_132827.jpg
+2026-06-04 13:11:29 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-04 13:11:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567908378_Image_20210101_132932.jpg
+2026-06-04 13:12:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780567968283_Image_20210101_133032.jpg
+2026-06-04 13:13:49 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568029198_Image_20210101_133133.jpg
+2026-06-04 13:14:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568090113_Image_20210101_133234.jpg
+2026-06-04 13:15:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568151026_Image_20210101_133335.jpg
+2026-06-04 13:16:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568211939_Image_20210101_133436.jpg
+2026-06-04 13:17:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568272848_Image_20210101_133537.jpg
+2026-06-04 13:18:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568333758_Image_20210101_133637.jpg
+2026-06-04 13:19:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568394770_Image_20210101_133738.jpg
+2026-06-04 13:20:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568455687_Image_20210101_133839.jpg
+2026-06-04 13:21:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568516601_Image_20210101_133940.jpg
+2026-06-04 13:22:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568577625_Image_20210101_134041.jpg
+2026-06-04 13:23:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568638542_Image_20210101_134142.jpg
+2026-06-04 13:24:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568699350_Image_20210101_134243.jpg
+2026-06-04 13:26:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568760357_Image_20210101_134344.jpg
+2026-06-04 13:27:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568821263_Image_20210101_134445.jpg
+2026-06-04 13:28:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568882275_Image_20210101_134546.jpg
+2026-06-04 13:29:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780568943186_Image_20210101_134647.jpg
+2026-06-04 13:30:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569004117_Image_20210101_134748.jpg
+2026-06-04 13:31:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569065126_Image_20210101_134849.jpg
+2026-06-04 13:32:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569126043_Image_20210101_134950.jpg
+2026-06-04 13:33:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569187062_Image_20210101_135051.jpg
+2026-06-04 13:34:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569247870_Image_20210101_135152.jpg
+2026-06-04 13:35:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569308878_Image_20210101_135253.jpg
+2026-06-04 13:36:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569369789_Image_20210101_135353.jpg
+2026-06-04 13:37:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569430701_Image_20210101_135454.jpg
+2026-06-04 13:38:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569491607_Image_20210101_135555.jpg
+2026-06-04 13:39:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569552512_Image_20210101_135656.jpg
+2026-06-04 13:40:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569613335_Image_20210101_135757.jpg
+2026-06-04 13:41:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569674251_Image_20210101_135858.jpg
+2026-06-04 13:42:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569735258_Image_20210101_135959.jpg
+2026-06-04 13:43:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569796166_Image_20210101_140100.jpg
+2026-06-04 13:44:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569857079_Image_20210101_140201.jpg
+2026-06-04 13:45:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569917887_Image_20210101_140302.jpg
+2026-06-04 13:46:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780569978812_Image_20210101_140402.jpg
+2026-06-07 10:12:36 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-07 10:12:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816358710_Image_20210104_102902.jpg
+2026-06-07 10:12:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816358783_Image_20210104_103003.jpg
+2026-06-07 10:13:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816399480_Image_20210104_103103.jpg
+2026-06-07 10:14:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816460389_Image_20210104_103204.jpg
+2026-06-07 10:20:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816826025_Image_20210104_103709.jpg
+2026-06-07 10:20:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816826101_Image_20210104_103810.jpg
+2026-06-07 10:21:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816886914_Image_20210104_103911.jpg
+2026-06-07 10:22:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780816947931_Image_20210104_104012.jpg
+2026-06-07 10:23:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817008743_Image_20210104_104113.jpg
+2026-06-07 10:24:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817069758_Image_20210104_104214.jpg
+2026-06-07 10:25:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817130670_Image_20210104_104315.jpg
+2026-06-07 10:26:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817191593_Image_20210104_104416.jpg
+2026-06-07 10:27:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817252501_Image_20210104_104516.jpg
+2026-06-07 10:28:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817313414_Image_20210104_104617.jpg
+2026-06-07 10:29:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817374329_Image_20210104_104718.jpg
+2026-06-07 10:30:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817435238_Image_20210104_104819.jpg
+2026-06-07 10:31:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817496248_Image_20210104_104920.jpg
+2026-06-07 10:32:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817557060_Image_20210104_105021.jpg
+2026-06-07 10:33:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817618071_Image_20210104_105122.jpg
+2026-06-07 10:34:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817678982_Image_20210104_105223.jpg
+2026-06-07 10:35:39 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817739895_Image_20210104_105324.jpg
+2026-06-07 10:36:40 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817800818_Image_20210104_105425.jpg
+2026-06-07 10:37:41 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817861850_Image_20210104_105526.jpg
+2026-06-07 10:38:42 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817922771_Image_20210104_105627.jpg
+2026-06-07 10:39:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780817983691_Image_20210104_105728.jpg
+2026-06-07 10:40:44 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818044604_Image_20210104_105829.jpg
+2026-06-07 10:41:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818105635_Image_20210104_105930.jpg
+2026-06-07 10:42:46 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818166451_Image_20210104_110030.jpg
+2026-06-07 10:43:47 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818227377_Image_20210104_110131.jpg
+2026-06-07 10:44:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818288293_Image_20210104_110232.jpg
+2026-06-07 10:45:49 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818349313_Image_20210104_110333.jpg
+2026-06-07 10:46:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818410124_Image_20210104_110434.jpg
+2026-06-07 10:47:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818471036_Image_20210104_110535.jpg
+2026-06-07 10:48:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818531968_Image_20210104_110636.jpg
+2026-06-07 10:49:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818592886_Image_20210104_110737.jpg
+2026-06-07 10:50:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818653795_Image_20210104_110838.jpg
+2026-06-07 10:51:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818714720_Image_20210104_110939.jpg
+2026-06-07 10:52:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818775628_Image_20210104_111040.jpg
+2026-06-07 10:53:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818836533_Image_20210104_111141.jpg
+2026-06-07 10:54:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818897445_Image_20210104_111241.jpg
+2026-06-07 10:55:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780818958456_Image_20210104_111342.jpg
+2026-06-07 10:56:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819019264_Image_20210104_111443.jpg
+2026-06-07 10:58:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819080272_Image_20210104_111544.jpg
+2026-06-07 10:59:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819141183_Image_20210104_111645.jpg
+2026-06-07 11:00:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819202091_Image_20210104_111746.jpg
+2026-06-07 11:01:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819262908_Image_20210104_111847.jpg
+2026-06-07 11:02:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819323817_Image_20210104_111948.jpg
+2026-06-07 11:03:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819384729_Image_20210104_112049.jpg
+2026-06-07 11:04:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819445641_Image_20210104_112150.jpg
+2026-06-07 11:05:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819506658_Image_20210104_112251.jpg
+2026-06-07 11:06:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819567567_Image_20210104_112352.jpg
+2026-06-07 11:07:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819628477_Image_20210104_112452.jpg
+2026-06-07 11:07:59 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-07 11:08:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819689388_Image_20210104_112553.jpg
+2026-06-07 11:09:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819750298_Image_20210104_112654.jpg
+2026-06-07 11:10:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819811209_Image_20210104_112755.jpg
+2026-06-07 11:11:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819872120_Image_20210104_112856.jpg
+2026-06-07 11:12:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819933135_Image_20210104_112957.jpg
+2026-06-07 11:13:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780819994056_Image_20210104_113058.jpg
+2026-06-07 11:14:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820054973_Image_20210104_113159.jpg
+2026-06-07 11:15:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820115888_Image_20210104_113300.jpg
+2026-06-07 11:16:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820176800_Image_20210104_113401.jpg
+2026-06-07 11:17:08 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-07 11:17:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820237615_Image_20210104_113502.jpg
+2026-06-07 11:18:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820298627_Image_20210104_113603.jpg
+2026-06-07 11:19:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820359539_Image_20210104_113704.jpg
+2026-06-07 11:20:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820420450_Image_20210104_113804.jpg
+2026-06-07 11:21:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820481359_Image_20210104_113905.jpg
+2026-06-07 11:22:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820542266_Image_20210104_114006.jpg
+2026-06-07 11:23:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820603075_Image_20210104_114107.jpg
+2026-06-07 11:24:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820663988_Image_20210104_114208.jpg
+2026-06-07 11:25:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820724928_Image_20210104_114309.jpg
+2026-06-07 11:26:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820785846_Image_20210104_114410.jpg
+2026-06-07 11:27:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820846861_Image_20210104_114511.jpg
+2026-06-07 11:28:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820907772_Image_20210104_114612.jpg
+2026-06-07 11:29:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780820968682_Image_20210104_114713.jpg
+2026-06-07 11:30:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821029661_Image_20210104_114814.jpg
+2026-06-07 11:31:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821090572_Image_20210104_114915.jpg
+2026-06-07 11:32:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821151480_Image_20210104_115015.jpg
+2026-06-07 11:33:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821212390_Image_20210104_115116.jpg
+2026-06-07 11:34:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821273400_Image_20210104_115217.jpg
+2026-06-07 11:35:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821334322_Image_20210104_115318.jpg
+2026-06-07 11:36:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821395237_Image_20210104_115419.jpg
+2026-06-07 11:37:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821456058_Image_20210104_115520.jpg
+2026-06-07 11:38:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821517069_Image_20210104_115621.jpg
+2026-06-07 11:39:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821577989_Image_20210104_115722.jpg
+2026-06-07 11:40:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821638910_Image_20210104_115823.jpg
+2026-06-07 11:41:39 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821699721_Image_20210104_115924.jpg
+2026-06-07 11:42:40 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821760734_Image_20210104_120025.jpg
+2026-06-07 11:43:41 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821821642_Image_20210104_120126.jpg
+2026-06-07 11:44:42 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821882558_Image_20210104_120226.jpg
+2026-06-07 11:45:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780821943475_Image_20210104_120327.jpg
+2026-06-07 11:46:44 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822004410_Image_20210104_120428.jpg
+2026-06-07 11:47:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822065324_Image_20210104_120529.jpg
+2026-06-07 11:48:46 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822126131_Image_20210104_120630.jpg
+2026-06-07 11:49:47 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822187046_Image_20210104_120731.jpg
+2026-06-07 11:50:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822248058_Image_20210104_120832.jpg
+2026-06-07 11:51:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822308869_Image_20210104_120933.jpg
+2026-06-07 11:52:49 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822369880_Image_20210104_121034.jpg
+2026-06-07 11:53:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822430793_Image_20210104_121135.jpg
+2026-06-07 11:54:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822491702_Image_20210104_121236.jpg
+2026-06-07 11:55:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822552615_Image_20210104_121337.jpg
+2026-06-07 11:56:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822613639_Image_20210104_121438.jpg
+2026-06-07 11:57:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822674446_Image_20210104_121538.jpg
+2026-06-07 11:58:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822735358_Image_20210104_121639.jpg
+2026-06-07 11:59:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822796372_Image_20210104_121740.jpg
+2026-06-07 12:00:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822857285_Image_20210104_121841.jpg
+2026-06-07 12:01:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822918298_Image_20210104_121942.jpg
+2026-06-07 12:02:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780822979207_Image_20210104_122043.jpg
+2026-06-07 12:04:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823040218_Image_20210104_122144.jpg
+2026-06-07 12:05:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823101128_Image_20210104_122245.jpg
+2026-06-07 12:06:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823161938_Image_20210104_122346.jpg
+2026-06-07 12:07:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823222946_Image_20210104_122447.jpg
+2026-06-07 12:08:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823283855_Image_20210104_122548.jpg
+2026-06-07 12:09:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823344765_Image_20210104_122649.jpg
+2026-06-07 12:10:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823405678_Image_20210104_122750.jpg
+2026-06-07 12:11:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823466693_Image_20210104_122851.jpg
+2026-06-07 12:12:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823527603_Image_20210104_122952.jpg
+2026-06-07 12:13:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823588518_Image_20210104_123052.jpg
+2026-06-07 12:14:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823649428_Image_20210104_123153.jpg
+2026-06-07 12:15:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823710242_Image_20210104_123254.jpg
+2026-06-07 12:16:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823771253_Image_20210104_123355.jpg
+2026-06-07 12:17:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823832164_Image_20210104_123456.jpg
+2026-06-07 12:18:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823893179_Image_20210104_123557.jpg
+2026-06-07 12:19:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780823954089_Image_20210104_123658.jpg
+2026-06-07 12:20:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824014997_Image_20210104_123759.jpg
+2026-06-07 12:21:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824075913_Image_20210104_123900.jpg
+2026-06-07 12:22:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824136825_Image_20210104_124001.jpg
+2026-06-07 12:23:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824197735_Image_20210104_124102.jpg
+2026-06-07 12:24:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824258644_Image_20210104_124203.jpg
+2026-06-07 12:25:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824319558_Image_20210104_124303.jpg
+2026-06-07 12:26:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824380368_Image_20210104_124404.jpg
+2026-06-07 12:27:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824441376_Image_20210104_124505.jpg
+2026-06-07 12:28:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824502304_Image_20210104_124606.jpg
+2026-06-07 12:29:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824563316_Image_20210104_124707.jpg
+2026-06-07 12:30:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824624223_Image_20210104_124808.jpg
+2026-06-07 12:31:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824685135_Image_20210104_124909.jpg
+2026-06-07 12:32:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824746045_Image_20210104_125010.jpg
+2026-06-07 12:33:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824806956_Image_20210104_125111.jpg
+2026-06-07 12:34:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824867968_Image_20210104_125212.jpg
+2026-06-07 12:35:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824928882_Image_20210104_125313.jpg
+2026-06-07 12:36:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780824989793_Image_20210104_125414.jpg
+2026-06-07 12:37:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825050509_Image_20210104_125515.jpg
+2026-06-07 12:38:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825111521_Image_20210104_125615.jpg
+2026-06-07 12:39:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825172433_Image_20210104_125716.jpg
+2026-06-07 12:40:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825233348_Image_20210104_125817.jpg
+2026-06-07 12:41:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825294258_Image_20210104_125918.jpg
+2026-06-07 12:42:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825355175_Image_20210104_130019.jpg
+2026-06-07 12:43:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825416189_Image_20210104_130120.jpg
+2026-06-07 12:44:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825477102_Image_20210104_130221.jpg
+2026-06-07 12:45:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825537914_Image_20210104_130322.jpg
+2026-06-07 12:46:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825598924_Image_20210104_130423.jpg
+2026-06-07 12:47:39 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825659834_Image_20210104_130524.jpg
+2026-06-07 12:48:40 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825720744_Image_20210104_130625.jpg
+2026-06-07 12:49:41 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825781656_Image_20210104_130726.jpg
+2026-06-07 12:50:42 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825842668_Image_20210104_130827.jpg
+2026-06-07 12:51:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825903478_Image_20210104_130927.jpg
+2026-06-07 12:52:44 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780825964390_Image_20210104_131028.jpg
+2026-06-07 12:53:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826025302_Image_20210104_131129.jpg
+2026-06-07 12:54:46 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826086217_Image_20210104_131230.jpg
+2026-06-07 12:55:47 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826147128_Image_20210104_131331.jpg
+2026-06-07 12:56:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826208041_Image_20210104_131432.jpg
+2026-06-07 12:57:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826268952_Image_20210104_131533.jpg
+2026-06-07 12:58:49 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826329861_Image_20210104_131634.jpg
+2026-06-07 12:59:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826390769_Image_20210104_131735.jpg
+2026-06-07 13:00:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826451683_Image_20210104_131836.jpg
+2026-06-07 13:01:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826512592_Image_20210104_131937.jpg
+2026-06-07 13:02:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826573501_Image_20210104_132037.jpg
+2026-06-07 13:03:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826634410_Image_20210104_132138.jpg
+2026-06-07 13:04:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826695321_Image_20210104_132239.jpg
+2026-06-07 13:05:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826756232_Image_20210104_132340.jpg
+2026-06-07 13:06:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826817142_Image_20210104_132441.jpg
+2026-06-07 13:07:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826878056_Image_20210104_132542.jpg
+2026-06-07 13:08:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826938965_Image_20210104_132643.jpg
+2026-06-07 13:09:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780826999876_Image_20210104_132744.jpg
+2026-06-07 13:11:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827060785_Image_20210104_132845.jpg
+2026-06-07 13:12:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827121696_Image_20210104_132946.jpg
+2026-06-07 13:13:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827182505_Image_20210104_133046.jpg
+2026-06-07 13:14:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827243413_Image_20210104_133147.jpg
+2026-06-07 13:15:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827304326_Image_20210104_133248.jpg
+2026-06-07 13:16:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827365134_Image_20210104_133349.jpg
+2026-06-07 13:17:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827426045_Image_20210104_133450.jpg
+2026-06-07 13:18:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827487065_Image_20210104_133551.jpg
+2026-06-07 13:19:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827547872_Image_20210104_133652.jpg
+2026-06-07 13:20:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827608880_Image_20210104_133753.jpg
+2026-06-07 13:21:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827669796_Image_20210104_133854.jpg
+2026-06-07 13:22:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827730708_Image_20210104_133955.jpg
+2026-06-07 13:23:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827791624_Image_20210104_134056.jpg
+2026-06-07 13:24:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827852633_Image_20210104_134157.jpg
+2026-06-07 13:25:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827913545_Image_20210104_134258.jpg
+2026-06-07 13:26:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780827974457_Image_20210104_134358.jpg
+2026-06-07 13:27:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828035469_Image_20210104_134459.jpg
+2026-06-07 13:28:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828096380_Image_20210104_134600.jpg
+2026-06-07 13:29:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828157295_Image_20210104_134701.jpg
+2026-06-07 13:30:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828218306_Image_20210104_134802.jpg
+2026-06-07 13:31:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828279218_Image_20210104_134903.jpg
+2026-06-07 13:32:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828340134_Image_20210104_135004.jpg
+2026-06-07 13:33:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828400958_Image_20210104_135105.jpg
+2026-06-07 13:34:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828461873_Image_20210104_135206.jpg
+2026-06-07 13:35:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828522782_Image_20210104_135307.jpg
+2026-06-07 13:36:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828583691_Image_20210104_135408.jpg
+2026-06-07 13:37:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828644599_Image_20210104_135509.jpg
+2026-06-07 13:38:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828705509_Image_20210104_135610.jpg
+2026-06-07 13:39:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828766515_Image_20210104_135710.jpg
+2026-06-07 13:40:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828827441_Image_20210104_135811.jpg
+2026-06-07 13:41:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828888357_Image_20210104_135912.jpg
+2026-06-07 13:42:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780828949273_Image_20210104_140013.jpg
+2026-06-07 13:43:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829010288_Image_20210104_140114.jpg
+2026-06-07 13:44:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829071202_Image_20210104_140215.jpg
+2026-06-07 13:45:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829132114_Image_20210104_140316.jpg
+2026-06-07 13:46:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829193140_Image_20210104_140417.jpg
+2026-06-07 13:47:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829254060_Image_20210104_140518.jpg
+2026-06-07 13:48:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829314874_Image_20210104_140619.jpg
+2026-06-07 13:49:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829375788_Image_20210104_140720.jpg
+2026-06-07 13:50:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829436719_Image_20210104_140821.jpg
+2026-06-07 13:58:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829923641_Image_20210104_141527.jpg
+2026-06-07 13:58:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829923714_Image_20210104_141628.jpg
+2026-06-07 13:59:44 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780829984629_Image_20210104_141729.jpg
+2026-06-07 14:00:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830045548_Image_20210104_141829.jpg
+2026-06-07 14:01:46 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830106366_Image_20210104_141930.jpg
+2026-06-07 14:02:47 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830167282_Image_20210104_142031.jpg
+2026-06-07 14:03:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830228198_Image_20210104_142132.jpg
+2026-06-07 14:04:49 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830289108_Image_20210104_142233.jpg
+2026-06-07 14:05:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830350016_Image_20210104_142334.jpg
+2026-06-07 14:06:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830410928_Image_20210104_142435.jpg
+2026-06-07 14:07:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830471837_Image_20210104_142536.jpg
+2026-06-07 14:08:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830532854_Image_20210104_142637.jpg
+2026-06-07 14:09:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830593767_Image_20210104_142738.jpg
+2026-06-07 14:10:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830654680_Image_20210104_142839.jpg
+2026-06-07 14:11:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830715594_Image_20210104_142940.jpg
+2026-06-07 14:12:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830776509_Image_20210104_143040.jpg
+2026-06-07 14:13:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830837526_Image_20210104_143141.jpg
+2026-06-07 14:14:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830898444_Image_20210104_143242.jpg
+2026-06-07 14:15:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780830959367_Image_20210104_143343.jpg
+2026-06-07 14:17:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831020281_Image_20210104_143444.jpg
+2026-06-07 14:18:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831081196_Image_20210104_143545.jpg
+2026-06-07 14:19:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831142113_Image_20210104_143646.jpg
+2026-06-07 14:20:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831203036_Image_20210104_143747.jpg
+2026-06-07 14:21:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831263753_Image_20210104_143848.jpg
+2026-06-07 14:22:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831324667_Image_20210104_143949.jpg
+2026-06-07 14:23:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831385600_Image_20210104_144050.jpg
+2026-06-07 14:24:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831446512_Image_20210104_144150.jpg
+2026-06-07 14:25:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831507427_Image_20210104_144251.jpg
+2026-06-07 14:26:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831568341_Image_20210104_144352.jpg
+2026-06-07 14:27:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831629252_Image_20210104_144453.jpg
+2026-06-07 14:28:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831690165_Image_20210104_144554.jpg
+2026-06-07 14:29:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831750982_Image_20210104_144655.jpg
+2026-06-07 14:30:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831811997_Image_20210104_144756.jpg
+2026-06-07 14:31:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831872812_Image_20210104_144857.jpg
+2026-06-07 14:32:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831933727_Image_20210104_144958.jpg
+2026-06-07 14:33:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780831994542_Image_20210104_145059.jpg
+2026-06-07 14:34:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832055460_Image_20210104_145159.jpg
+2026-06-07 14:35:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832116387_Image_20210104_145300.jpg
+2026-06-07 14:36:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832177303_Image_20210104_145401.jpg
+2026-06-07 14:37:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832238315_Image_20210104_145502.jpg
+2026-06-07 14:38:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832299230_Image_20210104_145603.jpg
+2026-06-07 14:39:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832360145_Image_20210104_145704.jpg
+2026-06-07 14:40:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832421163_Image_20210104_145805.jpg
+2026-06-07 14:41:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832482076_Image_20210104_145906.jpg
+2026-06-07 14:42:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832542997_Image_20210104_150007.jpg
+2026-06-07 14:43:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832603912_Image_20210104_150108.jpg
+2026-06-07 14:44:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832664849_Image_20210104_150209.jpg
+2026-06-07 14:45:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832725665_Image_20210104_150310.jpg
+2026-06-07 14:46:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832786575_Image_20210104_150411.jpg
+2026-06-07 14:47:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832847589_Image_20210104_150512.jpg
+2026-06-07 14:48:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832908501_Image_20210104_150612.jpg
+2026-06-07 14:49:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780832969422_Image_20210104_150713.jpg
+2026-06-07 14:50:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833030333_Image_20210104_150814.jpg
+2026-06-07 14:51:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833091252_Image_20210104_150915.jpg
+2026-06-07 14:52:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833152165_Image_20210104_151016.jpg
+2026-06-07 14:53:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833212984_Image_20210104_151117.jpg
+2026-06-07 14:54:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833273897_Image_20210104_151218.jpg
+2026-06-07 14:55:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833334911_Image_20210104_151319.jpg
+2026-06-07 14:56:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833395822_Image_20210104_151420.jpg
+2026-06-07 14:57:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833456739_Image_20210104_151521.jpg
+2026-06-07 14:58:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833517654_Image_20210104_151622.jpg
+2026-06-07 14:59:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833578666_Image_20210104_151723.jpg
+2026-06-07 15:00:39 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833639477_Image_20210104_151823.jpg
+2026-06-07 15:01:40 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833700394_Image_20210104_151924.jpg
+2026-06-07 15:02:41 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833761312_Image_20210104_152025.jpg
+2026-06-07 15:03:42 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833822322_Image_20210104_152126.jpg
+2026-06-07 15:04:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833883233_Image_20210104_152227.jpg
+2026-06-07 15:05:44 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780833944145_Image_20210104_152328.jpg
+2026-06-07 15:06:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834005058_Image_20210104_152429.jpg
+2026-06-07 15:07:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834065970_Image_20210104_152530.jpg
+2026-06-07 15:08:46 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834126891_Image_20210104_152631.jpg
+2026-06-07 15:09:47 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834187806_Image_20210104_152732.jpg
+2026-06-07 15:10:48 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834248851_Image_20210104_152833.jpg
+2026-06-07 15:11:49 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834309669_Image_20210104_152934.jpg
+2026-06-07 15:12:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834370587_Image_20210104_153035.jpg
+2026-06-07 15:13:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834431501_Image_20210104_153135.jpg
+2026-06-07 15:14:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834492428_Image_20210104_153236.jpg
+2026-06-07 15:15:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834553338_Image_20210104_153337.jpg
+2026-06-07 15:16:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834614251_Image_20210104_153438.jpg
+2026-06-07 15:17:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834675167_Image_20210104_153539.jpg
+2026-06-07 15:18:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834736083_Image_20210104_153640.jpg
+2026-06-07 15:19:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834796999_Image_20210104_153741.jpg
+2026-06-07 15:20:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834857914_Image_20210104_153842.jpg
+2026-06-07 15:21:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834918829_Image_20210104_153943.jpg
+2026-06-07 15:22:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780834979845_Image_20210104_154044.jpg
+2026-06-07 15:24:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835040760_Image_20210104_154145.jpg
+2026-06-07 15:25:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835101680_Image_20210104_154246.jpg
+2026-06-07 15:26:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835162596_Image_20210104_154347.jpg
+2026-06-07 15:27:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835223608_Image_20210104_154448.jpg
+2026-06-07 15:28:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835284526_Image_20210104_154548.jpg
+2026-06-07 15:29:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835345447_Image_20210104_154649.jpg
+2026-06-07 15:30:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835406363_Image_20210104_154750.jpg
+2026-06-07 15:31:07 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835467284_Image_20210104_154851.jpg
+2026-06-07 15:32:08 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835528204_Image_20210104_154952.jpg
+2026-06-07 15:33:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835589124_Image_20210104_155053.jpg
+2026-06-07 15:34:09 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835649936_Image_20210104_155154.jpg
+2026-06-07 15:35:10 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835710950_Image_20210104_155255.jpg
+2026-06-07 15:36:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835771870_Image_20210104_155356.jpg
+2026-06-07 15:37:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835832684_Image_20210104_155457.jpg
+2026-06-07 15:37:24 | INFO | Admin device event from 127.0.0.1
+2026-06-07 15:37:24 | INFO | Admin event accepted: action=add name=ש ip=192.168.1.1 uuid=0b743b18-3e0c-4a5e-8dd8-f43938da2d1b
+2026-06-07 15:38:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835893503_Image_20210104_155558.jpg
+2026-06-07 15:39:14 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-07 15:39:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780835955464_Image_20210104_155658.jpg
+2026-06-07 15:42:22 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-07 15:42:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836144266_Image_20210104_155900.jpg
+2026-06-07 15:42:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836144345_Image_20210104_160001.jpg
+2026-06-07 15:43:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836198057_Image_20210104_160102.jpg
+2026-06-07 15:44:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836258979_Image_20210104_160203.jpg
+2026-06-07 15:45:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836319913_Image_20210104_160304.jpg
+2026-06-07 15:46:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836380824_Image_20210104_160405.jpg
+2026-06-07 15:47:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836441637_Image_20210104_160506.jpg
+2026-06-07 15:48:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836502651_Image_20210104_160607.jpg
+2026-06-07 15:49:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836563564_Image_20210104_160708.jpg
+2026-06-07 15:50:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836624379_Image_20210104_160808.jpg
+2026-06-07 15:51:25 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836685392_Image_20210104_160909.jpg
+2026-06-07 15:52:26 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836746303_Image_20210104_161010.jpg
+2026-06-07 15:53:27 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836807117_Image_20210104_161111.jpg
+2026-06-07 15:54:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836868030_Image_20210104_161212.jpg
+2026-06-07 15:55:28 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836928942_Image_20210104_161313.jpg
+2026-06-07 15:56:29 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780836989853_Image_20210104_161414.jpg
+2026-06-07 15:57:30 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837050767_Image_20210104_161515.jpg
+2026-06-07 15:58:31 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837111678_Image_20210104_161616.jpg
+2026-06-07 15:59:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837172593_Image_20210104_161717.jpg
+2026-06-07 16:00:33 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837233506_Image_20210104_161818.jpg
+2026-06-07 16:01:34 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837294419_Image_20210104_161918.jpg
+2026-06-07 16:02:35 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837355335_Image_20210104_162019.jpg
+2026-06-07 16:03:36 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837416250_Image_20210104_162120.jpg
+2026-06-07 16:04:37 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837477262_Image_20210104_162221.jpg
+2026-06-07 16:05:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837538071_Image_20210104_162322.jpg
+2026-06-07 16:06:38 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837598985_Image_20210104_162423.jpg
+2026-06-07 16:07:39 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837659900_Image_20210104_162524.jpg
+2026-06-07 16:08:40 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837720813_Image_20210104_162625.jpg
+2026-06-07 16:09:41 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837781735_Image_20210104_162726.jpg
+2026-06-07 16:10:42 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837842747_Image_20210104_162827.jpg
+2026-06-07 16:11:43 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837903557_Image_20210104_162928.jpg
+2026-06-07 16:12:44 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780837964476_Image_20210104_163028.jpg
+2026-06-07 16:13:45 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780838025387_Image_20210104_163129.jpg
+2026-06-09 09:48:31 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-09 09:48:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780987712756_Image_20210106_100508.jpg
+2026-06-09 09:48:32 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780987712828_Image_20210106_100609.jpg
+2026-06-09 10:38:58 | INFO | FTP receiver listening on 0.0.0.0:2121
+2026-06-09 10:39:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780990751606_Image_20210106_105555.jpg
+2026-06-09 10:39:11 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780990751679_Image_20210106_105655.jpg
+2026-06-09 10:40:12 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780990812590_Image_20210106_105756.jpg
+2026-06-09 10:41:13 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780990873397_Image_20210106_105857.jpg
+2026-06-09 10:42:14 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780990934405_Image_20210106_105958.jpg
+2026-06-09 10:43:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780990995210_Image_20210106_110059.jpg
+2026-06-09 10:44:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991056221_Image_20210106_110200.jpg
+2026-06-09 10:45:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991117131_Image_20210106_110301.jpg
+2026-06-09 10:46:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991178037_Image_20210106_110402.jpg
+2026-06-09 10:47:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991238949_Image_20210106_110503.jpg
+2026-06-09 10:48:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991299858_Image_20210106_110604.jpg
+2026-06-09 10:49:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991360668_Image_20210106_110705.jpg
+2026-06-09 10:50:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1780991421576_Image_20210106_110805.jpg
+2026-06-09 10:57:10 | INFO | Admin device event from 127.0.0.1
+2026-06-09 10:57:10 | INFO | Admin event accepted: action=add name=daha ip=192.168.1.108 uuid=cf9fbc15-b1d1-4ff8-84a3-5da1ac2cb4af
+2026-06-09 11:17:31 | INFO | Admin device event from 127.0.0.1
+2026-06-09 11:17:31 | INFO | Admin event accepted: action=delete name=test ip=1.2.3.4 uuid=01caa517-1263-438f-82e0-379e1b7dc1bf
+2026-06-09 15:22:50 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781007770573_Image_20210101_120050.jpg
+2026-06-09 15:23:51 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781007831392_Image_20210101_120151.jpg
+2026-06-09 15:24:52 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781007892398_Image_20210101_120252.jpg
+2026-06-09 15:25:53 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781007953306_Image_20210101_120353.jpg
+2026-06-09 15:26:54 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008014211_Image_20210101_120454.jpg
+2026-06-09 15:27:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008075520_Image_20210101_120555.jpg
+2026-06-09 15:28:55 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008135435_Image_20210101_120655.jpg
+2026-06-09 15:29:56 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008196344_Image_20210101_120756.jpg
+2026-06-09 15:30:57 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008257252_Image_20210101_120857.jpg
+2026-06-09 15:31:58 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008318260_Image_20210101_120958.jpg
+2026-06-09 15:32:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008379180_Image_20210101_121058.jpg
+2026-06-09 15:33:59 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008439988_Image_20210101_121159.jpg
+2026-06-09 15:35:00 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008500896_Image_20210101_121300.jpg
+2026-06-09 15:36:01 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008561803_Image_20210101_121401.jpg
+2026-06-09 15:37:02 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008622611_Image_20210101_121502.jpg
+2026-06-09 15:42:03 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008923889_Image_20210101_120049.jpg
+2026-06-09 15:43:04 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781008984713_Image_20210101_120150.jpg
+2026-06-09 15:44:05 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009045721_Image_20210101_120251.jpg
+2026-06-09 15:45:06 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009106629_Image_20210101_120352.jpg
+2026-06-09 15:47:15 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009235795_Image_20210101_120049.jpg
+2026-06-09 15:48:16 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009296609_Image_20210101_120150.jpg
+2026-06-09 15:49:17 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009357516_Image_20210101_120251.jpg
+2026-06-09 15:50:18 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009418423_Image_20210101_120352.jpg
+2026-06-09 15:51:19 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009479334_Image_20210101_120453.jpg
+2026-06-09 15:52:20 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009540144_Image_20210101_120554.jpg
+2026-06-09 15:53:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009601150_Image_20210101_120655.jpg
+2026-06-09 15:54:21 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009661959_Image_20210101_120756.jpg
+2026-06-09 15:55:22 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009722864_Image_20210101_120856.jpg
+2026-06-09 15:56:23 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009783677_Image_20210101_120957.jpg
+2026-06-09 15:57:24 | INFO | FTP upload accepted from 192.168.1.130 -> device=idis file=1781009844486_Image_20210101_121058.jpg

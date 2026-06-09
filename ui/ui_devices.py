@@ -102,10 +102,11 @@ class CameraCredentialsDialog(tk.Toplevel):
         self.result = None
         self._username_var = tk.StringVar()
         self._password_var = tk.StringVar()
-        self._camera_type_var = tk.StringVar(value="Generic RTSP")
-        defaults = camera_defaults("Generic RTSP")
+        self._camera_type_var = tk.StringVar(value="Dahua")
+        defaults = camera_defaults("Dahua", device_ip)
         self._rtsp_port_var = tk.StringVar(value=str(defaults["port"]))
         self._stream_path_var = tk.StringVar(value=defaults["path"])
+        self._onvif_port_var = tk.StringVar(value="80")
         self._device_name = device_name
         self._device_ip = device_ip
         self._initial_values = initial_values or {}
@@ -167,7 +168,7 @@ class CameraCredentialsDialog(tk.Toplevel):
         camera_type_combo = ttk.Combobox(
             body,
             textvariable=self._camera_type_var,
-            values=("Generic RTSP", "Dahua", "Hikvision", "Axis"),
+            values=("Generic RTSP", "Dahua", "IDIS", "Hikvision", "Axis"),
             state="readonly",
             width=31,
         )
@@ -175,17 +176,48 @@ class CameraCredentialsDialog(tk.Toplevel):
         camera_type_combo.bind("<<ComboboxSelected>>", self._apply_camera_defaults)
 
         self._build_field(body, 7, "RTSP Port", self._rtsp_port_var)
-        self._build_field(body, 9, "RTSP Path", self._stream_path_var)
+        self._build_field(
+            body,
+            9,
+            "RTSP Path",
+            self._stream_path_var,
+            state="readonly",
+        )
+        self._onvif_label = tk.Label(
+            body,
+            text="ONVIF Port (IDIS zoom)",
+            font=("Helvetica", 9, "bold"),
+            bg=C["bg_toolbar"],
+            fg=C["tx_primary"],
+        )
+        self._onvif_entry = tk.Entry(
+            body,
+            textvariable=self._onvif_port_var,
+            width=34,
+            bg="#ffffff",
+            fg="#111111",
+            insertbackground="#111111",
+        )
+        self._onvif_hint = tk.Label(
+            body,
+            text="Required only for IDIS zoom control.",
+            font=("Helvetica", 8),
+            bg=C["bg_toolbar"],
+            fg=C["tx_secondary"],
+        )
+        self._onvif_label.grid(row=11, column=0, sticky="w", pady=(0, 4))
+        self._onvif_entry.grid(row=12, column=0, sticky="ew", pady=(0, 5))
+        self._onvif_hint.grid(row=13, column=0, sticky="w", pady=(0, 8))
 
         actions = tk.Frame(body, bg=C["bg_toolbar"])
-        actions.grid(row=11, column=0, sticky="e", pady=(14, 0))
+        actions.grid(row=14, column=0, sticky="e", pady=(14, 0))
         ttk.Button(actions, text="Skip", command=self._cancel).pack(side=tk.RIGHT)
         ttk.Button(actions, text="Save", command=self._submit).pack(
             side=tk.RIGHT,
             padx=(0, 8),
         )
 
-    def _build_field(self, parent, row, label, variable, show=None):
+    def _build_field(self, parent, row, label, variable, show=None, state="normal"):
         tk.Label(
             parent,
             text=label,
@@ -193,30 +225,53 @@ class CameraCredentialsDialog(tk.Toplevel):
             bg=C["bg_toolbar"],
             fg=C["tx_primary"],
         ).grid(row=row, column=0, sticky="w", pady=(0, 4))
-        tk.Entry(parent, textvariable=variable, width=34, show=show).grid(
+        entry = tk.Entry(
+            parent,
+            textvariable=variable,
+            width=34,
+            show=show,
+            state=state,
+            bg="#ffffff",
+            readonlybackground="#ffffff",
+            fg="#111111",
+            insertbackground="#111111",
+            disabledforeground="#111111",
+        )
+        entry.grid(
             row=row + 1,
             column=0,
             sticky="ew",
             pady=(0, 10),
         )
+        return entry
 
     def _apply_camera_defaults(self, _event=None):
-        defaults = camera_defaults(self._camera_type_var.get())
+        defaults = camera_defaults(self._camera_type_var.get(), self._device_ip)
         self._rtsp_port_var.set(str(defaults["port"]))
         self._stream_path_var.set(defaults["path"])
+        if self._camera_type_var.get().strip().lower() == "idis":
+            self._onvif_port_var.set(self._onvif_port_var.get().strip() or "80")
+        self._sync_idis_fields()
 
     def _apply_initial_values(self):
         if not self._initial_values:
+            self._sync_idis_fields()
             return
         self._username_var.set(self._initial_values.get("username", ""))
         self._password_var.set(self._initial_values.get("password", ""))
-        self._camera_type_var.set(
-            self._initial_values.get("camera_type", self._camera_type_var.get())
-        )
+        camera_type = self._initial_values.get("camera_type", self._camera_type_var.get())
+        self._camera_type_var.set(camera_type)
         self._rtsp_port_var.set(str(self._initial_values.get("rtsp_port", self._rtsp_port_var.get())))
-        self._stream_path_var.set(
-            self._initial_values.get("stream_path", self._stream_path_var.get())
-        )
+        self._stream_path_var.set(camera_defaults(camera_type, self._device_ip)["path"])
+        self._onvif_port_var.set(str(self._initial_values.get("onvif_port", self._onvif_port_var.get())))
+        self._sync_idis_fields()
+
+    def _sync_idis_fields(self):
+        state = "normal" if self._camera_type_var.get().strip().lower() == "idis" else "disabled"
+        fg = C["tx_primary"] if state == "normal" else C["tx_secondary"]
+        self._onvif_label.configure(fg=fg)
+        self._onvif_entry.configure(state=state)
+        self._onvif_hint.configure(fg=C["tx_secondary"])
 
     def _submit(self):
         username = self._username_var.get().strip()
@@ -224,6 +279,7 @@ class CameraCredentialsDialog(tk.Toplevel):
         camera_type = self._camera_type_var.get().strip()
         rtsp_port = self._rtsp_port_var.get().strip()
         stream_path = self._stream_path_var.get().strip()
+        onvif_port = self._onvif_port_var.get().strip() or "80"
         if not username or not password or not camera_type or not rtsp_port or not stream_path:
             messagebox.showerror(
                 "Camera Credentials",
@@ -242,12 +298,24 @@ class CameraCredentialsDialog(tk.Toplevel):
                 parent=self,
             )
             return
+        try:
+            onvif_port_num = int(onvif_port)
+            if onvif_port_num < 1 or onvif_port_num > 65535:
+                raise ValueError
+        except ValueError:
+            messagebox.showerror(
+                "Camera Credentials",
+                "ONVIF Port must be a valid number between 1 and 65535.",
+                parent=self,
+            )
+            return
         self.result = {
             "username": username,
             "password": password,
             "camera_type": camera_type,
             "rtsp_port": port_num,
             "stream_path": stream_path,
+            "onvif_port": onvif_port_num,
         }
         self.destroy()
 

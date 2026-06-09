@@ -11,7 +11,8 @@ Wires together:
 import queue as py_queue
 
 from ui import SecCamApp, C
-from core.backend import DEBUG_SERVER_ENABLED, DEBUG_SERVER_PORT
+from core.backend import DEBUG_SERVER_ENABLED, DEBUG_SERVER_PORT, FTP_SERVER_ENABLED
+from core.ftp_server import start_ftp_server
 from core.server import start_flask_server, start_debug_server, msg_queue
 
 
@@ -29,6 +30,8 @@ def _poll_queue(app: SecCamApp):
         try:
             if msg.get("admin_event"):
                 app.show_admin_device_event(msg)
+            elif msg.get("post_test"):
+                app.show_post_test_event(msg)
             elif msg.get("blocked"):
                 app.show_blocked_upload(msg)
             else:
@@ -57,6 +60,12 @@ def main():
 
     if DEBUG_SERVER_ENABLED:
         start_debug_server(port=DEBUG_SERVER_PORT)
+
+    if FTP_SERVER_ENABLED:
+        start_ftp_server(on_error=lambda exc: app.after(0, lambda: app.set_server_status(
+            f"FTP error: {exc}",
+            C["status_err"],
+        )))
 
     app.after(200, _poll_queue, app)
     app.mainloop()

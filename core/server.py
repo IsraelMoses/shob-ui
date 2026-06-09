@@ -91,6 +91,16 @@ def _format_headers(headers) -> dict:
     return {k: v for k, v in headers.items()}
 
 
+def _preview_body(body: bytes, max_bytes: int = 1500) -> str:
+    if not body:
+        return ""
+    preview = body[:max_bytes]
+    try:
+        return preview.decode("utf-8")
+    except UnicodeDecodeError:
+        return preview.hex(" ")
+
+
 def _client_ip() -> str:
     remote_addr = request.remote_addr or "unknown"
     if remote_addr in TRUSTED_PROXY_IPS:
@@ -129,6 +139,25 @@ def _log_blocked_post(source: str, sender_ip: str, path: str, headers, body: byt
         "received_at": datetime.now(),
         "source": source,
     })
+
+
+def _media_ext(filename: str = "", content_type: str = "", body: bytes = b"") -> str:
+    ext = Path(filename or "").suffix.lower()
+    if ext in (".jpeg", ".jpg", ".mp4"):
+        return ".jpg" if ext == ".jpeg" else ext
+
+    ct = (content_type or "").lower()
+    if "jpeg" in ct or "jpg" in ct:
+        return ".jpg"
+    if "mp4" in ct:
+        return ".mp4"
+
+    if body.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if len(body) > 12 and body[4:8] == b"ftyp":
+        return ".mp4"
+
+    return ""
 
 
 @flask_app.route("/internal/admin/device", methods=["POST"])
@@ -188,6 +217,76 @@ def admin_device_event():
     return jsonify({"status": "ok"}), 200
 
 
+@flask_app.route("/post-test", methods=["POST"])
+@flask_app.route("/event-test", methods=["POST"])
+@flask_app.route("/webhook-test", methods=["POST"])
+def post_test():
+    """
+    Diagnostic endpoint for camera event/webhook testing.
+    Accepts any POST body and logs it without trying to parse it as media.
+    """
+    sender_ip = _client_ip()
+    device = _safe_device_lookup(sender_ip)
+    raw_data = request.get_data(cache=True)
+    received_at = datetime.now()
+    headers = _format_headers(request.headers)
+    path = request.full_path if request.query_string else request.path
+    files = [
+        {
+            "field": field,
+            "filename": storage.filename,
+            "content_type": storage.content_type,
+            "content_length": storage.content_length,
+        }
+        for field, storage in request.files.items(multi=True)
+    ]
+
+    _log("\n" + "=" * 29 + " POST TEST " + "=" * 29)
+    _log(f"Time:          {received_at.isoformat(timespec='seconds')}")
+    _log(f"Client IP:     {sender_ip}")
+    _log(f"Known device:  {'yes' if device else 'no'}")
+    if device:
+        _log(f"Device:        {device.get('name', '-')} ({device.get('ip', '-')})")
+    _log(f"Path:          {path}")
+    _log(f"Content-Type:  {request.content_type or '-'}")
+    _log(f"Content-Length:{request.content_length or 0}")
+    _log("\n--- HEADERS ---")
+    _log(headers)
+    if files:
+        _log("\n--- FILES ---")
+        _log(files)
+    if raw_data:
+        _log("\n--- BODY PREVIEW ---")
+        _log(_preview_body(raw_data))
+    _log("=" * 69)
+
+    msg_queue.put({
+        "post_test": True,
+        "device": device,
+        "sender_ip": sender_ip,
+        "path": path,
+        "headers": headers,
+        "content_type": request.content_type or "",
+        "content_length": request.content_length or len(raw_data),
+        "body_preview": _preview_body(raw_data, max_bytes=500),
+        "files": files,
+        "known_device": bool(device),
+        "received_at": received_at,
+    })
+
+    return jsonify({
+        "status": "ok",
+        "kind": "post_test",
+        "sender_ip": sender_ip,
+        "known_device": bool(device),
+        "device": device["name"] if device else None,
+        "path": path,
+        "content_type": request.content_type,
+        "bytes": request.content_length or len(raw_data),
+    }), 200
+
+
+@flask_app.route("/camera-post", methods=["POST"])
 @flask_app.route("/upload", methods=["POST"])
 def upload():
     _log("\n==== FLASK UPLOAD RECEIVED ====")
@@ -216,24 +315,37 @@ def upload():
             "sender_ip": sender_ip,
         }), 403
 
-    if "file" in request.files:
-        f = request.files["file"]
-        ext = Path(f.filename).suffix.lower()
-        if ext not in (".jpeg", ".jpg", ".mp4"):
-            return jsonify({"error": "unsupported type"}), 400
+    media_file = request.files.get("file")
+    media_ext = ""
+    if media_file is not None:
+        media_ext = _media_ext(media_file.filename, media_file.content_type)
+
+    if media_file is None:
+        for _field, candidate in request.files.items(multi=True):
+            candidate_ext = _media_ext(candidate.filename, candidate.content_type)
+            if candidate_ext:
+                media_file = candidate
+                media_ext = candidate_ext
+                break
+
+    if media_file is not None:
+        ext = media_ext
+        if not ext:
+            return jsonify({
+                "error": "unsupported type",
+                "filename": media_file.filename,
+                "content_type": media_file.content_type,
+            }), 400
 
         tmp = BASE_DIR / "tmp"
         tmp.mkdir(exist_ok=True)
         tmp_path = tmp / f"{int(time.time() * 1000)}{ext}"
-        f.save(tmp_path)
+        media_file.save(tmp_path)
 
     else:
         ct = request.content_type or ""
-        if "jpeg" in ct or "jpg" in ct:
-            ext = ".jpg"
-        elif "mp4" in ct:
-            ext = ".mp4"
-        else:
+        ext = _media_ext(content_type=ct, body=raw_data)
+        if not ext:
             return jsonify({"error": "no file or unrecognised content-type"}), 400
 
         tmp = BASE_DIR / "tmp"

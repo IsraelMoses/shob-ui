@@ -61,6 +61,23 @@ def apply_ttk_style():
         troughcolor=C["bg_sidebar"],
         arrowcolor=C["tx_primary"],
     )
+    style.configure(
+        "Vertical.TScrollbar",
+        background="#101b27",
+        troughcolor="#07111c",
+        bordercolor="#1b2a36",
+        arrowcolor="#7f95a5",
+        darkcolor="#101b27",
+        lightcolor="#101b27",
+        relief="flat",
+        width=10,
+        arrowsize=10,
+    )
+    style.map(
+        "Vertical.TScrollbar",
+        background=[("active", "#17313a"), ("pressed", "#1e4b52")],
+        arrowcolor=[("active", "#2dd4bf")],
+    )
     style.configure("TSeparator", background=C["border"])
     style.configure(
         "TSpinbox",
